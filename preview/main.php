@@ -253,7 +253,7 @@
                                     ?>
                                     <div id="image_url_<?= $imgIterator ?>" class="hard image_url_<?= $imgIterator ?> lastPage"  data-likestatus ="<?= $backCoverLikeStatus ?>" data-comments="<?= $backCoverComments ?>" data-likes= "<?= $backCoverLikes ?>" data-spreadid ="<?= $backCoverSpreadId; ?>" style="background-image:url(<?= $backCoverThumbUrl ?>);background-size: cover;">
                                         <div id="loadingThmubs" style=" right: 50%;">
-                                            <img id="loading-thumbs" src="https://imgd.photogurus.com/assets/preview/images/loading2.gif" alt="Loading..." />
+                                           <!-- <img id="loading-thumbs" src="https://imgd.photogurus.com/assets/preview/images/loading2.gif" alt="Loading..." /> -->
                                         </div>
 
                                         <div class="prevControl controls">
