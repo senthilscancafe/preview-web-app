@@ -169,7 +169,7 @@
                                     ?>
                                     <div id="image_url_l_0" class="hard image_url_0" data-likestatus ="<?= $frontCoverLikeStatus ?>" data-comments="<?= $frontCoverComments ?>" data-likes= "<?= $frontCoverLikes ?>" data-spreadid ="<?= $frontCoverSpreadId; ?>" style="background-image:url(<?= $frontCoverThumbUrl ?>);background-size: cover;">
                                         <div id="loadingThmubs" style=" right: 42%;">
-                                            <img id="loading-thumbs" src="https://imgd.photogurus.com/assets/preview/images/loading2.gif" alt="Loading..." />
+                                            <!--<img id="loading-thumbs" src="https://imgd.photogurus.com/assets/preview/images/loading2.gif" alt="Loading..." /> -->
                                         </div>
                                         <div class="likeBox">
                                             <div class="clearfix top-row">
@@ -205,7 +205,7 @@
                                         ?>
                                         <div class="hard image_url_<?= $imgIterator ?>" id="image_url_l_<?= $imgIterator ?>" data-likestatus ="<?= $imageDetail['likestatus'] ?>" data-comments="<?= $imageDetail['comments'] ?>" data-likes= "<?= $imageDetail['likes'] ?>" data-spreadid ="<?= $imageDetail['spread_id']; ?>" style="background-image:url('<?= $spreadUrl ?>');background-size: cover;">
                                             <div id="loadingThmubs">
-                                                <img id="loading-thumbs" src="https://imgd.photogurus.com/assets/preview/images/loading2.gif" alt="Loading..." />
+                                                <!--<img id="loading-thumbs" src="https://imgd.photogurus.com/assets/preview/images/loading2.gif" alt="Loading..." />-->
                                             </div>
                                             <div class="prevControl controls">
                                                 <img src="" >
