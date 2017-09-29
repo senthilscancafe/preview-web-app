@@ -21,7 +21,7 @@ $config['branchio_api_endpoint'] = "https://api.branch.io/v1/url";
 //API end points
 
 //dev
-$urls['share_preview_url'] = "https://apidev.photogurus.com/share/order-image-urls/";
+$urls['share_preview_url'] = "http://api.local/share/order-image-urls/";
 $urls['check_valid_token_url'] = "https://apidev.photogurus.com/auth/validate-order-token/";
 $urls['send_link_url'] = "https://apidev.photogurus.com/send-app-link/";
 $urls['zulu_url'] = 'http://sdtdev.photogurus.com/master/index.html?orderId=';

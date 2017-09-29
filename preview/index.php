@@ -12,12 +12,11 @@ $newlogInUrl = $urls['login_url'];
 
 $branchKey = $configVars['branch_key'];
 $branchLink = $configVars['branchio_api_endpoint'];
-$currentUrl=$_GET['tracking_id'];
+$currentUrl=$_GET['stroy_id'];
 //$currentUrl = $_SERVER['REQUEST_URI'];
 //$apiFlag is to identify own story or shared story. Comes in the URL
 //$tokenFlag is to identify whether the shared link is a social media share link or direct email/sms share link. comes in cookie and default is 1 that is targeted token
 $apiFlag = 0;
-echo $currentUrl;
 $urlArr = explode('/', $currentUrl);
 //print_r($urlArr);
 //echo ($urlArr[3]);exit;
@@ -33,9 +32,8 @@ if(strstr($apiFlag, '?')){
 $parameter = array_pop($urlArr);
 
 $parameter = trim($parameter);
-echo $parameter;
-die;
 
+//echo $parameter;
 //$parameter = base64_decode($parameter);
 
 $trackingId = NULL;
@@ -45,7 +43,7 @@ $userLoggedIn = 0;
 $authToken = 0;
 $account = "";
 //$tokenFlag = 1; // default is 1 (targetted-token) as from dashboard it will always consider targeted token
-$orderToken = $parameter;
+$orderToken = $currentUrl;
 
 //if (isset($_COOKIE['order_token']) && $_COOKIE['order_token'] != '') {
 //    $orderToken = $_COOKIE['order_token'];
@@ -78,12 +76,10 @@ if($apiFlag == 0) {
     $trackingId = $parameter;
     $sharepreviewUrl .= "story-details/" . $loggedInUser . "/" . $trackingId;
 } else {
-    $sharepreviewUrl .= "share-story-details/" . $loggedInUser . "/" . $orderToken;
+    $sharepreviewUrl .= "share-story-details/". $orderToken;
 }
 
 $lsharepreviewUrl = $sharepreviewUrl;
-//echo $sharepreviewUrl;die;
-
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, $lsharepreviewUrl);

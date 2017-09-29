@@ -73,16 +73,11 @@
                     </div>
                 </div>
                 <div class="head-container row">
-                    <div class="spriteCode home"></div>
+                    
                     <div class="leftArea">
                         <div class="mobile-nav"></div>
                         <div class="spriteCode portraitHome"></div>
-                        <div class="pgLogo">
-                            <a href="https://www.photogurus.com/web/#/dashboard" class="">  <div class="spriteCode headerLogo"></div></a>
-                        </div>
-                        <a href="https://www.photogurus.com/web/#/dashboard" class="logoPosDesk">
-                            <div class="spriteCode headerLogo"></div>
-                        </a>
+                        <div class="spriteCode headerLogo"></div>
                     </div>
                     <div class="heder_wraper col-sm-4">
                     </div>
@@ -130,17 +125,17 @@
                                    <?php if ($userLoggedIn == 1 && $sharedStatus == 1000) { ?>
                                     <div class="mainCoverActionButtonContainer editIconLayering">                                                                            
                                         <!--<div class="spriteCode spreadShareIcon mt30"></div>-->
-                                        <div class="spriteCode spreadPrintIcon mt30"></div>
+                                        <!--<div class="spriteCode spreadPrintIcon mt30"></div>
                                         <a href="<?=$zuluUrl.$orderId.'&consumer=yes&token='.$authToken?>">
                                         <div class="spriteCode spreadEditIcon mt30"></div>
                                         </a>
-                                        <div class="spriteCode spreadInfoIcon mt30"></div>                                        
+                                        <div class="spriteCode spreadInfoIcon mt30"></div>-->                                        
                                     </div>
                                       <?php } ?>
                                        <?php if (($userLoggedIn == 1 && $sharedStatus == 8001) ||$userLoggedIn == 0) { ?>
-                                             <div class="mainCoverActionButtonContainer editIconLayering">  
+                                            <!-- <div class="mainCoverActionButtonContainer editIconLayering">  
                                                  <div class="spriteCode spreadPrintIcon"></div> 
-                                                  </div>                                      
+                                                  </div>-->                                  
                                       <?php } ?>
                                    
                              
