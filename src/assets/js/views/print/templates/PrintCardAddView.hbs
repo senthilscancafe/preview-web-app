@@ -1,0 +1,62 @@
+<div class="printFormContainer">
+  <div class="printFormHeader">{{heading}}</div>
+  <form method="post" id="checkout-form" class="">
+    <div class="cardImgContainer">
+      <img src="https://imgd.photogurus.com/assets/images/visa.png" alt="visa" class="imgSizeSet">
+      <img src="https://imgd.photogurus.com/assets/images/mastercard.png" alt="mastercard" class="imgSizeSet">
+      <img src="https://imgd.photogurus.com/assets/images/americanexpress.png" alt="americanexpress" class="imgSizeSet" style="width: 40px;">
+<img src="https://imgd.photogurus.com/assets/images/discovernetwork.png" alt="discovernetwork" class="imgSizeSet">
+</div>
+<div class="printFormSectionTitle">
+  <div>{{blockLabel1}}</div>
+</div>
+<div class="printFormBodyNextSection overFlowHide noPadding">
+  <!--<input name="card-name" id="card-name" class="printFormInput" placeholder="Name on card">
+            <input name="card-number" id="card-number" class="printFormInput" placeholder="Card number">
+            <input name="cvv" id="cvv" class="printFormInputBottom" placeholder="Security code">-->
+  <input name="card-name" id="card-name" class="printFormInput cardHolderName" placeholder="{{cardName}}">
+  <hr class="address-line-separator col-md-12"></hr>
+  <div id="card-number" class="hosted-field"></div>
+  <hr class="address-line-separator col-md-12"></hr>
+  <div id="cvv" class="hosted-field"></div>
+</div>
+<div class="printFormSectionTitle">
+  {{blockLabel2}}
+</div>
+<div class="expiryBody overFlowHide noPadding">
+  <!--div id="expiration-month" class="hosted-field"></div>
+      <div id="expiration-year" class="hosted-field"></div-->
+  <div class="row">
+    <div class="col-md-6">
+      <div id="expiration-month" class="hosted-field"></div>
+    </div>
+    <div class="col-md-6">
+      <div id="expiration-year" class="hosted-field"></div>
+    </div>
+  </div>
+</div>
+
+<div class="billingNoteBody addCardScreen">
+  <div class="row expiryFontSize">
+    <div class="col-md-6">
+      <div class="lineBlock">
+        <div>{{note1}}</div>
+        <div class="expiryFontPayPalSize">{{note3}}</div>
+      </div>
+      <img src="https://imgd.photogurus.com/assets/images/braintree.png" alt="mastercard" class="braintreeImg">
+    </div>
+    <div class="col-md-6">
+      <div class="pull-right">
+        <input type="checkbox" id="select-address" name="select-address"><label for="select-address"></label>
+        <div class="billingAddressNote">{{selectAddress}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="billingNoteBody">
+  <div id="cardDataSubmit" class="printFormPrimaryBtn">Continue</div>
+  <div class="addCardNote2">{{note2}}</div>
+</div>
+</form>
+</div>

@@ -1,0 +1,58 @@
+<div class="printInnerContainer">
+    <div class="text-center h1">Select Book Size</div>
+    <div class="printSubTitleBox">Your story has <b>{{noofpages}} pages</b></div>
+    <div class="row text-center printInnerBox books">
+        <div class="col-md-4 text-left">
+            <div class="insideSizeSection">
+                <div class="imgBlank5x5Box bookImgBox">
+                    <img src="{{webCoverUrl}}" width="125" alt="{{firstBookInfo.book_size}}">
+                </div>
+                <img src="https://imgd.photogurus.com/assets/images/verticalSizeRulerSmall1.png" class="rulerVertical" alt="{{firstBookInfo.book_size}}">
+                <div class="rulerVerticalText">{{firstBookInfo.height_cover}} inch</div>
+                <div class="m-top">
+                    <div class="rulerHorizontalText">{{firstBookInfo.height_cover}} inch</div>
+                    <img src="https://imgd.photogurus.com/assets/images/horizontalSizeRuler1.png" class="horizonRulerImg" alt="{{firstBookInfo.book_size}}">
+                </div>
+                <div class="textSection">
+                    <div class="bookHeader">{{firstBookInfo.name}}</div>
+                    <div class="bookText">From ${{firstBookInfo.baseprice}}</div>
+                </div>
+                <div class="textSection">
+                    <div class="bookText">20 pages book</div>
+                    <div class="bookText">(${{firstBookInfo.incremental_unit_price}} for additional 2 pages)</div>
+                </div>
+                <div class="printPrimaryBtn pull-left" id="select5x5Btn">Select</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <img src="https://imgd.photogurus.com/assets/images/iphone1.png" class="iphone7" height="136" alt="iphone 7">
+            <div class="iphoneText">iPhone 7</div>
+        </div>
+        <div class="col-md-5">
+            <div class="sizeIconSection">
+                <div class="rulerLeftVerticalText">{{secondBookInfo.height_cover}} inch</div>
+                <img src="https://imgd.photogurus.com/assets/images/verticalSizeRuler2.png" class="rulerLeftHorizontalImg" alt="{{secondBookInfo.book_size}}">
+            </div>
+            <div class="pull-left m-l-10">
+                <div class="bookImgBox imgBlank8x8Box">
+                    <img src="{{webCoverUrl}}" width="199" alt="{{secondBookInfo.book_size}}">
+                </div>
+                <div class="m-top">
+                    <div class="rulerHorizontalRightImgText">{{secondBookInfo.height_cover}} inch</div>
+                    <img src="https://imgd.photogurus.com/assets/images/horizontalSizeRulerBig1.png" class="horizonRulerRightImg" alt="{{secondBookInfo.book_size}}">
+                </div>
+                <div class="">
+                    <div class="textSection">
+                        <div class="bookHeader">{{secondBookInfo.name}}</div>
+                        <div class="bookText">From ${{secondBookInfo.baseprice}}</div>
+                    </div>
+                    <div class="textSection">
+                        <div class="bookText">20 pages book</div>
+                        <div class="bookText">(${{secondBookInfo.incremental_unit_price}} for additional 2 pages)</div>
+                    </div>
+                    <div class="printPrimaryBtn pull-left" id="select8x8Btn">Select</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,85 @@
+<div class="modal fade uploaderModal facebookAlbumSelectionModal" id="GPModal" role="dialog" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="gpphotosSelectionCount">0 photos selected</div>
+        <!-- Modal content-->
+        <div class="modal-content">
+            <!--Modal body-->
+            <div class="modal-body">
+
+                <div class="" >
+                    <div class="GoogleAlbumContainer" id="fb_modal" style="">                      
+                        <!-- The container for the uploaded files -->
+                        <div class="fb_title">
+                            <div class="spriteImage modalCloseBlock modalCloseIcon" id="closeGPAlbumList"></div>
+                            <div class="closeFBModal spriteImage modalBackArrow"> </div>
+                            <span id="fbInnerTitle">Google Photos Albums</span>
+                            <div class="saveSelection saveFbPhots" id="importSelectFlickerPhotosId">Save</div>
+                        </div>
+                        <div class="modal-body-right">
+                            <div class="selectAlbumTitile">Select an album</div>
+                            <div class="selectAllFBContent">
+                                <div>Select photos. Press shift to select multiple photos.</div>
+                                <div class="selectAllCheckIcon spriteImage"></div>                                
+                                <div class="selectAllAlbumPhots">Select All</div>
+                            </div>
+                            <div id="googleAlbumCollection" class="files"></div>
+                            <div id="googleSelectedAlbumPhotosCollection"  class="files btn-group" data-toggle="buttons"></div>
+                        </div>
+                    </div>                                        
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div  class="modal fade uploaderModal messageModal gpLoginExpired" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p>Google session is expired. please login again</p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default closeModal" id="gpReLoginWindow" data-dismiss="modal">OK</button>
+            </div>
+
+        </div>
+    </div>
+</div> 
+<div  class="loseSelectionGPModal messageModal modal fade" role="dialog" data-backdrop="static">
+    <div class="modal-dialog" style="width:300px">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p id="back_text">Are you sure you want to go back? You will lose your selection.</p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default  ot-btn"  id="cancelRedirectionGPBtn" style="" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-default ot-btn" id="redirectionToGPAlbumBtn"  style="" data-dismiss="modal">OK</button>                                        
+            </div>
+        </div>
+    </div>
+</div> 
+<div  class="loseSelectionCloseGPModal messageModal modal fade" role="dialog" data-backdrop="static">
+    <div class="modal-dialog" style="width:300px">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p id="back_text">Are you sure you want to go back? You will lose your selection.</p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default  ot-btn"  id="cancelRedirectionGPBtn" style="" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-default ot-btn" id="redirectionToUploaderGPAlbumBtn"  style="" data-dismiss="modal">OK</button>                                        
+            </div>
+        </div>
+    </div>
+</div> 

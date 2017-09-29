@@ -1,0 +1,84 @@
+<div class="printFormContainer">
+    <div class="printFormHeader">{{heading}}</div>
+    <div class="printFormBody row">
+        {{#each shippingList}}
+
+        <div class="col-md-12 shppingListOuterBox" data-address-id="{{this.address_id}}">
+            <div class="col-md-1">
+                <div class="share-RadioImg shareRadio shippingAddressRadio" id="{{this.address_id}}">
+                    <input class="share-radio" type="radio" checked="" name="shareWith">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="shippingName">
+                    <b>
+                        {{#compare this.address_firstname "!==" ""}}
+                            {{this.address_firstname}} 
+                        {{/compare}}
+                        
+                        {{#compare this.address_lastname "!==" ""}}
+                            {{this.address_lastname}}
+                        {{/compare}}
+                    </b>
+                </div>
+                <div>
+                    {{#compare this.address1 "!==" ""}}
+                        <span>{{sanitize this.address1 '{"formatType": 1}'}}</span> 
+                    {{/compare}}
+                </div>
+                <div>
+                    {{#compare this.address2 "!==" ""}}
+                        <span>{{sanitize this.address2 '{"formatType": 1}'}}</span>
+                    {{/compare}}
+                </div>
+                <div>
+                    {{#compare this.city "!==" ""}}
+                        <span>{{this.city}},</span> 
+                    {{/compare}}
+                    
+                    {{#compare this.state "!==" ""}}
+                        <span> {{this.state}}</span> 
+                    {{/compare}}
+                    
+                    {{#compare this.zip "!==" ""}}
+                        <span> {{this.zip}}</span>
+                    {{/compare}}
+                </div>
+                <div>
+                {{#compare this.country "!==" ""}}
+                    <span> {{this.country}}</span>
+                {{/compare}}
+                </div>
+                <div>
+                {{#compare this.phone "!==" ""}}
+                    <span>Phone: {{sanitize this.phone '{"formatType": 5}'}}</span> 
+                {{/compare}}
+                </div>
+
+            </div>
+            <div class="col-md-5 ShippingActionElementsBox">
+                <div class="col-md-6">
+                    <div class="btn btn-default editShippingAddress shippingListActionM8 secondaryBtn"><div class="i-edit-shipping"></div><div class="i-edit-shipping-text">Edit</div></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="btn btn-default deleteShippingAddress shippingListActionM8 secondaryBtn"><div class="i-delete-shipping"></div><div class="i-delete-shipping-text">Delete</div></div>
+                </div>
+                <div class="col-md-12">
+                    <div class="btn btn-primary thisShippingAddress mtop10 shippingListActionM8 primaryBtn">Ship to this address</div>
+                </div>
+            </div>
+        </div>
+        <hr class="address-line-separator col-md-12"> </hr>
+
+        {{/each}}
+        <div class="col-md-12">
+            <div class="addShippingAddress"><b>{{addShippingAddress}}</b>
+                <span style="float: right;">
+<i class="rightArrow icons">
+                                            
+                                        </i>
+</span>
+</div>
+</div>
+</div>
+</div>

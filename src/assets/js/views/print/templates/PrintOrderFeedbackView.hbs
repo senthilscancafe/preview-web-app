@@ -1,0 +1,32 @@
+<div class="printFormContainer">
+    <div class="printFormHeader">{{heading}}</div>
+    <div class="feedbackBody">
+        <div class="col-md-12 noPadding" id="{{orderDetails.invoice_id}}">
+            <div class="col-md-12 feebackImageRatingContainer">
+                <div class="row">
+                    <div class="col-md-5 noPadding">
+                        <img src="{{orderDetails.cover_url}}" width="150" height="150" class="orderDetailsImgBox" alt="">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="title"><b>{{orderDetails.cover_caption}}</b></div>
+                        <div class="title">Order number: {{orderDetails.order_number}}</div>
+                        <div class="title">{{orderDetails.size}} Book ({{sanitize orderDetails.no_of_spreads '{"formatType": 4}'}} pages)</div>
+                        <select id="feedbackPageRating">
+                            <option value=""></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="feedback title">Send us your feedback</div>
+            <textarea name="message" id="feedbackMessage" placeholder="Enter your message here"></textarea>
+        </div>
+        <div class="feedbackActionBody">
+            <div id="saveFeedbackData" class="printFormPrimaryBtn pull-right">{{submitLabel}}</div>
+        </div>
+    </div>
+</div>

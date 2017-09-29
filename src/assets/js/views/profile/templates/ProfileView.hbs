@@ -1,0 +1,276 @@
+<!-- main area -->
+<div class="">
+    <div class="page-height-o row-equal align-middle profile-container">
+        <div class="my_profile_photo_wrap">
+            <img class="img-thumbnail img-circle profile-pic" alt="" src="{{proflieImage}}">
+            <div id="filelink"></div>
+            <h5 class="">
+                <input class="file-upload" type="file" accept="image/*" style="display:none" />
+                <button type="button" id="uploadpaystub"  name="uploadpaystub" class="upload-button btn">{{photoButton}}</button>
+            </h5>
+        </div>
+        
+        <div class="box-wraps">
+            <div class="accounts-details-div clearfix">
+                <div class="profile_fields_box col-sm-6 user_accounts">
+                    <div class="clearfix email-margin">
+                        <div class="field-col1">
+                            <span class="profile-icons user-icon"></span>   
+                        </div>
+                        <div class="field-col2">
+                            {{sanitize name '{"formatType": 2, "limit": 20, "wordBoundary": false}'}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile_fields_box col-sm-6 user_accounts mobile-div">
+                    <div class="clearfix email-margin">
+                        <div class="field-col1">
+                            <span class="profile-icons first-mobile-icon mobile-icon"></span>
+                        </div>
+                        <!-- <div class="field-col2 mobileDefaultValue hide">
+                            {{email}} 
+                        </div>  -->
+                        <div class="field-col2 mobileDefault" id="enterMobile">
+                                Add mobile number
+                        </div>
+                        <div class="field-col2 profile-mobile-div" id="signUpMobileDiv" style="display:none;margin-top: 3px;overflow:visible;">
+                            <input type="tel" class="form-control telephone-input" autofocus onfocus="this.value = this.value;" id="mobile" style="" placeholder="">                              
+                            <span class="delMob" style="display: inline;top: 5px;">X</span>
+                        </div>  
+                        <div class='right-div mobile-right'>
+                            <div class='delete-secAccount delAccount del-mobile-sec'><span class="profile-icons delete-icon"></span></div>
+                        </div>
+                        <div class='right-div mobile-right'>
+                            <div class='field-verify-second field-verify field-verify_default verify-primary-mobile'>
+                                 <a data-toggle="modal" data-target="#verifyModalMobile" class="verify-now" >Verify Now</a>
+                            </div> 
+
+                            <div class='field-verify verify-sec-mobile'>
+                                 <a data-toggle="modal" data-target="#verifyModalMobile" class="verify-now" >Verify Now</a>
+                            </div>                           
+                            
+                        </div>
+                        <div class="right-side-text default-intext default-mob">
+                            (Default)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile_fields_box col-sm-6 user_accounts">
+                    <div class="clearfix default-email-left row-emails email-margin dn">
+                        <div class="field-col1">
+                            <span class="profile-icons email-icon"></span>
+                        </div>
+                        <div class="field-col2 add-email">
+                            Add an email address
+                        </div>
+                        <div class="field-col2 emailDefault">
+                            {{email}}
+                        </div>
+                        <div class="field-verify field-verify_default">
+                            <a data-toggle="modal" data-target="#verifyModal" class="verify-now" id="verifyNow">Verify Now</a>
+                        </div>
+                        <div class="right-side-text default-intext default-email">
+                            (Default)
+                        </div>
+                    </div>
+                    <div class="secondaryEmail clearfix row-emails email-margin dn">
+                        <div class="field-col1">
+                            <span class="profile-icons email-icon"></span>
+                        </div>
+                        <div class="field-col2 emailSec">
+                        </div>
+                        <div class='right-div'>
+                            <div class='delete-secAccount delAccount'></div>
+                        </div>
+                        <div class='right-div'>
+                            <div class='field-verify-second field-verify'> 
+                                <a data-toggle="modal" data-target="#verifyModal" class="verify-now">Verify Now</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+               <div class="profile_fields_box col-sm-6 user_accounts right-email-field">
+                    <div class="clearfix default-email-right row-emails email-margin dn">
+                        <div class="field-col1">
+                            <span class="profile-icons email-icon"></span>
+                        </div>
+                        <div class="field-col2 add-email">
+                            Add an email address
+                        </div>
+                        <div class="field-col2 emailDefault">
+                            {{email}}
+                        </div>
+                        <div class="field-verify field-verify_default">
+                            <a data-toggle="modal" data-target="#verifyModal" class="verify-now">Verify Now</a>
+                        </div>
+                        <div class="right-side-text default-intext default-email">
+                            (Default)
+                        </div>
+                    </div>
+
+                </div>          
+
+            </div>
+            
+
+            <div class="profile_fields_box other-box pull-left">
+                <div class="field-row clearfix">
+                    <div class="field-col1">
+                        <span class="profile-icons my-photostory-icon"></span>
+                    </div>
+                    <div class="field-col2" id="myPhotoStoryText">
+                        My Photo Stories
+                    </div>
+                    <div class="field-col3" id="myPhotoStory">
+                        <i class="gt-icon"></i>
+                    </div>
+                </div>
+                <!-- <div class="field-row clearfix">
+                    <div class="field-col1">
+                        <span class="profile-icons my-rewards-icon"></span>
+                    </div>
+                    <div class="field-col2">
+                        My Rewards
+                    </div>
+                    <div class="field-col3" id="changePassword">
+                        <i class="gt-icon"></i>
+                    </div>
+                </div>                -->
+            </div>
+
+           <div class="profile_fields_box other-box pull-right">
+                <div class="field-row clearfix">
+                    <div class="field-col1">
+                        <span class="profile-icons my-photobooks-icon"></span>
+                    </div>
+                    <div class="field-col2" id="myPhotobooksText">
+                        My Photo Books
+                    </div>
+                    <div class="field-col3" id="myPhotobooks">
+                        <i class="gt-icon"></i>
+                    </div>
+                </div> 
+                <!-- <div class="field-row clearfix">
+                    <div class="field-col1">
+                        <span class="profile-icons my-subscription-icon"></span>
+                    </div>
+                    <div class="field-col2">
+                        My Subscription Plan
+                    </div>
+                    <div class="right-side-text buy-intext">
+                        Buy
+                    </div>
+
+                </div>  -->
+            </div>
+            <div class="clearfix"></div>
+            <!-- <div class="profile_fields_box other-box pull-left">
+                 <div class="field-row clearfix">
+                    <div class="field-col1">
+                        <span class="profile-icons shipping-address-icon"></span>
+                    </div>
+                    <div class="field-col2">
+                        Shipping Address
+                    </div>
+                    <div class="field-col3" id="changePassword">
+                        <i class="gt-icon"></i>
+                    </div>
+                </div>
+                <div class="field-row clearfix">
+                    <div class="field-col1">
+                        <span class="profile-icons saved-cards-icon"></span>
+                    </div>
+                    <div class="field-col2">
+                        Saved Card
+                    </div>
+                    <div class="field-col3" id="changePassword">
+                        <i class="gt-icon"></i>
+                    </div>
+                </div> 
+
+            </div> -->
+            <!-- <div class="profile_fields_box other-box pull-right">
+                 <div class="field-row clearfix">
+                    <div class="field-col1">
+                        <span class="profile-icons billing-address-icon"></span>
+                    </div>
+                    <div class="field-col2">
+                        Billing Address
+                    </div>
+                    <div class="field-col3" id="changePassword">
+                        <i class="gt-icon"></i>
+                    </div>
+                </div> 
+
+            </div> -->
+            <div class="clearfix"></div>
+            <div class="profile_fields_box other-box pull-left">
+                <div class="field-row clearfix">
+                    <div class="field-col1">
+                        <span class="profile-icons password-icon"></span>
+                    </div>
+                    <div class="field-col2" id="changePasswordText">
+                        {{changepassword}}
+                    </div>
+                    <div class="field-col3" id="changePassword">
+                        <i class="gt-icon"></i>
+                    </div>
+                </div>
+                <div class="field-row clearfix">
+                    <div class="field-col1">
+                        <span class="profile-icons del-icon"></span>
+                    </div>
+                    <div class="field-col2" id="delete_account">
+                        {{deleteAccount}}
+                    </div>
+                </div>
+
+            </div>
+            <div class="profile_fields_box other-box pull-right">
+                <div class="field-row clearfix">
+                    <div class="field-col1">
+                        <span class="profile-icons logout-icon"></span>
+                    </div>
+                    <div class="field-col2-custom" id="logout">
+                        {{Logout}}
+                    </div>
+                    <div class="field-col3-custom login-id">
+                        {{email}}
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+    </div>
+</div>
+
+<!-- /main area -->
+
+
+<div id="profileCropModal" class="modal fade" role="dialog" data-backdrop="static">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="cropBack-container" data-dismiss="modal"><i class="cropBack"></i></button>
+                <h4 class="modal-title text-center">Upload Profile Picture</h4>
+            </div>
+            <div class="modal-body text-center">
+                <div>
+                    <i class="dragImage"></i>
+                    Drag the image to adjust the focus area
+                </div>
+                <div id="upload-demo"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="upload-result btn">Save</button>
+            </div>
+        </div>
+    </div>
+</div> 

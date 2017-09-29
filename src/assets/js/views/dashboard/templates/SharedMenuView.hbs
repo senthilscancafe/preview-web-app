@@ -1,0 +1,20 @@
+<div id="SharedMenuViewModal" class="modal menuStyle" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="menuHeader">{{sanitize this.cover_caption '{"formatType": 2, "limit": 20, "wordBoundary": false}'}}
+  <div class="socialValues">
+                    <div class="imageAddSocial comment_story"></div>{{this.commentscount}}</div>
+                <div class="socialValues">
+                    <div class="imageAddSocial like_story"></div>{{this.likescount}}</div>
+
+            </div>
+            <div class="profileMenuItem">
+                <img src="{{this.user_pic_path}}" class="profile_image_menu" /> {{this.story_owner_name}}
+            </div>
+            <div class="menuItems initiatePrint">
+                <div class="imageAddMenu print_story"></div>Order Photo Book</div>
+            <div class="menuItems initiateDelete">
+                <div class="imageAddMenu delete_story"></div>Remove Story</div>
+        </div>
+    </div>
+</div>

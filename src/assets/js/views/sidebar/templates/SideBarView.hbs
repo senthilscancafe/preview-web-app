@@ -1,0 +1,121 @@
+<!-- sidebar panel -->
+<div class="sidebar-panel offscreen-left">
+    <!--      <div class="brand">
+             toggle small sidebar menu 
+            <a href="javascript:;" class="toggle-apps hidden-xs" data-toggle="quick-launch">
+              <i class="icon-grid"></i>
+            </a>
+             /toggle small sidebar menu 
+             toggle offscreen menu 
+            <div class="toggle-offscreen" style="display: inline-block">
+              <a href="javascript:;" class=" hamburger-icon" data-toggle="offscreen" data-move="ltr">
+                <span></span>
+                <span></span>
+                <span></span>
+              </a>
+            </div>
+             /toggle offscreen menu 
+             logo 
+            <a class="brand-logo">
+              <span>PHOTOGURUS</span>
+            </a>
+            <a href="#" class="small-menu-visible brand-logo">PG</a>
+             /logo 
+          </div>-->
+
+    <!-- main navigation -->
+    <ul class="brand nav navbar-nav">
+        <li class="toggle-offscreen">
+            <!--        <a href="javascript:;" class="small-sidebar-toggle ripple" data-toggle="layout-small-menu">
+                        <i class="icon-toggle-sidebar"></i>
+                    </a>-->
+            <a href="javascript:;" class="hamburger-icon " data-toggle="offscreen" data-move="ltr">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </li>
+    </ul>
+    <nav role="navigation">
+        <ul class="nav">
+            <!-- Home -->
+            <li>
+                <div class="text-center" id="profileIcon">
+                    <img src="{{proflieImage}}">
+                    <h4>{{sanitize name '{"formatType": 2, "limit": 20, "wordBoundary": false}'}}</h4>
+                    <div>
+                        <span class="email-display">{{email}}</span><span class="seprate">|</span><span id="editProfile">{{EditProfile}}</span>
+                    </div>
+                </div>
+            </li>
+            <li class="navbar-form search-form leftSearch">
+                <i class="search-icon"></i>
+                <input type="search" class="form-control search-input" placeholder="{{searchphotostory}}">
+                <i class="deleteSearch"></i>
+            </li>
+
+            <!-- /Home -->
+            <!-- start a new photostory -->
+            <li class="navItems">
+
+                <a id="plusIcon" >
+                    <i></i>
+                    <span>{{StartANewPhotostory}}</span>
+                </a>
+            </li>
+            <!-- /start a new photostory  -->
+            <!-- View all photostories -->
+            <li class="navItems">
+                <a  id="allPhotoIcon">
+                    <i></i>
+                    <span>{{ViewallPhotostories}}</span>
+                </a>          
+            </li>
+            <!-- /View all photostories -->
+            <!-- View my photostories -->
+            <li class="navItems">
+                <a href="javascript:;" id="myPhotoIcon">
+                    <i></i>
+                    <span>{{ViewMyPhotostories}}</span>
+                </a>         
+            </li>
+            <!-- /View my photostories -->
+            <!-- View shared photostories -->
+            <li class="navItems">
+                <a href="javascript:;" id="sharedPhotoIcon">
+                    <i></i>
+                    <span>{{ViewSharedPhotostories}}</span>
+                </a>            
+            </li>
+            <!-- /View shared photostories -->
+
+            <!-- Settings -->
+<!--            <li class="navItems">
+                <a href="javascript:;" id="settingsIcon">
+                    <i></i>
+                    <span>{{Settings}}</span>
+                </a>           
+            </li>-->
+            <!-- /Settings -->
+            <!-- Help -->
+            <li class="navItems">
+                <a id="helpIcon">
+                    <i></i>
+                    <span>{{Help}}</span>
+                </a>            
+            </li>
+            <!-- /Help -->
+            <!-- Logout -->
+            <li class="navItems">
+                <a href="javascript:;" id="logoutIcon">
+                    <i></i>
+                    <span>{{Logout}}</span>
+                </a>
+            </li>
+            <!-- /Logout -->   
+        </ul>
+        <!--<div class="versionLabel">Version : {{version}}</div>-->
+    </nav>
+    <!-- /main navigation -->
+</div>
+<!-- /sidebar panel -->

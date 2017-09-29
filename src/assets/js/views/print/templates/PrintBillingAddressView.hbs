@@ -1,0 +1,46 @@
+<div class="printFormContainer">
+    <div class="printFormHeader">{{heading}}</div>
+    <div class="printFormBody">
+        <div class="formInput">
+            <label class="errorLabel">error</label>
+            <input name="billingName"      id="billingName" class="printFormInput" placeholder="Full name" value="{{name}}">
+            <hr class="address-line-separator col-md-12"></hr>
+        </div>
+        <div class="formInput">
+            <label class="errorLabel">error</label>
+            <input name="billingAddress1"  id="billingAddress1" class="printFormInput" placeholder="Address line 1" value="{{address1}}">
+            <hr class="address-line-separator col-md-12"></hr>
+        </div>
+        <div class="formInput">
+            <label class="errorLabel">error</label>
+            <input name="billingAddress2"  id="billingAddress2" class="printFormInput" placeholder="Address line 2" value="{{address2}}">
+            <hr class="address-line-separator col-md-12"></hr>
+        </div>
+        <div class="formInput">
+            <label class="errorLabel">error</label>
+            <input name="billingCity"      id="billingCity" class="printFormInput" placeholder="City" value="{{city}}">
+            <hr class="address-line-separator col-md-12"></hr>
+        </div>
+        <div class="formInput">
+            <label class="errorLabel">error</label>
+            <input name="billingState"     id="billingState" class="printFormInput" placeholder="State/Province/Region" value="{{state}}">
+            <hr class="address-line-separator col-md-12"></hr>
+        </div>
+        <div class="formInput">
+            <label class="errorLabel">error</label>
+            <input name="billingZIP"       id="billingZIP" class="printFormInput" placeholder="ZIP" value="{{zip}}">
+        </div>
+        <!--<div class="formInput">
+            <label class="errorLabel">error</label>
+            <input name="billingPhone"     id="billingPhone" class="printFormInputBottom" placeholder="Phone number" value="{{phone}}">
+            <hr class="address-line-separator col-md-12"></hr>
+        </div>-->
+    </div>
+    <div class="printFormBody ">
+        <input name="billingCountry" id="billingCountry" class="printFormInputBottom" placeholder="United States" value="{{country}}" readonly="readonly">
+    </div>
+    <div class="printFormBodyBox">
+        <div id="saveBillingData" class="printFormPrimaryBtn">{{submitLabel}}</div>
+    </div>
+
+</div>

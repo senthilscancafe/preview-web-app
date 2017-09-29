@@ -1,0 +1,27 @@
+
+<div class="modal-header">
+    <button type="button" class="close" id="PrivareMobileBack"><i class="backIcon"></i></button>
+    <h4 class="modal-title text-center">Choose Country Code</h4>
+</div>
+<div class="modal-body">
+    <p class="country-codeMsg">
+        Please confirm your friend's country code. If country code is incorrect, your friend will not be able to receive this message.
+    </p>
+
+    <form id="sharemobileForm" class="">
+        {{#each mobileData}}
+        <div class="form-group clearfix">
+            <i class="mobileValid mobileIcon"></i>
+            <input type="tel" class="form-control telephone-input input-lg mobile-number" value="{{mobile}}">  
+            <i class="mobileValid delIcon"></i>
+            <div class="error">{{errorMsg}}</div>
+        </div>
+        {{/each}}
+    </form>
+
+
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn next-btn disabled" id="privateMobileFormNext">Share</button>
+</div>
+

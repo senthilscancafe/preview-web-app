@@ -1,0 +1,484 @@
+<!-- Verify Account -->
+<form id="verfiyAccount" class="yellowVerify ">
+    <label>{{VerifyAccountHeader}}</label>
+    <div class="verify">
+        <div class="input-group">
+            <input type="text" class="form-control" id="verifyCode" placeholder="Enter Code">
+            <span class="input-group-btn">
+                <button class="btn btn-secondary" id="verify_code" type="button">{{Ok}}</button>
+            </span>
+        </div>
+    </div>
+    <button id="resend_btn" type="button" class="btn">{{Resend}}</button>
+</form>
+<div id="menuLayoutContainer"></div>
+<div id="messageModal" class="modal fade stopTransfer noDisplay" role="dialog" data-backdrop="static" >
+    <div class="modal-dialog">     
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p id="stopTransferText">[text to be replaced]</p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default stopTransferModal"  data-dismiss="modal">Ok</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="errorMessageModal" class="modal fade copy-link-modal" data-backdrop="static" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <div><strong class="copy-text">Link copied to the clipboard.</strong></div>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="errorMessageModalOKBtn">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="messageModal" class="modal fade alertNoEditShare noDisplay" role="dialog" data-backdrop="static" >
+    <div class="modal-dialog">     
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p id="alertNoEditShareText">Your story is being updated. Please wait for some time.</p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default alertNoEditShareModal"  data-dismiss="modal">OK</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="photoStoryPopup" class="white-popup-block mfp-hide modalContainer paddingNone">
+    <div class="modalHeader text-center" >
+        <h1>Add title to your photo story</h1>
+        <div class="popup-modal-dismiss closeCoverPage"></div>
+    </div>
+    <div class="row modalBody" >
+        <div>
+            <form role="form" class="psBody">
+                <div class="form-group"> <label for="Title" tabindex="1">Title</label> <input type="text" class="form-control" id="title" placeholder="E.g. Holiday Memories" autocomplete="off"> </div>
+                <div class="form-group"> <label for="Subtitle" tabindex="2">Subtitle (optional)</label> <input type="text" class="form-control" id="subtitle" placeholder="E.g. 2016"> </div>
+                <div class="form-group"> <label for="SpecialInstruction" tabindex="3">Special Instruction (optional)</label> <textarea name="textarea" rows="5" id="specialInstruction" class="form-control" placeholder="Have anything specific in mind? Let us know."></textarea> </div>
+                <a id="createOrder" tabindex="4" >
+                    <div class="text-center"  >Done</div>
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="notification"></div>
+
+<div class="same-height-cards container">      
+    <div class="col-xs-12 text-center">    
+        <div id="searchMessage" >{{searchFoundLength}}<b>{{searchData}}</b>
+            <div class="text-right closeImage imageAdd closeResult dashCloseImage" > </div>        
+        </div>
+    </div>
+    {{#each allStory}}
+        {{#each this}}   
+            {{#compare this.order_status  '!==' '8888'}} 
+            {{#compare this.year  '!==' ''}} 
+            <div class="col-xs-12 hrContainer firstHr">
+                <div class="gallaryDateCategory">{{this.year}}</div>
+                <hr class="hrStyles"/>
+            </div> 
+            {{/compare}}
+            {{/compare}}
+        {{/each}}
+        {{#each this}}       
+            {{#compare this.story '===' 'new'}}
+                <div class="create-story">
+                    <a class="uploaderLink">
+                        <div class="card bg-danger newStory-container">
+                            <img src="assets/images/startStoryBlankRect.png"  class="coverNew fullWidth">  
+                            <div class="pglogoDashboard">
+                                <div class="imageAdd startStoryIcon" > </div>
+                            </div>
+                            <div class="newStoryDesk">{{StartANewPhotostory}}</div>
+                            <div class="newStoryTab"><span class="plus">+</span><span class="mob-newStory">{{StartANewPhotostory}}</span></div>
+                            <div class="action-btn-container clearfix startNewStoryActionContainer">
+                                <div class="actionMenuBtn pull-right ">
+                                <div class='imageAdd'></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>      
+            {{/compare}}
+            {{#compare this.story '!==' 'new'}}
+                {{#compare this.book_dimension '===' "12 x 12"}}   
+                    {{#compare this.order_status  '===' '1000'}} 
+                        {{#compare this.is_merge  '===' '0'}}
+                            <div class="squareTile col-lg-3 col-sm-3 col-xs-6 dash-card {{this.numberType}}" id="dash{{this.id}}" >
+                        {{/compare}}
+                    {{/compare}}
+                    {{#compare this.order_status  '===' '8001'}} 
+                        <div class="squareTile col-lg-3 col-sm-3 col-xs-6 dash-card {{this.numberType}}" id="dash{{this.id}}" >
+                    {{/compare}}
+                    {{#compare this.order_status  '===' '950'}} 
+                        <div class="squareTile col-lg-3 col-sm-3 col-xs-6 dash-card {{this.numberType}}" id="dash{{this.id}}" >
+                    {{/compare}}
+                {{/compare}}
+                 {{#compare this.book_dimension '===' "12 x 12"}}   
+                    {{#compare this.order_status  '!==' '1000'}} 
+                    {{#compare this.order_status  '!==' '8001'}} 
+                    {{#compare this.order_status  '!==' '950'}}
+                            <div class="rectTile col-lg-3 col-sm-3 col-xs-6 dash-card {{this.numberType}}" id="dash{{this.id}}" >
+                    {{/compare}}
+                    {{/compare}}
+                    {{/compare}}
+                {{/compare}}
+
+                {{#compare this.book_dimension  '===' '8 x 11'}}  
+                        <div class="rectTile col-lg-3 col-sm-3 col-xs-6 dash-card {{this.numberType}}" id="dash{{this.id}}" >
+                {{/compare}}
+
+                <!--for unverified orders of any order status-->
+                {{#compare this.order_status  '===' '1000'}} 
+                    {{#compare this.story_belongsto  '===' 'Owner'}}
+                        {{#compare this.is_merge  '===' '1'}} 
+                            {{#compare this.verified_status  '===' '0'}}
+                            <div class="rectTile col-lg-3 col-sm-3 col-xs-6 dash-card {{this.numberType}}" id="dash{{this.id}}" >
+                            {{/compare}}
+                        {{/compare}}
+                    {{/compare}}
+                {{/compare}}
+                    
+                    
+                                <div class="card bg-danger">
+                                    {{#compare this.order_status  '===' '1000'}} 
+                                        {{#compare this.story_belongsto  '===' 'Owner'}}
+                                            {{#compare this.is_merge  '===' '1'}} 
+                                                {{#compare this.verified_status  '===' '0'}}
+                                                    <div class="story{{this.order_status}} unverifed-merge-btn-wrapper">
+                                                        <button class="btn btn-verify-now-tile verifyMerge" id="{{this.id}}" data-customer-email="{{this.story_shared_on_id}}" data-merge="{{this.is_merge}}" data-customer-id="{{this.owner_customer_id}}">Verify Now</button>
+                                                    </div>
+                                                    <div class="story-name unverifed-merge-title">{{this.cover_caption}}</div>           
+                                                    <div class="story-name unverifed-merge-note">Verify connection with {{this.story_shared_on_id}} to view</div>           
+                                                    <img class="unverified-merge-cover fullWidth" data-original="" src="https://d-photostory.s3.amazonaws.com/assets/images/progreeBG2Rect.png" onerror="if (this.src != 'https://d-photostory.s3.amazonaws.com/assets/images/progreeBG2Rect.png') this.src = 'https://d-photostory.s3.amazonaws.com/assets/images/progreeBG2Rect.png';">                         
+                                                    <div class="action-btn-container clearfix">
+                                        
+                                                    </div>
+                                                {{/compare}}
+                                            {{/compare}}
+                                        {{/compare}}
+                                    {{/compare}}
+
+                                    {{#compare this.order_status  '===' '1000'}} 
+                                        {{#compare this.story_belongsto  '===' 'Owner'}}
+                                            {{#compare this.visited  '===' 'yes'}}
+                                                {{#compare this.is_merge  '===' '0'}} 
+                                                <a href="{{this.flipbookLink}}" class="story{{this.order_status}}">
+                                                    {{#if this.webcoverurl}}
+                                                        <img  class="cover-image lazy fullWidth" data-original="{{this.webcoverurl}}" src="{{this.webcoverurl}}" >
+                                                    {{else}}
+                                                        <img  class="cover-image lazy fullWidth" data-original="{{this.webcoverurl}}" src="https://imgd.photogurus.com/assets/images/icon_default_photo1.png" >                         
+                                                    {{/if}}
+                                                </a>
+                                                {{/compare}}
+                                            {{/compare}}
+                                        {{/compare}}
+                                    {{/compare}}
+
+                                    {{#compare this.order_status  '===' '1000'}} 
+                                        {{#compare this.story_belongsto  '===' 'Owner'}} 
+                                            {{#compare this.visited  '===' 'no'}} 
+                                                {{#compare this.is_merge  '===' '0'}}            
+                                                <div class="bigImageAdd newBadgeIcon badgeImage"> </div>
+                                                <a href="{{this.flipbookLink}}" class="story{{this.order_status}}">
+                                                    {{#if this.webcoverurl}}
+                                                        <img  class="cover-image lazy fullWidth" data-original="{{this.webcoverurl}}" src="{{this.webcoverurl}}" >
+                                                    {{else}}
+                                                        <img  class="cover-image lazy fullWidth" data-original="{{this.webcoverurl}}" src="https://imgd.photogurus.com/assets/images/icon_default_photo1.png" >                         
+                                                    {{/if}}
+                                                </a>
+                                                {{/compare}}
+                                            {{/compare}}
+                                        {{/compare}}
+                                    {{/compare}}
+
+                                    {{#compare this.order_status  '===' '1000'}} 
+                                        {{#compare this.story_belongsto  '===' 'contributor'}} 
+                                        <div class="story{{this.order_status}} pglogoDashboard designInProgressIcon">
+                                            <img src="https://d-photostory.s3.amazonaws.com/assets/images/uploadProgress.png">
+                                        </div>
+                                        <div class="story-name designInprogresText">{{this.cover_caption}}
+                                        </div>
+
+                                        <img class="cover-image lazy fullWidth" data-original="{{this.webcoverurl}}" src="assets/images/startStoryBlankSquare.png" onerror="if (this.src != 'assets/images/startStoryBlankSquare.png') this.src = 'assets/images/startStoryBlankSquare.png';" >                         
+                                        <div class="bottom-div">
+                                            {{sanitize this.story_owner_name '{"formatType": 2, "limit": 10, "wordBoundary": false}'}} reviewing
+                                        </div>
+                                        <div class="action-btn-container clearfix">
+                                        
+                                        </div>
+                                        {{/compare}}
+                                    {{/compare}}
+
+                                    {{#compare this.order_status  '===' '950'}} 
+                                        <div class="bigImageAdd updatingBadgeIcon badgeImage"> </div>
+                                        {{#compare this.webcoverurl  '==' null}} 
+                                        <img src="https://d-photostory.s3.amazonaws.com/assets/images/basic-loader.gif" class="updateloader">
+                                        {{/compare}}
+                                        {{#if this.webcoverurl}}
+                                            <img  class="cover-image lazy fullWidth" data-original="{{this.webcoverurl}}" src="{{this.webcoverurl}}" >
+                                        {{else}}
+                                            <img  class="cover-image lazy fullWidth" data-original="{{this.webcoverurl}}" src="https://imgd.photogurus.com/assets/images/icon_default_photo1.png" >                         
+                                        {{/if}}
+                                    {{/compare}}
+                        
+                                    {{#compare this.order_status  '===' '8000'}}          
+                                    <div class="bigImageAdd sharedBadgeIcon badgeImage"> </div>
+                                    <a href="{{this.flipbookLink}}" class="story{{this.order_status}}">
+                                        {{#if this.webcoverurl}}
+                                            <img  class="cover-image lazy fullWidth" data-original="{{this.webcoverurl}}" src="{{this.webcoverurl}}" >
+                                        {{else}}
+                                            <img  class="cover-image lazy fullWidth" data-original="{{this.webcoverurl}}" src="https://imgd.photogurus.com/assets/images/icon_default_photo1.png" >                         
+                                        {{/if}}
+                                    </a>
+                                    {{/compare}}
+                                    {{#compare this.order_status  '===' '8001'}} 
+                                    <div class="bigImageAdd sharedBadgeIcon badgeImage"> </div>
+                                    <a href="{{this.flipbookLink}}" class="story{{this.order_status}}">
+                                        {{#if this.webcoverurl}}
+                                        <img  class="cover-image lazy fullWidth" data-original="{{this.webcoverurl}}" src="{{this.webcoverurl}}" onerror="this.src='https://imgd.photogurus.com/assets/images/icon_default_photo1.png'">                         
+                                        {{else}}
+                                        <img  class="cover-image lazy fullWidth" data-original="{{this.webcoverurl}}" src="https://imgd.photogurus.com/assets/images/icon_default_photo1.png" >                         
+                                        {{/if}}
+                                    </a>
+                                    {{/compare}}
+                                    {{#compare this.order_status  '===' '200'}} 
+                                        {{#compare this.is_merge  '===' '1'}} 
+                                            {{#compare this.verified_status  '===' '0'}} 
+                                            <div class="story{{this.order_status}} unverifed-merge-btn-wrapper">
+                                                <button class="btn btn-verify-now-tile verifyMerge" id="{{this.id}}" data-customer-email="{{this.story_shared_on_id}}" data-merge="{{this.is_merge}}" data-customer-id="{{this.owner_customer_id}}">Verify Now</button>
+                                            </div>
+                                            <div class="story-name unverifed-merge-title">{{this.cover_caption}}</div>           
+                                            <div class="story-name unverifed-merge-note">Verify connection with {{this.story_shared_on_id}} to view</div>           
+                                            <img class="unverified-merge-cover fullWidth" data-original="" src="https://d-photostory.s3.amazonaws.com/assets/images/progreeBG2Rect.png" onerror="if (this.src != 'https://d-photostory.s3.amazonaws.com/assets/images/progreeBG2Rect.png') this.src = 'https://d-photostory.s3.amazonaws.com/assets/images/progreeBG2Rect.png';" >  
+                                            <div class="action-btn-container clearfix">
+
+                                            </div>
+                                            {{/compare}}
+                                        {{/compare}}
+                                    {{/compare}}
+
+                                    {{#compare this.order_status  '===' '200'}} 
+                                        {{#compare this.is_merge  '===' '0'}} 
+                                        <div class="story{{this.order_status}} pglogoDashboard designInProgressIcon">
+                                            <img src="https://d2glxkwzncolmv.cloudfront.net/images/dashboard/uploadProgress.png">
+                                        </div>
+                                        <div class="story-name designInprogresText">{{this.cover_caption}}
+                                        </div>           
+                                        <img class="cover-image lazy fullWidth" data-original="{{this.webcoverurl}}" src="assets/images/startStoryBlankRect.png" onerror="if (this.src != 'assets/images/startStoryBlankRect.png') this.src = 'assets/images/startStoryBlankRect.png';" >                         
+                                        
+                                        {{/compare}}
+                                    {{/compare}}
+
+                                {{#compare this.order_status  '===' '125'}} 
+                                    {{#compare this.is_merge  '===' '0'}}
+                                    <div  class="story{{this.order_status}} pglogoDashboard designInProgressIcon">
+                                        <img src="https://d-photostory.s3.amazonaws.com/assets/images/uploadProgress.png">
+                                    </div>
+                                    <div class="story-name designInprogresText">{{this.cover_caption}}
+                                    </div>
+                                    <img class="cover-image lazy fullWidth" data-original="{{this.webcoverurl}}" src="assets/images/startStoryBlankRect.png" onerror="if (this.src != 'assets/images/startStoryBlankRect.png') this.src = 'assets/images/startStoryBlankRect.png';" >                         
+                                    <div class="action-btn-container clearfix">
+                                        <div class="actionMenuBtn pull-right">
+                                        
+                                        </div>
+                                    </div>
+                                    {{/compare}}
+                                {{/compare}}
+
+                                {{#compare this.order_status  '===' '125'}}
+                                    {{#compare this.is_merge  '===' '1'}} 
+                                        {{#compare this.verified_status  '===' '0'}}
+                                        <div class="story{{this.order_status}} unverifed-merge-btn-wrapper">
+                                            <button class="btn btn-verify-now-tile verifyMerge" id="{{this.id}}" data-customer-email="{{this.story_shared_on_id}}" data-merge="{{this.is_merge}}" data-customer-id="{{this.owner_customer_id}}">Verify Now</button>
+                                        </div>
+                                        <div class="story-name unverifed-merge-title">{{this.cover_caption}}</div>           
+                                        <div class="story-name unverifed-merge-note">Verify connection with {{this.story_shared_on_id}} to view</div>           
+                                        <img class="unverified-merge-cover fullWidth" data-original="" src="https://d-photostory.s3.amazonaws.com/assets/images/progreeBG2Rect.png" onerror="if (this.src != 'https://d-photostory.s3.amazonaws.com/assets/images/progreeBG2Rect.png') this.src = 'https://d-photostory.s3.amazonaws.com/assets/images/progreeBG2Rect.png';" >                         
+
+                                        <div class="action-btn-container clearfix">
+                                        
+                                        </div>
+                                        {{/compare}}
+                                    {{/compare}}
+                                {{/compare}}
+
+                                {{#compare this.order_status  '===' '50'}}
+                                    {{#compare this.is_merge  '===' '1'}} 
+                                        {{#compare this.verified_status  '===' '0'}}
+                                        <div class="story{{this.order_status}} unverifed-merge-btn-wrapper">
+                                            <button class="btn btn-verify-now-tile verifyMerge" id="{{this.id}}" data-customer-email="{{this.story_shared_on_id}}" data-merge="{{this.is_merge}}" data-customer-id="{{this.owner_customer_id}}">Verify Now</button>
+                                        </div>
+                                        <div class="story-name unverifed-merge-title">{{this.cover_caption}}</div>           
+                                        <div class="story-name unverifed-merge-note">Verify connection with {{this.story_shared_on_id}} to view</div>           
+                                        <img class="unverified-merge-cover fullWidth" data-original="" src="https://d-photostory.s3.amazonaws.com/assets/images/progreeBG2Rect.png" onerror="if (this.src != 'https://d-photostory.s3.amazonaws.com/assets/images/progreeBG2Rect.png') this.src = 'https://d-photostory.s3.amazonaws.com/assets/images/progreeBG2Rect.png';" >                         
+
+                                        <div class="action-btn-container clearfix">
+                                        
+                                        </div>
+                                        {{/compare}}
+                                    {{/compare}}
+                                {{/compare}}
+
+                                {{#compare this.order_status  '===' '50'}}
+                                        {{#compare this.is_merge  '===' '0'}}
+                                                <div class="bigImageAdd saveBadgeIcon badgeImage"> </div>
+                                                <div class="story{{this.order_status}} pglogoDashboard">
+
+                                                    {{#compare this.design_request_type_name '===' 'MCMD'}}
+                                                    <div class="imageAdd multicontributorTile"> </div>
+                                                    {{/compare}}
+
+                                                    {{#compare this.design_request_type_name '===' 'SCMD'}}
+                                                    <img src="https://d-photostory.s3.amazonaws.com/assets/images/multiDevice.png">
+                                                    {{/compare}}
+
+                                                    {{#compare this.images_selected_for_upload  '!==' '0'}}
+                                                    <span class="selected-count">{{this.total_transferred_count}}</span>
+                                                    {{/compare}}
+
+                                                </div>
+                                                <div class="story-name">{{this.cover_caption}}
+                                                </div>
+                                                {{#compare this.design_request_type_name '===' 'SCMD'}}
+                                                <div class="addmorephotos-container">
+                                                    <button class="btn btn-addmorephotos uploaderUpdateLink SCMD" id="{{this.id}}" data-title="{{this.cover_caption}}" data-count="{{this.images_selected_for_upload}}" data-type="{{this.design_request_type_name}}"  data-copy-link="{{this.image_contribution_invitation_link}}" data-belongsTo="{{this.story_belongsto}}"  data-story-owner-name="{{this.story_owner_name}}">Add Photos</button>
+                                                </div>  
+                                                {{/compare}}
+
+                                                {{#compare this.design_request_type_name '===' 'MCMD'}}
+                                                <div class="addmorephotos-container">
+                                                    <button class="btn btn-addmorephotos uploaderUpdateLink MCMD" id="{{this.id}}" data-title="{{this.cover_caption}}" data-count="{{this.images_selected_for_upload}}" data-type="{{this.design_request_type_name}}"  data-copy-link="{{this.image_contribution_invitation_link}}" data-belongsTo="{{this.story_belongsto}}"  data-story-owner-name="{{this.story_owner_name}}">Add Photos</button>
+                                                </div>  
+                                                {{/compare}}
+
+                                                <img class="cover-image lazy fullWidth" data-original="{{this.webcoverurl}}" src="assets/images/startStoryBlankRect.png" onerror="if (this.src != 'assets/images/startStoryBlankRect.png') this.src = 'assets/images/startStoryBlankRect.png';" >                         
+                                                <div class="bottom-div-saving">
+                                                Saving photos
+                                                </div>             
+                                                <div class="action-btn-container clearfix">
+                                                    <div class="actionMenuBtn pull-right" id="{{this.id}}">
+                                                        <div class='imageAdd tileMenu'></div>
+                                                    </div>
+                                                </div>
+                                        {{/compare}}
+                                {{/compare}}
+
+                                {{#compare this.order_status  '===' '8888'}} 
+                                    <div class="bigImageAdd sampleBadgeIcon badgeImage"> </div>
+                                    <a href="{{this.flipbookLink}}" class="story{{this.order_status}}">
+                                        {{#if this.webcoverurl}}
+                                        <img  class="cover-image lazy fullWidth" data-original="{{this.webcoverurl}}" src="{{this.webcoverurl}}" >
+                                        {{else}}
+                                        <img  class="cover-image lazy fullWidth" data-original="{{this.webcoverurl}}" src="https://imgd.photogurus.com/assets/images/icon_default_photo1.png" >                         
+                                        {{/if}}
+                                    </a>
+                                {{/compare}}
+
+                                {{#compare this.order_status  '===' '1000'}} 
+                                    {{#compare this.story_belongsto  '===' 'Owner'}} 
+                                        {{#compare this.is_merge  '===' '0'}}
+                                        <div class="action-btn-container clearfix">
+                                                <div class="actionMenuBtn pull-right"  id="{{this.id}}">
+                                                    <div class='imageAdd tileMenu'></div>
+                                                </div>
+                                            </div>
+                                        {{/compare}}
+                                    {{/compare}}
+                                {{/compare}}
+
+                                {{#compare this.order_status  '===' '8000'}} 
+                                <div class="absolute lt rt story-nav text-white">
+                                    <a  class="card-link bold text-uppercase pull-left infoButton infoButtonShared" id="{{this.id}}">
+                                        <i class="icons"></i>
+                                    </a>
+                                </div>            
+                                {{/compare}}
+
+                                {{#compare this.order_status  '===' '8001'}}            
+                                <div class="action-btn-container clearfix">
+                                    <div class="actionMenuBtn pull-right"  id="{{this.id}}">
+                                        <div class='imageAdd tileMenu'></div>
+                                    </div>
+                                </div>
+                                {{/compare}}
+
+                                {{#compare this.order_status  '===' '950'}} 
+                                    <div class="action-btn-container clearfix">
+                                        
+                                    </div>         
+                                {{/compare}}
+                        
+                                {{#compare this.order_status  '===' '200'}} 
+                                    {{#compare this.is_merge  '===' '0'}} 
+                                    <div class="bottom-div-design-in-progress">
+                                        Design in progress
+                                    </div>
+                                    <div class="daysText">
+                                        Submitted on 14-Mar-2017.<br>           
+                                        Story will be ready in 2 - 3 days.
+                                    </div>
+                                    <div class="action-btn-container clearfix">
+                                        
+                                    </div>
+                                    {{/compare}}
+                                {{/compare}}
+
+                                {{#compare this.order_status  '===' '125'}}  
+                                    {{#compare this.is_merge  '===' '0'}}    
+                                    <div class="bottom-div">
+                                        Transfer in Progress
+                                    </div>
+                                    {{/compare}}
+                                {{/compare}}
+
+                    </div>
+        </div>
+    
+    {{/compare}}
+    {{/each }}
+
+    {{/each}}
+
+    {{#if sampleStory}}
+    <div class="col-xs-12 hrContainer lastHr" > 
+        <hr class="hrEnd paddingNone"/>
+    </div>
+    {{/if}}
+    {{#each sampleStory}}
+    <div class="col-lg-3 col-sm-3 col-xs-6 dash-sample-card">
+        <div class="card bg-danger">
+            {{#compare this.order_status  '===' '8888'}} 
+            <div class="bigImageAdd sampleBadgeIcon badgeImage"> </div>
+            {{/compare}}
+            <a href="{{this.flipbookLink}}">
+                {{#if this.webcoverurl}}
+                    <img  class="cover-image lazy fullWidth" data-original="{{this.webcoverurl}}" src="{{this.webcoverurl}}" >
+                {{else}}
+                    <img  class="cover-image lazy fullWidth" data-original="{{this.webcoverurl}}" src="https://imgd.photogurus.com/assets/images/icon_default_photo1.png" >                         
+                {{/if}}
+            </a>
+        </div>
+    </div>
+    {{/each}}
+
+</div>
+
+<!-- /main area -->

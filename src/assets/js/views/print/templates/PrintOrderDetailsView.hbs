@@ -1,0 +1,85 @@
+<div class="printFormContainer">
+    <div class="printFormHeader">{{heading}}</div>
+    <div class="overFlowHide noPadding orderDetailsScreen">
+        <div class="col-md-12 noPadding orderDetailsBlock" id="{{orderDetails.invoice_id}}">
+            <div class="col-md-12 orderSummeryTile">
+                <div class="row">
+                    <div class="col-md-6 noPadding">
+                        <img src="{{orderDetails.cover_url}}" width="215" height="215" class="orderDetailsImgBox" alt="cover image">
+                    </div>
+                    <div class="col-md-6 title">
+                        <div><b>Shipped to:</b></div>
+                        <div>{{orderDetails.fullname}}</div>
+                        <div>{{orderDetails.address1}}</div>
+                        <div>{{orderDetails.address2}}</div>
+                        <div>{{orderDetails.city}}</div>
+                        <div>{{orderDetails.state}} {{orderDetails.zip}}</div>
+                        <div>{{orderDetails.country}}</div>
+                        {{#compare orderDetails.phone "!==" ""}}
+                        <div>Phone: {{sanitize orderDetails.phone '{"formatType": 5}'}}</div>
+                        {{/compare}}
+                    </div>
+                </div>
+                <div class="row orderDetailDate ">
+                    <div class="col-md-6 noPadding">
+                        <div><b>Order Date: </b>{{formatDate orderDetails.order_date 1}}</div>
+                    </div>
+                    <div class="col-md-6 orderDetailsDeliveryText">
+                        <div><b>Delivery by: </b>{{formatDate orderDetails.estimatedDeliveryDate 1}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="col-md-12 reOrderHr"></hr>
+        <div class="col-md-12 orderDetailsSubBlock fS18">
+            <div>
+                {{orderDetails.STATUS}}
+                {{#if orderDetails.shippingTrackingURL}}
+                    <span class="trackShipLink">Track</span>
+                {{/if}}
+            </div>
+        </div>
+        <hr class="col-md-12 reOrderHr"></hr>
+        <div class="col-md-12 orderDetailsSubBlock orderInfo">
+            <div class="orderSummaryText"><b>Order Summary</b></div>
+            <div><b>{{orderDetails.cover_caption}}</b></div>
+            <hr class="col-md-12 detailsHr"></hr>
+            <div>
+                <table class="table table-condensed borderless">
+                    <tbody>
+                        <tr>
+                            <td>{{orderDetails.size}} Book ({{sanitize orderDetails.no_of_spreads '{"formatType": 4}'}} pages):</td>
+                            <td class="text-right">${{orderDetails.book_price}}</td>
+                        </tr>
+                        {{#compare orderDetails.discount_amount "!==" "0.00"}}
+                        <tr>
+                            <td>Discount:</td>
+                            <td class="text-right colorRed">${{orderDetails.discount_amount}}</td>
+                        </tr>
+                        {{/compare}}
+                        <tr>
+                            <td>Shipping:</td>
+                            <td class="text-right">${{orderDetails.shipping_price}}</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Tax:</td>
+                            <td class="text-right">${{orderDetails.tax}}</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Total:</td>
+                            <td class="text-right">${{orderDetails.order_total_amount}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <hr class="col-md-12 reOrderHr"></hr>
+        <div class="col-md-12 orderDetailsSubBlock">
+            <div>Like your photobook?
+                <span class="feedbackLink">Let us know</span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<a>
+    <i class="i-bell"></i>
+    <span id="notification_count" style="display: none;"></span>
+</a>
+<span id="up_point"></span>
+<div class="notifiaction-container">
+    <div class="panel panel-default panel1">
+        <div class="panel-heading" id="col1">
+            <h4 class="panel-title">
+                <i class="indicator glyphicon glyphicon-up"></i>
+                <span>
+                    {{Notifications}}
+                </span>
+            </h4>
+        </div>
+        <div id="collapseOne"  class="collapse-content">      
+            <div class="pageloadRelative">
+                <div class="pageload-inner text-center table-center" >
+                    <!--                <div class="sk-rotating-plane"></div>-->
+                    <img src="{{imageBase}}loading-photogurus.gif">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default panel2">
+        <div class="panel-heading" id="col2">
+            <h4 class="panel-title">
+                <i class="indicator glyphicon glyphicon-down"></i>
+                <span>
+                    {{PhotoStoryStatus}}
+                </span>
+            </h4>
+        </div>
+        <div id="collapseTwo" class="collapse-content">
+        </div>
+    </div>
+</div>

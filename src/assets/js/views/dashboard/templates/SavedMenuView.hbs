@@ -1,0 +1,20 @@
+<div id="SavedMenuViewModal" class="modal menuStyle" role="dialog" >
+     <div class="modal-dialog">
+        <div class="modal-content">
+              <div class="menuHeader">{{sanitize this.cover_caption '{"formatType": 2, "limit": 30, "wordBoundary": false}'}}
+              </div>
+            <div class="menuItems initiateInfo"><div class="imageAddMenu info_story"></div>Info</div>
+            {{#compare this.design_request_type  '===' '2'}}
+            <div class="menuItems initiateCopyLink" style="padding-bottom:15px;">
+                <div class="imageAddMenu invite_story"></div>Invite Friends
+                <div class="copyLinkDiv">
+                    <input value="{{this.image_contribution_invitation_link}}" class="copyLinkInput" readonly="readonly">
+                    <button class="copyBtn">Copy</button>
+                </div>
+            </div>
+            {{/compare}}
+            <div class="menuItems initiateDesign"><div class="imageAddMenu design_story"></div>Start Design</div>
+            <div class="menuItems initiateDeleteForSavedStory"><div class="imageAddMenu delete_story"></div>Remove Story</div>           
+        </div>
+    </div>
+</div>

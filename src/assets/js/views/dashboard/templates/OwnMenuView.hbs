@@ -1,0 +1,29 @@
+<div id="OwnMenuViewModal" class="modal menuStyle" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="menuHeader">{{sanitize this.cover_caption '{"formatType": 2, "limit": 20, "wordBoundary": false}'}}
+                <div class="socialValues">
+                    <div class="imageAddSocial comment_story"></div>{{this.commentscount}}</div>
+                <div class="socialValues">
+                    <div class="imageAddSocial like_story"></div>{{this.likescount}}</div>
+                
+            </div>
+
+            <div class="menuItems initiateShare">
+                <div class="imageAddMenu share_story"></div>Share Story</div>
+            <div class="menuItems initiateEditStory">
+                <div class="imageAddMenu edit_story"></div>Edit Story</div>
+            <div class="menuItems initiatePrint">
+                <div class="imageAddMenu print_story"></div>Order Photo Book</div>
+            <div class="menuItems initiateSaveStory">
+                <div class="imageAddMenu save_story"></div>Save Story</div>
+            <div class="menuItems initiateDelete">
+                <div class="imageAddMenu delete_story"></div>Delete Story</div>
+            <div class="menuItems initiateDateUpdation">
+                <div class="imageAddMenu date_story"></div>
+                <input id="triggerCalender" type="text" value="{{this.orderDate}}" class="form-control" readonly="readonly">
+                <!--<div id="editDateId" class="image_content_code editContent"></div>-->
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,87 @@
+<div class="modal fade uploaderModal facebookAlbumSelectionModal" id="AmazonModal" role="dialog" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="acphotosSelectionCount">0 photos selected</div>
+        <!-- Modal content-->
+        <div class="modal-content">
+            <!--Modal body-->
+            <div class="modal-body">
+
+                <div class="" >
+                    <div class="GoogleAlbumContainer" id="fb_modal" style="">                      
+                        <!-- The container for the uploaded files -->
+                        <div class="fb_title">
+                            <div class="spriteImage modalCloseBlock modalCloseIcon" id="closeACAlbumList"></div>
+                            <div class="closeFBModal spriteImage modalBackArrow"> </div>
+                            <span id="fbInnerTitle">Amazon Drive</span>
+                            <div class="saveSelection saveFbPhots" id="importSelectACPhotosId">Save</div>
+                        </div>
+                        <div class="modal-body-right">
+                            <div class="selectAlbumTitile">Select an album</div>
+                            <div class="noImages"></div>
+                            <div class="selectAllFBContent">
+                                <div>Select photos. Press shift to select multiple photos.</div>
+                                <div class="selectAllCheckIcon spriteImage"></div>                                
+                                <div class="selectAllAlbumPhots">Select All</div>
+
+                            </div>
+                            <div id="amazonCloudCollection" class="files"></div>
+                            <div id="amazonCloudSelectedPhotosCollection"  class="files btn-group" data-toggle="buttons"></div>
+                        </div>
+                    </div>                                        
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div  class="modal fade uploaderModal messageModal acLoginExpired" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p>Amazon session is expired. please login again</p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default closeModal" id="acReLoginWindow" data-dismiss="modal">OK</button>
+            </div>
+
+        </div>
+    </div>
+</div> 
+<div  class="loseSelectionACModal messageModal modal fade" role="dialog" data-backdrop="static">
+    <div class="modal-dialog" style="width:300px">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p id="back_text">Are you sure you want to go back? You will lose your selection.</p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default  ot-btn"  id="cancelRedirectionACBtn" style="" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-default ot-btn" id="redirectionToACAlbumBtn"  style="" data-dismiss="modal">OK</button>                                        
+            </div>
+        </div>
+    </div>
+</div> 
+<div  class="loseSelectionCloseACModal messageModal modal fade" role="dialog" data-backdrop="static">
+    <div class="modal-dialog" style="width:300px">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p id="back_text">Are you sure you want to go back? You will lose your selection.</p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default  ot-btn"  id="cancelRedirectionACBtn" style="" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-default ot-btn" id="redirectionToUploaderACAlbumBtn"  style="" data-dismiss="modal">OK</button>                                        
+            </div>
+        </div>
+    </div>
+</div> 

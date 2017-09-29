@@ -1,0 +1,87 @@
+<!-- Share Modal -->
+
+
+<div class="modal-header">
+    <button type="button" class="close" id="PrivareShareBack"><i class="backIcon"></i></button>
+    <h4 class="modal-title text-center">{{shareTitle}}</h4>
+</div>
+
+<div class="modal-body">
+
+    <p>
+       {{selectDeslectInstructions}}
+    </p>
+    <div class="clearfix img-container">
+
+        {{#each shareAllImages}}
+        {{#compare  this.page_sequence '===' '1'}}
+
+        <div class="shareImg cover-pic">
+            <div class="back-cover">
+                <div class="share-checkImg shareCheck active">
+                    <input class="share-checkBox coverCheck" type="checkbox" checked=""  name="" id="{{this.page_id}}"/>
+                </div>
+                <div class="overlay overlayBtn"></div>
+                <img src="{{this.name}}">
+            </div>
+        </div>
+        {{/compare }}
+        {{#compare  this.page_sequence '!==' this.shareAllImagesLength}}
+        {{#compare  this.page_sequence '!==' '1'}}
+        <div class="col-xs-6 shareImg">
+            <div>
+                <div class="share-checkImg shareCheck active">
+                    <input class="share-checkBox" type="checkbox" checked=""  name="" id="{{this.page_id}}"/>
+                </div>
+                <div class="overlay overlayBtn"></div>
+                <img src="{{this.name}}">
+            </div>
+        </div>
+        {{/compare }}
+        {{/compare }}
+        {{#compare  this.page_sequence '===' this.shareAllImagesLength}}
+        <div class="shareImg back-cover-pic">
+            <div class="back-cover">
+                <div class="share-checkImg shareCheck active">
+                    <input class="share-checkBox coverCheck" type="checkbox" checked=""  name="" id="{{this.page_id}}"/>
+                </div>
+                <div class="overlay overlayBtn"></div>
+                <img src="{{this.name}}">
+            </div>
+        </div>
+        {{/compare }}
+        {{/each}}
+
+
+    </div>   
+
+</div>
+<div class="modal-footer">    
+    <button type="button" class="btn next-btn" id="privateShareNext">{{next}}</button>
+</div>
+
+
+<!-- /Share Modal -->
+<div id="mailBody" style="display: none">
+
+</div>
+<!-- Message Modal -->
+<!-- Message Modal -->
+<div id="alertFirstModal" class="modal fade" data-backdrop="static" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <div><strong>Are you sure you want to go back? You will lose your data.</strong></div>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default" id="shareCancel">No</button>
+                <button type="button" class="btn btn-default" id="ok_shareBack">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- / Message Modal -->

@@ -1,0 +1,97 @@
+<div id="shareModal" class="modal shareClassModal" role="dialog" data-backdrop="static">
+    <div class="modal-dialog" id="shareDialog">
+
+        <div class="modal-content" id="scrEmailShareSend">
+            <div class="modal-header">
+                <button type="button" class="close" id="backBtn"><i class="backIcon"></i></button>
+                <h4 class="modal-title text-center shareType">Email Invite</h4>
+            </div>
+            <div class="modal-body">
+                <form id="shareEmailForm" class="scrForm">
+                    <!--                    <div class="form-group">
+                                            <label>
+                                                {{From}}
+                                            </label>
+                                            <input type="text" class="form-control" id="emailFromId" value="{{senderemail}}" disabled="" />
+                                        </div>-->
+                    <div class="form-group">
+                        <label>
+                            To: Email
+                        </label>
+                        <input type="text" class="form-control" id="EmailAndMobileId" placeholder="Enter email address seprated by commas" />
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            Subject 
+                        </label>
+                        <input type="text" class="form-control" id="SubjectId" value="Please add photos to my photostory" disabled/>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            Message
+                        </label>
+                        <textarea rows="3" class="form-control" id="MessageId" disabled>Hello, I am inviting you to add photos to my story</textarea>
+                    </div>
+                </form>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn next-btn" id="contributorEmailShareNextBtn">NEXT</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div  class="modal fade uploaderModal messageModal emailShareSuccessModal" role="dialog" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Email invite sent.</h4>
+            </div>
+            <div class="modal-body text-center" style="margin: 0px;">
+                <p style="margin: 0px;">Tap on the story draft to add photos anytime.</p>
+                <p style="margin: 0px;" id="savingPhotosMsg"></p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default closeModal"  id="emailSentSuccess">Ok</button>
+            </div>
+
+        </div>
+    </div>
+</div> 
+<div  class="modal fade messageModal emailShareFailModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center" style="margin: 0px;">
+                <p style="margin: 0px;">Email is invalid</p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default" data-dismiss="modal"> OK</button>
+            </div>
+
+        </div>
+    </div>
+</div> 
+
+
+<!-- email error -->
+<div class="modal fade errorEmail messageModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p><span id="firstText">Email cannot be empty </span></p>
+            </div>
+            <div class="modal-footer text-center">                                        
+                <button type="button" class="btn btn-default" id="emailError">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div> 
+<!-- email error -->

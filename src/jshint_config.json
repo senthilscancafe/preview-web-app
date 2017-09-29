@@ -1,0 +1,17 @@
+{
+    "bitwise": true,
+    "curly": true,
+    "eqeqeq": true,
+    "nocomma": true,
+    "freeze": true,
+    "funcscope": true,
+    "noarg": true,
+    "nocomma": true,
+    "nonbsp": true,
+    "nonew": true,
+    "strict": true,
+    "undef": true,
+    "unused": true,
+    "varstmt": false,
+    "browser": true
+}

@@ -1,0 +1,31 @@
+<div class="printFormContainer">
+    <div class="printFormHeader">{{heading}}</div>
+
+    <div class="">
+        <div class="printFormBodyDiscount">
+            <label id="removeDiscount" class="discountRemoveLabel" style="display: inline;">{{submitLabel2}}</label>
+            <input name="discount-code" id="discount-code" class="printFormInputBottom" placeholder="Enter discount code">
+        </div>
+        {{#if couponsList}}
+            {{#each couponsList}}
+            <div class="printDiscountFormBody ">
+                <div class="radioContainer discountContainer row">
+                    <div class="col-md-1 ">
+                        <div class="share-RadioImg shareRadio couponCheck" id="{{this.couponId}}">
+                            <input class="share-radio" type="radio" checked="" name="shareWith">
+                        </div>
+                    </div>
+                    <div class="col-md-11 text-left">
+                        <div>{{this.couponContent}} <b>"<span class="couponCode">{{this.couponCode}}</span>"</b></div>
+                    </div>
+                </div>
+            </div>
+            <!--<div style="margin-top:10px"></div>-->
+            {{/each}}
+        {{/if}}
+    </div>
+    <div class="printFormBodyBoxDiscount">
+        <div id="applyDiscount" class="printFormPrimaryBtn" style="margin-top: 0px;">{{submitLabel1}}</div>
+        <!--<div id="removeDiscount" class="printPrimaryBtn pull-right" style="margin-right: 20px; margin-top: 0px;">{{submitLabel2}}</div>-->
+    </div>
+</div>

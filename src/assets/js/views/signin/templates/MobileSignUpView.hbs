@@ -1,0 +1,92 @@
+<div class="app signin usersession">
+    <div class="loginHeader">
+        <div class="logo-img-box">
+            <img src="assets/images/pg-logo.png">
+        </div>
+
+        <ul class="nav navbar-nav navbar-right hidden-xs ">
+
+            <li>
+                <a href="javascript:;"   class="ripple actionText" >
+                    Signup
+                </a>        
+            </li>         
+            <li>
+                <a href="javascript:;"  class="link" >
+                    |
+                </a>        
+            </li>         
+            <li>
+                <a href="javascript:;" class="ripple" data-toggle="layout-chat-open">
+                    Login
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="session-wrapper">
+        <div class="page-height-o row-equal align-middle">
+            <div class="column">
+                <div class="card bg-white no-border">
+                    <div class="divider"></div>
+                    <div class="text-center m-b m-t">
+                        <h4 class="modal-title text-center text-uppercase">Mobile Signup</h4>
+                    </div>
+                    <div class="divider" style="color:#323232"></div>
+                    <div class="card-block">
+                        <form role="form" class="form-layout" action="/" style="padding-top: 0px;">                  
+                            <div class="form-inputs">
+                                <!--<label class="text-uppercase">Your email address</label>-->
+                                <input type="text" class="form-control input-lg" placeholder="Name" required>
+                                <!--<label class="text-uppercase">Password</label>-->
+
+                                  <input type="tel" class="form-control telephone-input input-lg" style="" placeholder="+1 25646455666" required>     
+                                <input type="password" class="form-control input-lg m-t" placeholder="Password" required>
+                                <input type="password" class="form-control input-lg" placeholder="Confirm password" required>                                
+                            </div>
+                            <div class="m-t m-b"> By clicking on Signup, you agree to our  
+                               <a class="linkColor" id="termOfServices">Term of Services</a> and our 
+                                <a class="linkColor" id="policy"> Privacy Policy.</a>
+                            </div> 
+
+                            <button class="btn btn-primary btn-block btn-lg m-b bodyText" type="submit">Signup</button>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <a class="btn btn-block btn-icon btn-facebook">
+                                        <i class="fa fa-facebook"></i> Login
+                                    </a>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <a class="btn btn-block btn-icon btn-google">
+                                        <i class="fa fa-google-plus"></i> Login
+                                    </a>
+                                </div>
+                            </div>                     
+
+                            <div class="m-t"> Already have an account? 
+                                <a class="linkColor" id="login">Login</a>                                 
+                            </div>                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="messageModal" class="mobileFeature modal fade" role="dialog" data-backdrop="static">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p id="download_text">We couldn’t log you in with your Facebook ID. In the next screen, please allow Photogurus to access your email address.</p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default ot-btn" id="reinitiateFBDialog" data-dismiss="modal" >OK</button>
+            </div>
+
+        </div>
+    </div>
+</div> 

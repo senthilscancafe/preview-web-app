@@ -1,0 +1,45 @@
+/* Below Stles for PhotoGurus Left Slider Menu Like Start */
+/* Below Default Style For PhotoGurus Home Page Left Nav Menu Start */
+.sidr{display:none;position:absolute;position:fixed;top:0;height:100%;z-index:999999;width:220px;overflow-x:none;overflow-y:none;font-family: "proximanova light";
+font-size:1em;background:#333;color:#fff;-webkit-box-shadow:inset 0 0 5px 5px #222;-moz-box-shadow:inset 0 0 5px 5px #222;box-shadow:inset 0 0 5px 5px #222}
+.sidr .sidr-inner{padding:0 0 15px}
+.sidr .sidr-inner>p{margin-left:15px;margin-right:15px}
+.sidr.right{left:auto;right:-220px}.sidr.left{left:-220px;right:auto}
+.sidr h1{font-size:11px;font-weight:normal;padding:0 15px;margin:0 0 0px;color:#fff;line-height:24px; }
+.sidr ul{display:block;margin:0 0 15px;padding:0;border-top:1px solid #1a1a1a;border-bottom:1px solid #4d4d4d}
+.sidr ul li{display:block;margin:0;line-height:48px;border-top:1px solid #4d4d4d;border-bottom:1px solid #1a1a1a}
+.sidr ul li:hover,.sidr ul li.active,.sidr ul li.sidr-class-active{border-top:none;line-height:49px}
+.sidr ul li:hover>a,.sidr ul li:hover>span,.sidr ul li.active>a,.sidr ul li.active>span,.sidr ul li.sidr-class-active>a,.sidr ul li.sidr-class-active>span{-webkit-box-shadow:inset 0 0 15px 3px #222;-moz-box-shadow:inset 0 0 15px 3px #222;box-shadow:inset 0 0 15px 3px #222; color:#ffbc00;}
+.sidr ul li a,.sidr ul li span{padding:0 15px;display:block;text-decoration:none;color:#fff}
+/* Above Default Style For PhotoGurus Home Page Left Nav Menu End */
+/* Below Style For PhotoGurus Home Page Left Nav Menu Start */
+/*#pg_menuToggleLeft {
+	background:url(https://imgd.photogurus.com/assets/images/menutoggle_left_sprite.png) no-repeat; width: 44px; height: 44px;
+	background-position: 0px 0px; cursor: pointer; position:absolute; left:10px; top:0px;}
+#pg_menuToggleLeft:hover{ background-position: 0px -44px;}*/
+#hamburger-menu {
+    
+}
+.left_close_bt{
+	background:url(https://imgd.photogurus.com/assets/images/menutoggle_left_sprite.png) no-repeat; height: 11px; width: 11px;
+	background-position: 0px -88px; cursor: pointer; position: absolute; right: 20px; top: 18px;}
+.left_close_bt:hover{ background-position: 0px -99px; }	
+.leftLogoWrap{ background:#323232; padding:5px 0;height:54px;}
+.leftLogoWrap .logo1 a{
+    color: #FFFFFF; font-family: "proximanova light"; font-size: 20px; font-weight: 800; 
+	letter-spacing: 0.10em; line-height: 34px; margin-top: 20px; margin-left: 15px; text-decoration:none;}
+.leftLogoWrap .logo1 a:hover{ color: #ffbc00;}
+/* Above Style For PhotoGurus Home Page Left Nav Menu End */
+/* Above Stles for PhotoGurus Left Slider Menu Like End */
+#hamburger-menu .hamburger-icon  span {
+    background-color: #FFF;
+}
+
+#hamburger-menu .hamburger-icon:hover span {
+    background-color: #fcbc02;
+}
+
+
+#hamburger-menu li {
+    margin-top: 2px !important;
+}

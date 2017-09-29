@@ -1,0 +1,138 @@
+<div class="app signin usersession">
+    <div class="loginHeader">
+        <div class="logo-img-box">
+            <img src="{{imageBase}}pg-logo.png">
+        </div>
+
+        <ul class="nav navbar-nav navbar-right hidden-xs ">
+
+            <li>
+                <a href="javascript:;"   class="ripple actionText" >
+                    Signup
+                </a>        
+            </li>         
+            <li>
+                <a href="javascript:;"  class="link" >
+                    |
+                </a>        
+            </li>         
+            <li>
+                <a href="javascript:;" class="ripple personalizedLogin" data-toggle="layout-chat-open">
+                    Login
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="session-wrapper">
+        <div class="card bg-white no-border">
+            <div class="text-center title-con">
+                <h4 class="modal-title text-center">Account Signup</h4>
+            </div>
+            <div class="row" style="margin:0px ">
+                <div class="card no-border col-md-12 m-b clearfix" style="margin:0px;padding-top:20px;border-radius: 0px;box-shadow: none;" >
+                    <div class="personalized">
+                        <div class="col-xs-3 column p-l-0 p-r-0">
+                            <img class="img-responsive" src="{{storyCover}}" alt="">
+                        </div>
+                        <div class="col-xs-9 column text-black p-r-0  personalized-detail">
+                            <p> Your friend <span class="m-t-0"><b class="sharer-name">{{sharer}}</b></span>{{sharerText}}<b>{{storyName}}</b>. {{signInText}}</p>     
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-block">
+                <form role="form" class="form-layout" action="/" style="padding-top: 0px;">
+
+                    <div class="form-inputs">
+                        <!--<label class="text-uppercase">Your email address</label>-->
+                        <input type="text" class="form-control input-lg" id="personalizedName" placeholder="Name">
+                        <!--<label class="text-uppercase">Password</label>-->
+                        <div class="col-sm-12" id="mobileAndEmailDiv">
+                            <div class="row">
+                                <div class="col-xs-5" id="emailDiv" style="padding-left: 0px;">
+                                    <input type="email" class="form-control input-lg" id="emailTemp" placeholder="Email" > 
+                                </div>
+                                <div class="col-xs-1" id="orDiv" style="text-align: center;">
+                                    or
+                                </div>
+                                <div class="col-xs-6" id="mobileDiv" style="padding-right: 0px;">
+                                    <input type="tel" class="form-control input-lg" id="mobileTemp" style="" placeholder="Mobile" >  
+                                    <span class="del">X</span>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12" id="signUpEmailDiv" style="padding-left: 0px; display: block;padding-right:0px">
+                            <input type="email" class="form-control input-lg" id="personalizedEmail" placeholder="Email" > 
+                            <span class="del">X</span>
+                            <span class="delEmail">X</span>
+                        </div>   
+                        <div class="col-xs-12" id="signUpMobileDiv" style="padding-left: 0px; padding-bottom: 20px; display: block;padding-right:0px">
+                            <input type="tel" class="form-control telephone-input input-lg" autofocus onfocus="this.value = this.value;" id="personalizedPhone" style="" placeholder="+1 25646455666">  
+                            <span class="del">X</span>
+                            <span class="delMob">X</span>
+                        </div>  
+
+                        <input type="password" class="form-control input-lg" id="personalizedPass" placeholder="Password" >
+                        <input type="password" class="form-control input-lg" id="personalizedConfirmPass" placeholder="Confirm password"> 
+                        <div id="error" class="errorMessage"></div>
+                    </div>
+                    <div class="m-t m-b"> By clicking on Signup, you agree to our  
+                        <a class="linkColor" id="termOfServices">Term of Services</a> and our 
+                        <a class="linkColor" id="policy"> Privacy Policy.</a>
+                    </div> 
+
+                    <button class="btn btn-primary btn-block btn-lg m-b bodyText" type="button" id="personalizedSubmit">Signup</button>
+                    <div id="amazon-root"></div>
+                    <div class="" style="height: 56px;">
+                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 hrOR pull-left"></div>
+                        <div class="circleOR">OR</div>
+                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 hrOR pull-right"></div>
+                    </div>
+                    <div class="row" >
+                      
+
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <a class="btn btn-block btn-icon btn-facebook disabled" id="facebookLogin">
+                                <i class="fa fa-facebook"></i> Login
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <a class="btn btn-block btn-icon btn-google disabled" id="googlePlusLoginAcSignUp">
+                                <i><img src="{{imageBase}}googleplus.png" style="margin-top: -6px;"></i> Login
+                            </a>
+                        </div>
+                          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <a class="btn btn-block btn-icon btn-amazon disabled" id="amazonLogin">
+                                <i class="fa fa-amazon"></i> Login                            
+                            </a>
+                        </div>
+                    </div>                      
+
+                    <div class="m-t"> Already have an account? 
+                        <a class="linkColor personalizedLogin" id="login">Login</a>                            
+                    </div>                            
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="messageModal" class="mobileFeature modal fade" role="dialog" data-backdrop="static">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p id="download_text">We couldn’t log you in with your Facebook ID. In the next screen, please allow Photogurus to access your email address.</p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default ot-btn" id="reinitiateFBDialog" data-dismiss="modal" >OK</button>
+            </div>
+
+        </div>
+    </div>
+</div> 

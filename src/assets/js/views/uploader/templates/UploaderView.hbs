@@ -1,0 +1,729 @@
+<div class="loginHeader" style="background: #4b4b4b;">
+<i class="home-icon"></i>
+<div class="logo-img-box logoPhotogurus">
+    <img src="{{imageBase}}pg-logo.png">
+</div>
+</div>
+<div id="wrapper" class="uploaderContainer">
+    <div class="pageload loadingPhotogurusBody">
+        <div class="pageload-inner text-center">
+            <!--<img src="{{imageBase}}loading-photogurus.gif" style="width: 120px;height: 120px;">-->
+            <img src="{{imageBase}}loading-photogurus.gif" style="width: 100px;">
+</div>
+</div>
+<!-- Page Content -->
+<div id="page-content-wrapper">
+    <!--<div class="collapse navbar-collapse navbar-ex1-collapse"> <div class="home"></div><span class="glyphicon glyphicon-menu-hamburger" id="menu-toggle"></span> <a href="#" id="logoHome"> <img src="assets/images/photogurus_logo_fixed_nav.png" class="img-responsive logo" alt="Photo gurus"> </a> </div>-->
+    <div class="container">
+        <div class="row" style="margin-top: 43px;">
+<div class="dynamicLoadingMessage">Dynamic Message</div>
+<div class="col-lg-12">
+    <div class="content_header">
+        <div class="pg_main_title">
+            <div class="pg_logo"><img src="assets/images/gurus_logo_supage_header_black.png"></div>
+            <div class="pg_title add_photo_title">Please add photos from one or more sources</div>
+        </div>
+
+        <div class="indicationFlip"></div>
+        <div class="limitIndication">Select more 20 photos</div>
+
+        <div class="multiple_resource_box">
+            <div class="resourceContainer">
+
+                <div class="input_photo_box fileinput-button mc">
+                    <label for="fileupload" style="margin-bottom: -17px;">
+<div class="my_computer"> </div>
+<div class="my_computer_text">My Computer</div>
+<span class=""> 
+                                            <input id="fileupload" type="file" name="name" multiple onblur="fileOut()">
+</span>
+</label>
+
+<table class="files"></table>
+</form>
+<div class="counterLabel" id="myComputerPhotoCounter">1 Photo Added</div>
+</div>
+<div class="input_photo_box otherDeviceBox ">
+    <div id="otherDevice"> </div>
+    <div class="active_other_device"> </div>
+    <div class="input_photo_box_label">Other Devices</div>
+    <div class="counterLabel" id="OtherDeviceCounter">1 Added</div>
+</div>
+<div class="input_photo_box friendsBox">
+    <div id="friends"> </div>
+    <div class="Friends"> </div>
+    <div class="input_photo_box_label">Friends</div>
+    <div class="counterLabel" id="FriendsCounter">1 Photo Added</div>
+</div>
+<div class="input_photo_box googlePhotoBox">
+    <div id="googlephoto"> </div>
+    <div class="google_photo"> </div>
+    <div class="input_photo_box_label">Google Photos</div>
+    <div class="counterLabel" id="GPhotoCounter">1 Photo Added</div>
+</div>
+<div class="input_photo_box amazonPhotoBox" id="amazonLogin">
+    <div id="amazonphoto"> </div>
+    <div class="amazon_photo"> </div>
+    <div class="input_photo_box_label">Amazon Drive</div>
+    <div class="counterLabel" id="ACPhotoCounter">1 Photo Added</div>
+</div>
+<div class="input_photo_box" id="dropboxUpload">
+    <div id="dropbox"> </div>
+    <div class="drop_box"> </div>
+    <div class="input_photo_box_label">Dropbox</div>
+    <div class="counterLabel" id="dbPhotoCounter">1 Photo Added</div>
+</div>
+<div class="input_photo_box " id="facebookUpload">
+    <div class="fbdisable"></div>
+    <div class="facebook"> </div>
+    <div class="input_photo_box_label">Facebook</div>
+    <div class="counterLabel" id="fbPhotoCounter">1 Photo Added</div>
+</div>
+<a title="" id="flickerpopup">
+    <div class="input_photo_box" id="flickerUploadId">
+        <div class="flickr"> </div>
+        <div class="input_photo_box_label">Flickr</div>
+        <div class="counterLabel" id="flickerPhotoCounter">1 Photo Added</div>
+    </div>
+</a>
+<div class="input_photo_box" id="oneDrive">
+    <div class="one_drive"> </div>
+    <div class="input_photo_box_label">onedrive</div>
+    <div class="counterLabel" id="dbPhotoCounter">1 Photo Added</div>
+</div>
+<a id="finishId">
+    <div class="primary_btn" id="startUpload">Finish</div>
+</a>
+<a id="saveAndDesignId">
+    <div class="primary_btn disabled_btn" id="saveAndDesignUpload">Finish</div>
+</a>
+<a id="contributorFinishId">
+    <div class="primary_btn disabled_btn" id="contributorUpload">Finish</div>
+</a>
+</div>
+<!--div class="input_photo_box"> <div class="amazon"> </div><div class="input_photo_box_label">Amazon</div><div class="counterLabel" id="amazonPhotoCounter">1 Photo Added</div></div-->
+
+<!--<div class="indicationImg" ></div>-->
+
+<!--                                    <div id="successPopupStory" class="white-popup-block mfp-hide confirmationBox" style=" padding: 0px;">
+                                                                    <div class="modalBody" >
+                                                                        <div class="confirmationBoxText" style="margin-bottom:20px">You"r done! Yep, that"s it! </div>
+                                                                        <div class="confirmationBoxText" style="margin-bottom:20px">All you need to do is sit back and relax while we design and send you the photo story. </div>
+                                                                        <div class="confirmationBoxText" style="margin-bottom:20px">It takes up to 2 business days for your photo story to be designed professionally and available online for review. </div>
+                                                                        <div class="primary_btn popup-modal-dismiss" id="redirectBaseURLId">OK</div>
+                                                                    </div>
+                                                                </div>-->
+<div id="sureToSubmit" class="white-popup-block mfp-hide confirmationBox" style=" padding: 0px;">
+<div class="modalBody">
+    <div class="confirmationBoxText"> Have you added photos from all your sources?</div>
+    <div class="confirmationBoxText" style="margin-bottom: 20px;">Are you ready to submit?</div>
+<a class="popup-modal" href="#photoStoryPopup">
+    <div class="primary_btn " id="sureToSubmitYes" data-toggle="modal" data-target="#PhotoStory">Yes</div>
+</a>
+<div class="primary_btn popup-modal-dismiss" id="sureToSubmitNo" data-toggle="modal" data-target="#PhotoStory">No</div>
+</div>
+</div>
+
+<div id="photoStoryPopup" class="white-popup-block mfp-hide modalContainer" style=" padding: 0px;">
+<div class="modalHeader text-center">
+    <h1>Add title to your photo story</h1>
+    <div class="popup-modal-dismiss closeCoverPage"></div>
+</div>
+<div class="row modalBody">
+    <!--                                            <div class="col-sm-6" style=" padding: 48px 0px 0px 0px;">
+                                                                                    <div class="photoStoryCover"></div>
+                                                                                </div>-->
+    <div class="" style="">
+<form role="form" style="text-align:left; padding: 25px;width: 417px;margin: 0 auto;">
+<div class="form-group"> <label for="Title" tabindex="1">Title</label> <input type="text" class="form-control" id="title" placeholder="E.g. Holiday Memories"
+        autocomplete="off"> </div>
+<div class="form-group"> <label for="Subtitle" tabindex="2">Subtitle (optional)</label> <input type="text" class="form-control" id="subtitle" placeholder="E.g. 2016">    </div>
+<div class="form-group"> <label for="SpecialInstruction" tabindex="3">Special Instruction (optional)</label> <textarea name="textarea" rows="5" id="specialInstruction"
+        class="form-control" placeholder="Have anything specific in mind? Let us know."></textarea> </div>
+<a id="createOrder" tabindex="4">
+    <div class="text-center">Done</div>
+</a>
+</form>
+</div>
+</div>
+</div>
+<div id="photoUploadProcess" class="modal fade uploaderModal" data-backdrop="static" style=" padding: 0px;" role="dialog" >
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modalHeader">
+            <h2 style="color: #333;">Uploading Photos</h2>
+</div>
+<div class=" modalBody ">
+    <div class="row downloadTray">
+        <div class="uploderIcon col-xs-2"></div>
+        <div class="progressNtitleContainer col-xs-10">
+            <h4>Uploading photos for <span id="uploadPhotoTitle">Tanzania 2012</span></h4>
+            <div id="progress" class="progress">
+                <div class="progress-bar progress-bar-success"></div>
+            </div>
+            <div class="successMessageBox"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="modelBottomBar col-xs-12">Do not close your browser !</div>
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="total_count" id="totalCount"></div>
+<div class="sourceFlagImg"></div>
+<div class="upArrowFlagImg upArrow"></div>
+
+<div>
+    <div class="limitCrossed"><span id="max1000Text"> </span><br>
+        <div id="numberOfFilesToRemove">Remove 20 photos to continue</div>
+    </div>
+</div>
+<div class="collection_box">
+    <div class="selectUptoInfo upArrow AddUptoText">Please select <span id="imageRemains">948</span> photos from any source above.</div>
+    <div class="selectUptoInfo indicationContributor upArrow"></div>
+    <input type="hidden" id="totalCountHidden" name="user" value="0" />
+    <input type="hidden" id="flickerCountHidden" name="user" value="0" />
+    <input type="hidden" id="gpCountHidden" name="user" value="0" />
+    <input type="hidden" id="acCountHidden" name="user" value="0" />
+
+
+    <div id="files" class="files"></div>
+    <div id="flickerFiles" class="files"></div>
+    <div class="clearfix"></div>
+</div>
+<div class="blank-box">1.0.1</div>
+<div id="loadingBlock"></div>
+<div class="modal fade uploaderModal facebookAlbumSelectionModal facebookModalCheck" id="myModal" role="dialog" data-keyboard="false"
+    data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="fbphotosSelectionCount">0 photos selected</div>
+        <div class="modal-content">
+            <!--<img src="assets/images/close.png" class="close fbClose" >-->
+            <div class="modal-body">
+                <div class="">
+                    <div class="" id="fb_modal">
+                        <div class="fb_title">
+                            <div class="spriteImage modalCloseBlock modalCloseIcon" id="closeFBAlbumList"></div>
+                            <div class="closeFBModal spriteImage modalBackArrow"> </div>
+                            <span id="fbInnerTitle">Faceboook Album</span>
+                            <div class="saveSelection" id="addfbphotos">Save</div>
+                        </div>
+                        <div class="modal-body-right">
+                            <div class="selectAlbumTitile">Select an album</div>
+                            <div class="selectAllFBContent">
+                                <div>Select photos. Press shift to select multiple photos.</div>
+                                <div class="selectAllCheckIcon spriteImage"></div>
+                                <div class="selectAllAlbumPhots">Select All</div>
+                            </div>
+                            <div id="FBAlbums" class="files"></div>
+                            <div id="FBAlbumsPhotos" class="files btn-group" data-toggle="buttons"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="googleUploadView"></div>
+<div id="flickrUploadView"></div>
+<div id="amazonUploadView"></div>
+<div id="contributorEmailShareView"></div>
+
+<div class="modal fade uploaderModal messageModal Limit1000" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p>Currently, you can select maximum 1000 images to create a photostory.</p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default closeModal" data-dismiss="modal">OK</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="loseSelectionModal messageModal modal fade" role="dialog" data-backdrop="static">
+    <div class="modal-dialog" style="width:300px">
+    <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Go back?</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p id="back_text">If you go back you will lose all the photos that you have added.</p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default  ot-btn" id="cancelRedirectionBtn" style="" data-dismiss="modal">Stay here</button>
+                <button type="button" class="btn btn-default ot-btn" id="redirectionToDashboardBtn" style="" data-dismiss="modal">Go Back</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="otherDeviceModal messageModal modal fade" role="dialog" data-backdrop="static">
+    <div class="modal-dialog" style="width:350px">
+<!-- Modal content-->
+<div class="modal-content">
+    <div class="modal-header">
+        <h4>Add title to save story draft.</h4>
+    </div>
+    <div class="modal-body text-center" style="margin-top: 0px;">
+<p id="otherDeviceText1" style="font-weight: bold;margin: 0px;">Tap on the story draft to add photos from another device.</p>
+<!--<p id="otherDeviceText2" style="font-weight: bold">Resume on another device by logging with same account in the app or website.</p>-->
+</div>
+<input type="text" class="form-control" id="savetitle" placeholder="Enter a title for your story" autocomplete="off" autofocus>
+<div class="modal-footer text-center">
+    <button type="button" class="btn btn-default  ot-btn saveStoryDisabled" id="saveStory">Save</button>
+    <button type="button" class="btn btn-default ot-btn" id="closeSavePopup" style="" data-dismiss="modal">Cancel</button>
+</div>
+
+</div>
+</div>
+</div>
+<div class="modal fade uploaderModal messageModal linkCopiedAndSaveSuccessModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center" style="margin: 0px;">
+                <p style="margin: 0px;">Link copied!</p>
+                <p style="margin: 0px;" id="copySaveText"></p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default closeModal" data-dismiss="modal" id="linkCopiedSuccessBtn">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="copyLinkModal messageModal modal fade" role="dialog" data-backdrop="static">
+    <div class="modal-dialog" style="width:350px">
+<!-- Modal content-->
+<div class="modal-content">
+    <div class="modal-header">
+        <h4>Photogurus</h4>
+    </div>
+    <input type="text" class="form-control" value="http" id="copyLinkInput" readonly />
+    <p class="copy-text"></p>
+    <div class="modal-footer text-center">
+        <button type="button" class="btn btn-default  ot-btn" id="copyLinkBtn">Copy</button>
+    </div>
+
+</div>
+</div>
+</div>
+
+<div class="modal fade uploaderModal messageModal linkCopiedSuccessModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center" style="margin: 0px;">
+<p style="margin: 0px;">Link copied to the clipboard</p>
+</div>
+<div class="modal-footer text-center">
+    <button type="button" class="btn btn-default closeModal" data-dismiss="modal" id="linkCopiedSuccessBtn">OK</button>
+</div>
+
+</div>
+</div>
+</div>
+
+<div id="messageModal" class="modal fade inviteFriendsModal" role="dialog" data-backdrop="static">
+    <div class="modal-dialog" style="width:350px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Add title to invite friends.</h4>
+                <!--<div class="modalCloseBlock inviteFriendscloseIcon" id="closeIFPopup"></div>-->
+            </div>
+            <div class="modal-body text-center" style="margin-top: 0px;">
+                <p id="inviteFriendsText" style="font-weight: bold;margin: 0px;">Give your story a name. You can invite your friends on the next page.</p>
+                <input type="text" class="form-control" id="friendsTitle" placeholder="Enter a title for your story" autocomplete="off" autofocus>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default saveStoryDisabled splitter" id="inviteFriendsNextBtn">Next</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="inviteFriendsModal messageModal modal fade" role="dialog" data-backdrop="static">
+    <div class="modal-dialog" style="width:350px">
+<div class="modal-content">
+    <div class="modal-header">
+        <h4>Photogurus</h4>
+        <div class="modalCloseBlock inviteFriendscloseIcon" id="closeIFPopup"></div>
+    </div>
+    <input type="text" class="form-control" id="friendsTitle" placeholder="Give a name to your story" autocomplete="off" autofocus>
+    <div class="modal-body text-center" style="margin-top: 0px;">
+<p id="inviteFriendsText" style="font-weight: bold;margin: 0px;">to invite your friends</p>
+</div>
+
+<div class="modal-footer text-center">
+    <button type="button" class="btn btn-default  ot-btn saveStoryDisabled" id="inviteFriendsNextBtn">Next</button>
+</div>
+
+</div>
+</div>
+</div>-->
+
+<div class="inviteFriendsToAddPhotosModal messageModal modal fade" role="dialog" data-backdrop="static">
+    <div class="modal-dialog" style="width:350px">
+<!-- Modal content-->
+<div class="modal-content">
+    <div class="modal-header">
+        <h4>Photogurus</h4>
+        <div class="modalCloseBlock inviteFriendscloseIcon" id="closeIFAddPhotosPopup"></div>
+    </div>
+    <div class="modal-body text-center" style="margin-top: 0px;">
+<p id="inviteFriendsToAddPhotosText" style="font-weight: bold;margin: 0px;">Invite friends to add photos to your story.</p>
+<div class="desktop-share-option share-sprite">
+    <a class="email-button" style="text-align:right">
+<i style="margin-right:10px;"></i>
+</a>
+<a class="share-button" style="text-align:left">
+<i style="margin-left:10px;"></i>
+</a>
+</div>
+<p id="inviteFriedsFooterText">*Anyone with the link can add photos to your story</p>
+</div>
+</div>
+</div>
+</div>
+<div class="loseSelectionFBModal messageModal modal fade" role="dialog" data-backdrop="static">
+    <div class="modal-dialog" style="width:300px">
+<!-- Modal content-->
+<div class="modal-content">
+    <div class="modal-header">
+        <h4>Photogurus</h4>
+    </div>
+    <div class="modal-body text-center">
+        <p id="back_text">Are you sure you want to go back? You will lose your selection.</p>
+    </div>
+    <div class="modal-footer text-center">
+        <button type="button" class="btn btn-default  ot-btn" id="cancelFBRedirectionBtn" style="" data-dismiss="modal">Cancel</button>
+<button type="button" class="btn btn-default ot-btn" id="redirectionToFBAlbumBtn" style="" data-dismiss="modal">OK</button>
+</div>
+
+</div>
+</div>
+</div>
+<div class="messageModal modal fade" role="dialog" data-backdrop="static" id="contributorFinishPopup">
+    <div class="modal-dialog" style="width:300px">
+<!-- Modal content-->
+<div class="modal-content">
+    <div class="modal-header">
+        <h4>Super!</h4>
+    </div>
+    <div class="modal-body text-center">
+        <p class="confirmationBoxTextForDevice">Have you selected all the photos you wanted to add?</p>
+    </div>
+    <div class="modal-footer text-center">
+        <button type="button" class="btn btn-default  ot-btn" id="addPhotosFromAnotherDevice" style="border-right:1px solid #e5e5e7" data-dismiss="modal">Yes</button>
+<button type="button" class="btn btn-default ot-btn" id="finishContributionId" style="" data-dismiss="modal">No</button>
+</div>
+
+</div>
+</div>
+</div>
+<div class="loseSelectionFBCloseModal messageModal modal fade" role="dialog" data-backdrop="static">
+    <div class="modal-dialog" style="width:300px">
+<!-- Modal content-->
+<div class="modal-content">
+    <div class="modal-header">
+        <h4>Photogurus</h4>
+    </div>
+    <div class="modal-body text-center">
+        <p id="back_text">Are you sure you want to go back? You will lose your selection.</p>
+    </div>
+    <div class="modal-footer text-center">
+        <button type="button" class="btn btn-default  ot-btn" id="cancelFBRedirectionBtn" style="" data-dismiss="modal">Cancel</button>
+<button type="button" class="btn btn-default ot-btn" id="redirectionToUploadFBAlbumBtn" style="" data-dismiss="modal">OK</button>
+</div>
+
+</div>
+</div>
+</div>
+<div class="modal messageModal fileSizeExceeded" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p>File size limit exceeded, x files have been removed</p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default closeModal dupMessageBtn" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal messageModal fileType" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p>Only JPEG and PNG images are allowed. Other file formats have been removed.</p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default closeModal dupMessageBtn" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade uploaderModal messageModal duplicateAlert" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p>Please select at least 20 photos to upload.</p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default closeModal dupMessageBtn" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade uploaderModal messageModal loggedOut" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p>You logged out Please login again</p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default closeModal loggedOutFromFacebook" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade uploaderModal messageModal check20" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p>Please select at least 20 photos to upload.</p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default closeModal dupMessageBtn" id="dupsRemovedOK" data-dismiss="modal">OK</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal fade uploaderModal messageModal check20Finish" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p>Please select at least 20 photos to upload.</p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default closeModal dupMessageBtn" id="dupsRemovedFinishOK" data-dismiss="modal">OK</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal fade uploaderModal messageModal saveStoryMsgPopup" role="dialog" data-backdrop="static">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p><span id="savePhotosMsg">We will save your photos now. No need to wait.</span></p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default closeModal" id="startUpdatingOrder" data-dismiss="modal">Ok</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal fade uploaderModal messageModal designStart" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p><span id="firstText">Got your photos. Designing your story.</span> Now</p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default closeModal" id="redirectBaseURLId" data-dismiss="modal">OK</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal fade uploaderModal messageModal noPhotosSelected" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p><span id="selectImageId">Please select 1 or more photos from another source.</span></p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default closeModal" data-dismiss="modal">OK</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- <div  class="modal fade uploaderModal messageModal uploadStarMessage" role="dialog" data-backdrop="static" data-keyboard="false">
+                            <div class="modal-dialog">
+                               
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4>Photogurus</h4>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <p><span id="firstText">Starting Upload. We will upload your photos in background. No need to wait. Thanks.</span></p>
+                                    </div>
+                                    <div class="modal-footer text-center">
+                                        <button type="button" class="btn btn-default closeModal" id="uploadStartedMessageId" data-dismiss="modal" >OK</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div> -->
+<div class="modal fade uploaderModal errorMessageModal messageModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p><span id="firstText">Have you added photos from all your sources? </span><br><span id="secondText">Are you ready to submit? </span></p>
+            </div>
+            <div class="modal-footer text-center">
+
+                <button type="button" class="btn btn-default" id="startCreatingOrder" data-dismiss="modal" style="border-right: 2px solid #e5e5e7;">Yes</button>
+<button type="button" class="btn btn-default closeModal" data-dismiss="modal">No</button>
+</div>
+</div>
+</div>
+</div>
+
+<div id="messageModal" class="modal fade alertImageCount" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p id="displayTextError">[text to be replaced]</p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default closeCustomModal" data-dismiss="modal" id="alertImageCountBtn">OK</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade saveAndDesignPopup" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <div class="modalCloseBlock sDcloseIcon" id="closeSDPopup"></div>
+                <p>I have more photos to add</p>
+                <button type="button" class="btn pgActionBtn" id="startUpdatingOrder" data-dismiss="modal">Save my story</button>
+                <p> I have selected all the photos I needed</p>
+                <button type="button" class="btn pgActionBtn" data-dismiss="modal" id="designMyStoryId">Design my story</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="messageModal" class="modal fade alertFBDialog" role="dialog" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p id="displayText">Unable to retreive photos from your Facebook account. Please try again.</p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default closeCustomModal" data-dismiss="modal">OK</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="messageModal" class="modal fade fbPermissionDialog" role="dialog" data-backdrop="static">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p id="download_text">We couldn’t access your Facebook photos. In the next screen, please allow Photogurus to access your photos.</p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default ot-btn" id="reinitiateFBDialog" data-dismiss="modal">OK</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="messageModal" class="modal fade multiDeviceWithoutImage" role="dialog" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Super!</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p id="displayText">Tap on the story draft to add your photos anytime.</p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default multiDeviceWithoutImageClose" data-dismiss="modal">Ok</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>

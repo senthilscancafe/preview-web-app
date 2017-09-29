@@ -1,0 +1,85 @@
+<div class="printInnerContainer">
+    <div class="text-center h1">Select Pages</div>
+    <div class="pageNotification">
+        <div class="pull-left">
+            <div class="inlineDivLeft"> {{bookData.book_size}} {{bookData.category}} for </div>
+            <div class="coverCaptionTextBook"> {{storyData.cover_caption}}</div>
+            <div class="inlineDivRight"> (<span id="updateSelectedPagesCount">{{pageCount}} pages</span>)</div>            
+        </div>
+        <div class="pull-right" id="bookPriceSection">
+            Book Price: <b>$<span id="bookTotalPrice">{{bookData.baseprice}}</span></b>
+            </div>
+        </div>
+
+        <div class="row printPageInnerBox">
+            <div class="pageInfoText">{{note}}</div>
+            <div class="pageInfoText maxInfoText">Please uncheck
+                <span id="maxSpreadMsg"> 2 set</span> of pages (spread) to print your book.</div>
+            <div class="pageOuterShadowContainer">
+
+                <div class="col-md-12 pagesContainer">
+                    <div class="col-md-12 text-left innerPageContainer">
+                        {{#each pageData.images}} 
+                        
+                            {{#compare this.pageType '===' 'spread'}}
+                                <div class="spreadContainer spreadBox selected" id="{{this.page_id}}">
+                                    <div class="imageFileCode bookTopCenterSpine"></div>
+                                    <img data-original="{{this.name}}" class="pageSelectionImg pageSelection spreadImageSize lazy">
+                                    <img src="https://imgd.photogurus.com/assets/images/pageBlackMask.png" width="199" height="100" class="pageMask spreadSelection">
+                                    <div class=" imageFileCode printCheckedIcon spreadSelection"></div>
+                                    <div class="imageFileCode bookBottomCenterSpine posAbs"></div>
+                                    <div class="spreadPageNumberSize posAbs left0">{{this.pageLeft}}</div>
+                                    <div class="spreadPageNumberSize posAbs right0">{{this.pageRight}}</div>
+                                </div>
+                            {{/compare}}
+                            
+                            {{#compare this.pageType '===' 'blank'}}
+                                <div class="spreadContainer">
+                                    <div class="imageFileCode bookTopCenterSpine"></div>
+                                    <img data-original="{{this.name}}" width="199" height="100" class="imgBgColor pageSelectionImg blankSpreadSelection lazy">
+                                    <div class=" imageFileCode printCheckedIcon blankSpreadSelection"></div>
+                                    <div class="imageFileCode bookBottomCenterSpine posAbs"></div>
+                                    <div class="spreadPageNumberSize posAbs left0">{{this.pageLeft}}</div>
+                                    <div class="spreadPageNumberSize posAbs right0">{{this.pageRight}}</div>
+                                </div>
+                            {{/compare}} 
+                            
+                            {{#compare this.pageType '===' 'cover'}} 
+                                {{#compare this.page_sequence '===' '1'}}
+                                    <div class="spreadContainer selectedCover frontCover" id="{{this.page_id}}">
+                                        <div class=" imageFileCode bookTopCenterSpineblank"></div>
+                                        <div class="coverContainer">
+                                            <img data-original="{{this.name}}" width="100" class="pageSelectionImg lazy" />
+                                            <img src="https://imgd.photogurus.com/assets/images/pageBlackMask.png" width="100" height="100" class="pageMaskCover coverSelection"
+                                            />
+                                            <div class=" imageFileCode printCoverCheckedIcon coverSelection"></div>
+                                        </div>
+                                        <div class="imageFileCode bookBottomCenterSpineblank posAbs"></div>
+                                        <div class="spreadPageNumberSize posAbs100">Front Cover</div>
+                                    </div>
+                                {{/compare}}
+                                {{#compare this.page_sequence '!==' '1'}}
+                                    <div class="spreadContainer selectedCover backCover" id="{{this.page_id}}">
+                                        <div class=" imageFileCode bookTopCenterSpineblank"></div>
+                                        <div class="coverContainer">
+                                            <img data-original="{{this.name}}" width="100" class="pageSelectionImg lazy" />
+                                            <img src="https://imgd.photogurus.com/assets/images/pageBlackMask.png" width="100" height="100" class="pageMaskCover coverSelection"
+                                            />
+                                            <div class=" imageFileCode printCoverCheckedIcon coverSelection"></div>
+                                        </div>
+                                        <div class="imageFileCode bookBottomCenterSpineblank posAbs"></div>
+                                        <div class="spreadPageNumberSize posAbs100">Back Cover</div>
+                                    </div>
+                                {{/compare}}
+                            {{/compare}}
+
+                        {{/each}}
+                    </div>
+                </div>
+                <img src="https://imgd.photogurus.com/assets/images/printInnerShadow.png" class="printInnerShadow" />
+            </div>
+            <div class="col-md-12 text-center">
+                <div class="printPrimaryBtn mbt20" id="collectPagesBtn">Continue</div>
+            </div>
+            <div id="conditionalUnselectedMsg">Unselected pages will not be printed.</div>
+        </div>

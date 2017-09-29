@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <script>
+            console.log("in");
+            (function () {
+                setCookie = function (cname, cvalue, exdays) {
+                    var d = new Date();
+                    // (number*days)
+                    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+                    var expires = "expires=" + d.toUTCString();
+                    var co = cname + "=" + cvalue + ";";
+                    co += "path=/;";
+                    co += expires;
+                    document.cookie = co;
+                };
+
+                var URLHash = window.location.search;
+                URLHash = decodeURI(URLHash);
+                URLHash = URLHash.split('&');
+                URLHash = URLHash[0].split("?code=");
+//                URLHash = URLHash[0].split("#access_token=");
+                setCookie('awsAccessToken', URLHash[1]);
+                window.opener.$("#AmazonModal").modal('show');
+                window.opener.$('.loadingPhotogurusBody').show();
+                window.close();
+
+            })();
+
+
+        </script>
+    </head>    
+    <body>
+        <div></div>
+    </body>
+</html>

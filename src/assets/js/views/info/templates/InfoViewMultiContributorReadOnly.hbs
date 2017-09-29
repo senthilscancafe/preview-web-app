@@ -1,0 +1,86 @@
+<!-- Info Modal -->
+<div class="modal " id="InfoModal" role="dialog">
+    <div id="infoDialog" class="modal-dialog multiContributorOnly">
+
+        <!-- Modal content-->
+        <div class="modal-content" id="baseInfo">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><i class="backIcon"></i></button>
+                <div class="del-icon-modal delete-info" data-dismiss="modal"><img src="assets/images/bin-icon.png"></div>
+                <h4 class="modal-title">{{caption}}</h4>
+            </div>
+            <div class="modal-body">
+                <div class="innerTop clearfix">
+                    <div class=""> 
+                        <div class="elementContainer triggerAddMorePhotos">
+                            <img src="assets/images/add-more-photos.png">
+                        </div>
+                    </div>
+                    <div class=""> 
+                        <div class="elementContainer top10" >
+                            {{addMorePhotos}}
+                        </div>
+                    </div>
+                </div>
+
+
+                <ul class="nav nav-tabs">
+                    <li class="active" style="margin-left: 13px;margin-right: 5px; margin-top: -1px;"><a data-toggle="tab" href="#yourPhotosTab">Your Photos</a></li>
+                    <li style="margin-top: -1px;"><a data-toggle="tab" href="#friendsPhotosTab">Friend's Photos</a></li>
+                </ul>
+                <div class="sc1-content" style="padding: 5px;">                   
+
+                    <div class="tab-pane fade in active" id="yourPhotosTab" >
+                        <div class="image-set-src-container div-owner clearfix">
+                            <div class="image_content_code_info leftArrowIcon"></div>
+                            <div class="image-set-src-holder">
+                                <div class="image-set multiContributorContributorSets" >
+
+
+                                </div>
+                            </div>
+                            <div class="image_content_code_info div-owner rightArrowIcon"></div>
+                        </div>    
+                        <div class="position-center imageSetCounterTextClass selectedCountText"><span id="ownerImageSetCounterTextId" ></span> </div>
+
+                    </div>
+
+
+                    <div class="tab-pane fade " id="friendsPhotosTab" >
+                        <div class="image-set-src-container div-contributor clearfix">
+                            <div class="image_content_code_info leftArrowIcon"></div>
+                            <div class="image-set-src-holder">
+                                <div class="image-set-Friends multiContributorContributorSets">
+
+
+                                </div>
+                            </div>
+                            <div class="image_content_code_info rightArrowIcon"></div>
+                        </div>    
+                        <div class="position-center imageSetCounterTextClass selectedCountText"><span id="contributuorImageSetCounterTextId"></span></div>
+
+                    </div>
+
+
+                </div>
+            </div>
+            <!--<div class="modal-footer clearfix"></div>-->
+        </div>
+    </div>
+</div>
+<div id="errorMessageModal" class="modal fade" data-backdrop="static" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <div><strong class="copy-text">Link copied to the clipboard.</strong></div>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="errorMessageModalOKBtn">OK</button>
+            </div>
+        </div>
+    </div>
+</div>

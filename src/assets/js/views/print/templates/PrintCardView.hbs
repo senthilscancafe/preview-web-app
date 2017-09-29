@@ -1,0 +1,27 @@
+<div class="printFormContainer">
+    <div class="printFormHeader">{{heading}}</div>
+    <div class="printFormBody">
+        {{#each cardList}}
+        <div class="cardListElementsOuterBox">
+            <div class="col-md-1">
+                <div class="share-RadioImg shareRadio cardRadio" id="{{this.billingAddress.billingAddressId}}">
+                    <input class="share-radio" type="radio" name="shareWith">
+                </div>
+            </div>
+            <div class="col-md-11">
+                <div class=""><b>{{this.cardType}} {{this.maskedNumber}}</b></div>
+                <div class=""><b>{{this.cardholderName}}</b></div>
+                <div class="">Expires {{this.expirationDate}}</div>
+            </div>
+        </div>
+        <hr class="address-line-separator col-md-12"> </hr>
+        {{/each}}
+        <div class="addCard"><b>{{addCard}}</b>
+            <span style="float: right;"><i class="rightArrow icons"></i></span>
+</div>
+</div>
+<div class="printFormBodyBox">
+    <div id="continuePayment" class="printFormPrimaryBtn">{{submitLabel}}
+    </div>
+</div>
+</div>

@@ -1,0 +1,84 @@
+<!-- Info Modal -->
+<div class="modal " id="InfoModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content" id="baseInfo">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><i class="backIcon"></i></button>
+                <h4 class="modal-title">{{caption}}</h4>
+            </div>
+            <div class="modal-body">
+                <div class="innerTopBody clearfix">
+                    <div class="albumCover">
+                        <img src="{{cover}}" onError="this.onerror=null;this.src='{{imageBase}}icon_default_photo.png';" />
+                    </div>
+                    <div class="albumContent"> 
+                        <div class="title">{{caption}}</div>
+                        <!--                        <div class="subTitle">AUG 2009</div>-->
+                        <div>
+                            <input id="calender" type="text" value="{{orderDate}}" class="form-control" disabled="disabled">
+                            <div id="editDateId" class="image_content_code editContent"></div>
+                        </div>
+                        <!--div class="pagesPhoto">{{pagescount}} pages, {{photoscount}} photos</div-->
+                        <div class="shareBookOwner">{{bookOwner}}</div>
+                        <!--                        <div><div class="location">San Francisco,Cambodia, Goa</div><textarea rows="3" cols="20" id="loationId" maxlength="70" style="display:none;float: left;"></textarea ><div class="locationEditBox"><div class="sharedImage_code locationEditDone"></div></div><div id="locationEditId" class="image_content_code editContent"></div></div>-->
+                    </div>
+                </div>
+                <div class="innerCenterBody">
+                    <div class="cTitle">{{shareUppercase}} <span class="cSubTitle"> {{withshare}}</span></div>
+                    <div class="shareContainer clearfix">
+                        <div class="sharedUserContainer clearfix">
+                            <div class="image_content_code leftArrowIcon"></div>
+                            <div class="shared-names">
+                                <div class="share-NameCon">
+                                    <div class='userIconDetailsContent' id="add_new-sharer"><div class='userIcon_code sharedCIcon'><img src="assets/images/newShare.png"></div><div class='cSubTitle sharerName'>{{addnew}}</div></div>
+                                </div>
+                            </div>
+                            <div class="image_content_code rightArrowIcon"></div>
+                        </div>
+                        <div class="sharedFeatureContainer">
+                            <div class="linkContent share-more" id="{{id}}">
+                                <div class="sharedImage_code shareMoreIcon"></div>
+                                <div class="cSubTitle ib">{{sharemore}}</div>
+                            </div>
+                            <div class="linkContent" id="removePublicLinks"> 
+                                <div class="sharedImage_code removePublicLink"></div>
+                                <div class="cSubTitle ib">{{removepubliclinks}}</div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="modal-footer clearfix">
+                <div class="footerItem footerItem_border order-photoBook"><div class="image_code print_icon"></div><div class="main-head">{{order}}</div><div class="sub-head">{{photobook}}</div></div>
+                <div class="footerItem footerItem_border edit-item"><a href="{{editStoryTool}}{{id}}&consumer=yes&token={{authToken}}"><div class="image_code edit_icon"></div><div class="main-head">{{edit}}</div><div class="sub-head">{{photostory}}</div></a></div>
+                <div class="footerItem footerItem_border save-item"><a href="{{zipURL}}"><div class="image_code save_icon"></div><div class="main-head">{{save}}</div><div class="sub-head">{{todevice}}</div></a></div>
+                {{#compare stroytype  '===' 'SharedStory'}} 
+                    <div class="footerItem delete-info"><div class="image_code delete_icon"></div><div  class="main-head">{{remove}}</div><div class="sub-head">{{fromgallery}}</div></div>  
+                {{/compare}}
+                {{#compare stroytype  '===' 'OwnStory'}} 
+                    <div class="footerItem delete-info"><div class="image_code delete_icon"></div><div  class="main-head">{{delete}}</div><div class="sub-head">{{fromgallery}}</div></div>  
+                {{/compare}}
+                <!--button type="button" class="btn btn-default" data-dismiss="modal">Close</button-->
+            </div>
+        </div>
+        <div class="modal-content" id="shaereInfo">
+            <div class="modal-header clearfix">
+                <button type="button" class="close" id="info_back"><i class="backIcon"></i></button>
+                <h4 class="modal-title">{{sharedwith}} <span class="sharer"></span></h4>
+                <div class="info-delete"></div>
+            </div>
+            <div class="modal-body text-center">
+                <img src="" id="sharer_image">
+                <p class="sharer pagesPhoto" ></p>
+                <p id="sharer_email" class="pagesPhoto"></p>
+                <p class="pagesPhoto">{{sharedthrough}} <span id="shared_through"></span></p>
+                <p class="pagesPhoto">{{sharedon}} <span id="shared_date"></span></p>
+            </div>
+        </div>
+    </div>
+</div>

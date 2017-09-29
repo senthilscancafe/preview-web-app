@@ -1,0 +1,79 @@
+<div>
+    <div class="uploader-bar t3 b-a-0 text-white">    
+        <div class="icon-notification"><span class="uploading-icon"></span></div>
+        <div class="middle-div clearfix">
+            <div class="upload-text">
+                <span class="uploadingStoryTitleText">{{uploadTitleRequestType}} </span><b><span class="uploadingStoryName">{storyName}</span></b>
+            </div>
+            <div class="progress allFileUploadProcessBar" >
+                <div class="progress-bar progress-bar-success"></div>
+            </div>
+            <div>
+                <div class="uploader-count">
+
+                </div> 
+                <div class="additional-details">
+                    <span class="upload-in-text">Upload Details</span><span class="detail-menu" data-toggle="modal" data-target="#uploader-details-modal"></span>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <div class="upload-status-bar">
+        <div class="default-text">
+            <span class="yellow-font"><strong>Do not close your browser </strong></span><span class="showRemainingTime">(Time remaining 00:15:20)</span>
+        </div>
+        <div class="warning-bad-network">
+            <span class="upload-paused-icon"></span><span class="red-font"><strong>{{badNetwork}}</strong></span>
+        </div>
+        <div class="warning-no-network">
+            <span class="upload-paused-icon"></span><span class="red-font"><strong>{{noNetwork}}</strong></span>
+        </div>
+    </div>
+</div>
+<div id="uploader-details-modal" class="modal fade" role="dialog" >
+    <div class="modal-dialog container">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="uploader-modal-close"></div>
+            <div class="uploader-bar t3 b-a-0 text-white">    
+                <div class="icon-notification"><span class="uploading-icon"></span></div>
+                <div class="middle-div clearfix">
+                    <div class="upload-text">
+                        <span class="uploadingStoryTitleText">{{uploadTitleRequestType}} </span><span class="uploadingStoryName"><b>{storyName}</b></span>
+                    </div>
+                    <div class="progress allFileUploadProcessBar">
+                        <div class="progress-bar progress-bar-success"></div>
+                    </div>
+                    <div>
+                        <div class="uploader-count">
+                            
+                        </div> 
+                    </div>
+                </div> 
+            </div>
+            <div class="delete-upload-div clearfix">
+
+                <div id="uploader-cancel-btn"></div>
+                <div class="uploadDetails-in-text">
+                    Upload details
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="upload-details">                   
+                    {{#each uploadFileData}}
+                    <div class="col-sm-4 source-cols">
+                        <div class="source-desktop source-icons"></div>
+                        <div class="name-container">
+                            <div class="image-name">{{this.fileName}}</div>
+                            <div class="progress {{this.className}}">
+                                <div class="progress-bar progress-bar-success"></div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}                  
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

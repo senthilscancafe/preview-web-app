@@ -1,0 +1,1960 @@
+
+
+btn btn-primary active[data-toggle=buttons]>.btn input[type=checkbox],
+[data-toggle=buttons]>.btn input[type=radio],
+[data-toggle=buttons]>.btn-group>.btn input[type=checkbox],
+[data-toggle=buttons]>.btn-group>.btn input[type=radio] {
+    clip: auto;
+}
+
+[tooltip]:before {
+    content: attr(tooltip);
+    position: absolute;
+    opacity: 0;
+    transition: all 0.15s ease;
+    padding: 10px;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px silver;    
+}
+
+[tooltip]:hover:before {
+    opacity: 1;
+    background: yellow;
+    margin-top: -50px;
+    margin-left: 20px;    
+}
+
+[tooltip]:not([tooltip-persistent]):before {
+    pointer-events: none;
+}
+.input_photo_box.friendsBox{
+    /*display: none;*/
+}
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: inset 1px 0 0 rgba(255,255,255,.4);
+    width: 12px;
+    margin: 0px 2px 2px 2px;
+    position: absolute;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.noImages{
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    display:none;
+}
+
+.indicationContributor{
+    display:none;
+}
+
+/* dropbox css*/
+#cancelRedirectionBtn,#cancelFBRedirectionBtn,#cancelRedirectionGPBtn,#cancelRedirectionFlickrBtn,#cancelRedirectionACBtn,#saveStory{
+    border-right: 1px solid #e5e5e7;
+}
+
+#redirectionToDashboardBtn,#redirectionToFBAlbumBtn,#redirectionToGPAlbumBtn,#redirectionToFlickrAlbumBtn{
+    width: 137px;
+}
+.loseSelectionModal .modal-dialog{
+    width:300px;
+}
+.dropbox-dropin-btn,
+.dropbox-dropin-btn:link,
+.dropbox-dropin-btn:hover {
+    width: 106px!important;
+    background: transparent!important;
+    height: 92px!important;
+    border: none!important;
+    position: relative;
+    font-size: 0px!important;
+}
+#dropbox{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+.dropbox-dropin-btn, .dropbox-dropin-btn:link, .dropbox-dropin-btn:hover {
+    padding: 6px 7px 5px 3px!important;
+}
+.dropbox-dropin-btn .dropin-btn-status {
+    background: none!important;
+}
+.mycomputerImages{
+    width: 33.33333333%;
+    padding: 11px;
+    line-height: 1;
+    height: 40px;  
+    cursor:pointer;
+    display: table;
+}
+.mycomputerImages:hover{
+    background: #f2f2f2;
+}
+
+
+#photoStoryPopup input:-webkit-autofill {    
+    webkit-box-shadow: 0 0 0 50px #f8f7f7 inset;
+    -webkit-text-fill-color: #000;
+}
+#photoStoryPopup .has-error .form-control {
+    border-color: #a94442;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+#photoStoryPopup textarea.form-control {
+    border-color: #e4e4e4;
+    font-weight: 400;
+    font-size: 1rem;
+    border-radius: 0;
+    -webkit-transition: border 150ms linear;
+    transition: border 150ms linear;
+    box-shadow: none;
+    border-radius: 5px;
+}
+#photoStoryPopup label{
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+#files{
+    padding: 15px;
+}
+
+#fbInnerTitle{
+    width: 260px;
+    /* text-align: center; */
+    margin: 0 auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+
+#myComputerPhotoCounter,
+#fbPhotoCounter,
+#dbPhotoCounter,
+#flickerPhotoCounter,
+#GPhotoCounter,
+#ACPhotoCounter,
+#OtherDeviceCounter,
+#FriendsCounter{
+    visibility: hidden;
+    height: 38px;
+}
+.dynamicLoadingMessage {
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    display: none;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 1200;
+    width: 400px;
+    height: 50px;
+    top: 61%;
+    padding: 14px;
+    left: 0;
+    right: 0;
+    border: 3px solid #ddd;
+}
+audio, canvas, progress, video {
+    display: inline-block;
+    vertical-align: baseline;
+    position: absolute;
+}
+.counterLabel {
+    color: #F3AF0C;
+    margin-top: 22px;
+    margin-bottom: -49px;
+    display: inline-block;
+    font-size: 12px;
+}
+.fb_bottom {
+    position: absolute;
+    margin-top: 96px;
+    margin-left: 96px;
+}
+.confirmationBox {
+    width: 350px;
+}
+
+.confirmationBoxText {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.fb_panel_btn_size {
+    width: 236px;
+    text-align: center;
+}
+.container {
+    width: 1133px;
+}
+
+.active .fb-albums {
+    padding: 0px;
+    background-color: #ddd;
+}
+.btn-group,
+.btn-group-vertical {
+    width: 100%;
+}
+#fb_modal .col-sm-6 {
+    width: 50%;
+}
+.fb_title {
+    padding: 6px 16px 6px 16px;   
+    text-align: center;
+    background: #4b4b4b;
+    font-size: 24px;
+    color:#f5f5f5;
+    height: 48px;
+}
+.fb-albums-thumb {
+    width: 130px;
+    height: 130px;
+    border: 1px solid #b4b4b4;
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.fb-albums:hover .fb-albums-thumb, .GPModalAlbum:hover .fb-albums-thumb,.flickrModalAlbum:hover .fb-albums-thumb,.ACModalAlbum:hover .fb-albums-thumb{
+    outline: 3px solid #ffbc00;
+}
+.fb-albums-focus {   
+}
+.fb-albums-thumb-check {
+    height: 90px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.closeCoverPage {
+    position: absolute;
+    right: 25px;
+    top: 32px;
+    cursor: pointer;
+    background: url(https://imgd.photogurus.com/assets/images/uploader/closeIcon.png) no-repeat;
+    width: 18px;
+    height: 19px;
+}
+.close {
+    /*    float: right;
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 1;
+        color: #000;
+        text-shadow: 0 1px 0 #fff;
+        filter: alpha(opacity=20);
+        opacity: 1;
+        margin-top: -13px;
+        margin-right: -9px;
+        position: absolute;
+        z-index: 1051;
+        right: 0;*/
+}
+.selectAlbumTitile {   
+    margin-top: 17px;
+}
+.uploaderModal .modal-body-right {    
+    padding: 0px 0px 0px 20px;
+    position: relative;
+    height: 443px;
+    overflow-y: hidden;
+    background: #dedede;
+}
+.uploaderModal .modal-body {
+    /*position: relative;*/
+    padding: 0px;
+    /*height: 411px;*/
+    /*    border: 8px solid #dddddd;
+        border-radius: 5px;
+        background-color: #f3f3f3;*/
+}
+.saveAndDesignPopup .modal-dialog{
+    margin: 0 auto;
+    width: 400px;
+}
+.saveAndDesignPopup .modal-content{
+    width: 400px;   
+    border-radius: 22px;
+}
+#contributorEmailShareView #scrEmailShareSend {
+    display: block;
+    background: #dedede!important;
+}
+#contributorEmailShareView #shareModal > .modal-dialog > .modal-content {
+    /* background: rgba(0,0,0,0.85); */
+    position: relative;
+    width: 100%;
+    border: 0;
+    width: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #555353;
+    top: -185px;
+    height: 100%;
+}
+#contributorEmailShareView #shareModal .modal-dialog {
+    margin: 20% auto 5%;
+}
+#EmailAndMobileIdMsg {
+    color:red;
+    margin-left: 5px;
+}
+
+
+#contributorEmailShareView .uploaderModal.modal.emailShareSuccessModal {  
+    z-index: 3030;
+}
+
+#contributorEmailShareView #shareModal .modal-body {
+    position: relative;
+    /* padding-bottom: 28px; */
+    height: 500px;
+    /* width: 350px; */
+}
+#contributorEmailShareView .scrForm {
+    background: #fff;
+    padding: 15px;
+    font-size: 14px;
+    color: #323232;
+    border-radius: 6px;
+    height: 300px;
+}
+
+.uploaderContainer .form-control#MessageId {
+    height: 100px;
+}
+.sDcloseIcon{
+    width: 20px;
+    height: 19px;
+    display: inline-block;
+    float: right;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background-image: url(../images/closeWhiteIcon.png);
+    cursor: pointer;
+}
+.inviteFriendscloseIcon{
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    float: right;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background-image: url(../images/close.png);
+    cursor: pointer;
+}
+#inviteFriedsFooterText{
+    font-weight: bold;
+    margin: 0px;
+    color:#818181;
+    font-size: 12px;
+}
+.saveAndDesignPopup .modal-body{
+    background: #3a3a3a;
+    padding: 58px 34px;
+    border-radius: 11px;
+}
+.saveAndDesignPopup p{
+    color: #f5f5f5;
+    font-size: 19px;
+    margin: 0px;
+}
+.pgActionBtn{
+    background: #ffbc00;
+    color: #333333;
+    padding: 10px 38px;
+    font-weight: bold;
+    padding: 13px 36px;
+    background: #feba00;
+    border-radius: 3px;
+    font-size: 24px;
+    cursor: pointer;
+    border: 0px;
+    border: 1px solid #DBA204;
+    margin: 20px 0px;
+}
+.gpphotosSelectionCount,.fbphotosSelectionCount,.flickrphotosSelectionCount,.acphotosSelectionCount{
+    position: absolute;
+    background: #4b4b4b;
+    z-index: 1330;
+    bottom: 0;
+    width: 100%;
+    opacity: .9;
+    height: 38px;
+    padding: 6px;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    display:none;
+}
+.uploaderModal .modalBody {
+    text-align: center;
+    padding: 20px;
+}
+.messageModal{
+    top:0px!important;
+}
+.messageModal .modal-dialog {
+    width: 384px;
+    margin: 10% auto 5%;
+}
+.messageModal.errorMessageModal  .modal-dialog {  
+    margin: 10% auto 5%;
+}
+.messageModal .modal-header {
+    padding: 5px;
+    border-bottom: 2px solid #15b0e4;
+    text-align: center;
+}
+.messageModal .modal-header h4 {
+    font-weight: 600;
+}
+.messageModal .modal-body {
+    position: relative;
+    padding: 0px;
+    border: 0px solid #dddddd;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 10px;
+
+}
+.messageModal .modal-footer {
+    padding: 0;
+    border-top: 2px solid #e5e5e7;
+    text-align:center;
+
+}
+.messageModal .modal-footer .btn {
+    background: transparent;
+    border: 0px;
+    text-align: center;
+    float: none;
+    color: #007aff;
+    padding: 10px 40px;
+    font-size: 15px;
+    /*text-transform: uppercase;*/
+}
+#saveStory,#closeSavePopup{
+    font-weight: bold;    
+}
+#saveStory.saveStoryDisabled,#inviteFriendsNextBtn.saveStoryDisabled{
+    color:#cccccc  
+}
+.messageModal .modal-content {
+    color: #000;
+    border-radius: 10px;
+    font-size: 15px;
+}
+#confirm_download.btn {
+    border-right: 1px solid #e5e5e7;
+}
+.errorMessageModal .btn {
+    width: 48%;
+}
+#PhotoStory .modal-body {
+    position: relative;
+    padding: 0px;
+    height: 411px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.uploaderModal .modal-content {
+    /*    margin-top: 11px;*/
+}
+.collection_box {
+    min-height: 187px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #fff;
+    border-top: none;
+    box-shadow: 0 5px 5px -5px #333;
+    clear: both;
+    padding-left: 3px;
+    padding-bottom: 20px;
+    border: 1px solid #cecece;
+    border-top: none;
+}
+.blank-box {
+    background: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 20px;
+}
+.uploaderContainer .content_header {
+    margin-top: 27px;
+}
+/*Related to modal*/
+
+.uploaderModal.modal {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+}
+.uploaderModal .modal-dialog {
+
+    margin: 0 auto;
+}
+.uploaderModal.facebookAlbumSelectionModal .modal-dialog,#GPModal .modal-dialog,#AmazonModal .modal-dialog{
+    width: 644px;
+    margin: 0 auto;
+}
+.uploaderModal.facebookAlbumSelectionModal{
+
+}
+.progress {
+    border-radius: 0px;
+    margin-bottom: 0px;
+    display: none;
+}
+/*realated to nave*/
+
+.navbar-collapse.collapse {
+    position: fixed;
+    z-index: 1000;
+    float: left;
+    width: 100%;
+    background: #323232; 
+    padding: 5px;
+    /* height: 54px; */
+    /*background-color: #4b4b4b;*/
+}
+/*.navbar-nav {
+    float: right;
+    margin: 15px;
+}*/
+input[type=checkbox]:checked {
+    /*background-image: url("https://imgd.photogurus.com/assets/images/uploader/check.png");*/
+}
+input[type=checkbox]:checked {
+    display:inline-block;
+    float: left;
+}
+
+.check_box {
+    display:none;
+}
+.overlayCheckBtn {
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+    position: absolute;
+    /* display: none; */
+    /* background: rgba(0,0,0,0.3); */
+    z-index: 1;
+    display:none;
+    background: url('https://imgd.photogurus.com/assets/images/uploader/selectedImage.png');
+}
+.check_box + label{
+    background:url('images/check-box.png') no-repeat;
+    height: 16px;
+    width: 16px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+.check_box:checked + label{
+    background:url('images/check-box-checked.png') no-repeat;
+    height: 16px;
+    width: 16px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+.loadingPhotogurus {
+    background: url('https://imgd.photogurus.com/assets/images/loading-photogurus.gif') no-repeat;
+    position: fixed;
+    z-index: 1020;
+    width: 200px;
+    height: 200px;
+    top: 45%;
+    left: 45%;
+}
+.noPreviewAvailble {
+    background: url(https://imgd.photogurus.com/assets/images/uploader/nopreview.png) no-repeat;
+    z-index: 1020;
+    width: 117px;
+    height: 117px;
+
+}
+.loadingPhotogurusBody {
+    position: fixed;
+    z-index: 1030;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.9;
+}
+.deleteIcon {
+    /*background: url(https://imgd.photogurus.com/assets/images/uploader/delete.png) no-repeat;
+    width: 13px;
+    height: 18px;*/
+    background-position: -266px -281px; 
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+    margin: 0;
+    z-index: 10;
+    display: inline-block;
+    float: right;
+    display: none;
+    margin-top: -4px;
+}
+.googlePhotoSmallIcon {
+    background: url(https://imgd.photogurus.com/assets/images/uploader/gpicon.png) no-repeat;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    margin: 0px;
+    z-index: 10;
+    display: inline-block;
+    margin-right: 15px;  
+}
+.amazonPhotoSmallIcon {
+    background: url(https://imgd.photogurus.com/assets/images/uploader/amazon.png) no-repeat;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    margin: 0px;
+    z-index: 10;
+    display: inline-block;
+    margin-right: 15px;  
+}
+.facebookSmallIcon {
+    background: url(https://imgd.photogurus.com/assets/images/uploader/facebook.png) no-repeat;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    margin: 0px;
+    z-index: 10;
+    display: inline-block;
+    margin-right: 15px;  
+}
+.dropboxSmallIcon {
+    background: url(https://imgd.photogurus.com/assets/images/uploader/dropbox.png) no-repeat;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    margin: 0px;
+    z-index: 10;
+    display: inline-block;
+    margin-right: 15px;  
+}
+.flickrPhotoSmallIcon {
+    background: url(https://imgd.photogurus.com/assets/images/uploader/flickerLeftBottom.png) no-repeat;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    margin: 0px;
+    z-index: 10;
+    display: inline-block;
+    margin-right: 15px;  
+}
+.mcIcon {
+    background: url(https://imgd.photogurus.com/assets/images/uploader/mcIcon.png) no-repeat;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    margin: 0px;
+    z-index: 10;
+    display: inline-block;
+    margin-right: 15px;  
+}
+.odIcon {
+    background: url(https://imgd.photogurus.com/assets/images/uploader/odIcon.png) no-repeat;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    margin: 0px;
+    z-index: 10;
+    display: inline-block;
+    margin-right: 15px;  
+}
+.generalTextName{
+    display: inline-block;
+    /*margin-left: 12px;*/
+    font-weight: bold;
+    font-size: 14px;
+    width: 276px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+.spriteImage{
+    background-image: url(https://imgd.photogurus.com/assets/images/smallSprite.png);   
+    cursor: pointer;
+}
+.modalBackArrow{
+    width: 23px;
+    height: 32px;
+    background-position: -298px -54px;
+    display:inline-block;
+    float: left;
+}
+.saveSelection{
+    float: right;
+}
+modalCloseBlock{
+    display: block;
+}
+
+.modalCloseIcon {
+    width: 31px;
+    height: 33px;
+    background-position: -298px -337px;
+    display: inline-block;
+    float: right;
+    margin-left: 5px;
+    display: none;
+    position: absolute;
+    right: -15px;
+    margin-top: -25px;
+}
+.mycomputerImages:hover .deleteIcon{
+    display:block;
+}
+.selectUptoInfo{
+    font-family: segoepr;
+    font-size: 26px;
+    text-align: center;
+    margin-top: 105px;
+}
+.indicationImg {
+    background: url(https://imgd.photogurus.com/assets/images/uploader/indication.png) no-repeat;
+    width: 570px;
+    height: 112px;
+    cursor: pointer;
+    position: absolute;
+    right: 36px;
+    /* margin-top: 70px; */
+    z-index: 10;
+    bottom: 0;
+}
+.indicationFlip {
+    background: url(https://imgd.photogurus.com/assets/images/uploader/indicationFlip.png) no-repeat;
+    width: 570px;
+    height: 150px;
+    cursor: pointer;
+    position: absolute;
+    right: -36px;
+    margin-top: -23px;
+    z-index: 10;
+    display: none;
+}
+.limitIndication {
+    background: url(https://imgd.photogurus.com/assets/images/uploader/limit.png) no-repeat;
+    width: 300px;
+    height: 45px;
+    cursor: pointer;
+    position: absolute;
+    right: 36px;
+    color: #be0706;
+    z-index: 10;
+    font-size: 15px;
+    font-Weight: 600;
+    text-indent: 58px;
+    line-height: 2.7;
+    display:none;
+}
+.limitCrossed {
+    background: url(https://imgd.photogurus.com/assets/images/uploader/limitCrossed.png) no-repeat;
+    width: 285px;
+    height: 91px;
+    cursor: pointer;
+    position: absolute;
+    right: 36px;
+    color: #be0706;
+    z-index: 10;
+    font-size: 15px;
+    font-Weight: 600;
+    text-indent: 58px;
+    line-height: 2.7;
+    display: none; 
+    font-family: arial;
+    font-size: 12px;
+    color: #323232;
+    text-align: center;
+    line-height: 1.5;
+    margin-top: -75px;
+    padding: 19px;
+    color: black;
+    right: 59px;
+    float: right;
+}
+.numberOfFilesToRemove{
+    text-align: center;
+    width: 233px;
+    line-height: 1.5;
+    white-space: nowrap;
+}
+.resourceContainer{
+    display: inline-block;
+    z-index: 30;
+    position: absolute;
+    left: -127px;
+    right: 0px;
+}
+.mfp-close-btn-in .mfp-close {
+    display: none;
+}
+#pg_menuToggleLeft {
+    background: url(https://imgd.photogurus.com/assets/images/uploader/pg_images/menutoggle_left_sprite.png) no-repeat;
+    width: 44px;
+    height: 44px;
+    background-position: 0px 0px;
+    cursor: pointer;
+    position: absolute;
+    left: 10px;
+    top: 0px;
+}
+.glyphicon-menu-hamburger:hover {
+    color: #ffbc00;
+    cursor: pointer;
+}
+#menu-toggle {
+    height: 42px;
+    cursor: default;
+}
+.glyphicon-menu-hamburger {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 0px;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: white;
+    padding: 12px;
+}
+.pg_title {
+    font-size: 40px;
+    font-weight: normal;
+    margin: 0;
+    line-height: 1.6;
+}
+.white-popup-block,
+.white-popup-block1 {
+    background: #FFF;
+    text-align: left;
+    margin: 40px auto;
+    position: relative;
+    border-radius: 3px;
+}
+.uploaderModal .modalBody {
+    padding: 10px;
+}
+.uploaderModal .modalHeader {
+    padding: 20px 10px;
+    border-bottom: 1px solid #cfcfcf;
+}
+#photoUploadProcess .modalHeader {
+    padding: 0px 0px 10px 0px;
+    text-align: center;
+    /* border-bottom: none; */
+    border-bottom: 1px solid #cfcfcf;
+    /* margin-bottom: 40px; */
+}
+#photoStoryPopup h1 {
+    margin: 0px;
+    padding-left: 45px;
+    font-size: 43px;
+    color: #494949;
+}
+#photoUploadProcess h4 {
+    display: inline-block;
+    margin-bottom: 21px;
+    margin-top: 6px;
+    font-size: 22px;
+    color: #fff;
+}
+#photoUploadProcess h1 {
+    margin-top: 0px;
+    margin-bottom: 48px;
+    margin-left: -41px;
+}
+#uploadPhotoTitle{
+    font-weight: bold;
+}
+.progress {
+    display: inline-block;
+    width: 100%;
+}
+.successMessageBox {
+    vertical-align: top;
+    color: white;
+    font-size: 20px;
+}
+.progress {
+    width: 550px;
+    height: 12px;
+    overflow: hidden;
+    background-color: #4b4b4b;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+}
+.progress-bar {
+    background-color: #fff;
+}
+.secondaryText {
+    color: #ca1919;
+}
+#photoUploadProcess .row {
+    margin-right: 0px;
+    margin-left: 0px;
+    margin: 0 auto;
+}
+.modelBottomBar{
+    font-size: 21px;
+    color: #ffbc00;
+    padding: 16px;
+    background: #3b3b3b;
+    font-weight: bold;
+}
+#photoUploadProcess .modalBody {
+    background: #7f7d7d;
+    margin: 0 auto;
+    margin: 40px 67px 67px 67px;
+    padding: 0px;
+}
+.downloadTray{
+    padding: 25px 20px 20px 20px;
+}
+.descriptionText {
+    text-align: left;
+    padding-left: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    width: 350px;
+    display: inline-block;
+}
+.uploaderContainer .form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #f8f7f7;
+    background-image: none;
+    border: 1px solid #dedede;
+    border-radius: 0px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#contributorEmailShareView .form-control,.copyLinkModal .form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.copyLinkModal .form-control {
+    display: block;
+    width: 275px;
+    margin: 20px auto;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+
+
+/*.nav>li>a {
+    position: relative;
+    display: inline-block;
+    padding: 0px;
+}*/
+.nav>li>a:focus,
+.nav>li>a:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: transparent;
+}
+.progressNtitleContainer {
+    display: inline-block;
+}
+.home {
+    background: url("https://imgd.photogurus.com/assets/images/uploader/home.png");
+    width: 32px;
+    height: 32px;
+    float: left;
+    margin: 5px;
+    margin-left: 15px;
+    cursor:pointer;
+}
+.choose {
+    background: url("https://imgd.photogurus.com/assets/images/uploader/choose.jpg") no-repeat;
+    width: 294px;
+    height: 261px;
+    position: absolute;
+    margin: 0 auto;
+    background-position: center;
+    margin-top: 12%;
+    margin-left: 15%;
+}
+.photoStoryCover {
+    background: url("https://imgd.photogurus.com/assets/images/uploader/photostory.jpg") no-repeat;
+    width: 294px;
+    height: 283px;
+    /* position: absolute; */
+
+    margin: 0 auto;
+    background-position: center;
+    /* margin-top: 12%; */
+    /* margin-left: 15%; */
+}
+.uploderIcon {
+    background: url("https://imgd.photogurus.com/assets/images/uploader/uploderIcon.png") no-repeat;
+    width: 98px;
+    height: 124px;
+    display: inline-block;
+    background-position: center;
+    vertical-align: top;
+    padding: 0px;
+    width: 52px;
+}
+.progressbar {
+    background: url("https://imgd.photogurus.com/assets/images/uploader/progressbar.png") no-repeat;
+    width: 540PX;
+    height: 25PX;
+    background-position: center;
+    vertical-align: middle;
+}
+.waitwatch {
+    background: url("https://imgd.photogurus.com/assets/images/uploader/waitwatch.png") no-repeat;
+    width: 44PX;
+    height: 45PX;
+    background-position: center;
+    vertical-align: top;
+    display: inline-block;
+}
+.professionalDesigner {
+    background: url("https://imgd.photogurus.com/assets/images/uploader/professionalDesigner.png") no-repeat;
+    width: 44px;
+    height: 52px;
+    background-position: center;
+    vertical-align: top;
+    display: inline-block;
+}
+.photoUploadModalBody {
+    box-shadow: inset 23px 22px 21px 4px rgba(249, 249, 249, 0.6);
+}
+.camMan {
+    background: url("https://imgd.photogurus.com/assets/images/uploader/camMan.png") no-repeat;
+    width: 294px;
+    height: 312px;
+    ;
+    /* position: absolute; */
+
+    margin: 0 auto;
+    background-position: right;
+    margin-top: 4%;
+    /* margin-left: 15%; */
+}
+.pg_main_title {
+    background: #fff;
+    border: 1px solid #cecece;
+    border-bottom: none;
+    color: #484848;
+    height: 93px;
+    padding: 17px 100px 17px 35px !important;
+}
+.pg_logo {
+    float: left;
+    margin-right: 20px;
+    padding-top: 10px;
+}
+.logo {
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    /* padding: 9px; */
+
+    width: 78px;
+    height: 32px;
+    margin: 0 auto;
+    margin-top: 6px;
+}
+.titleh1 {
+    font-size: 28px;
+    margin: 0 auto;
+    width: 400px;
+    padding: 10px;
+}
+.preview-img,
+.preview-img-flicker,
+.preview-img-db,
+.preview-img-gp {
+    /*    float: left;
+        border: 1px solid #ccc;
+        width: 117px;
+        height: 117px;
+        overflow: hidden;
+        position: relative;
+        margin-right: 3px;
+        margin-top: 3px;*/
+}
+.add_photo_title {
+    margin: -6px 0 0 0;
+    float: left;
+}
+.total_count {
+    background-color: #ddd;
+    border-bottom: none;
+    border: 1px solid #bab8b8;
+    color: #000;
+    padding: 10px;
+    height: 40px;
+    background: #e0e0e0;
+    background: -moz-linear-gradient(top, #e0e0e0 0%, #d4d4d4 0%, #ededed 0%, #ededed 0%, #d4d4d4 0%, #d4d4d4 0%, #d4d4d4 0%, #ededed 18%, #d4d4d4 100%, #d4d4d4 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e0e0e0), color-stop(0%, #d4d4d4), color-stop(0%, #ededed), color-stop(0%, #ededed), color-stop(0%, #d4d4d4), color-stop(0%, #d4d4d4), color-stop(0%, #d4d4d4), color-stop(18%, #ededed), color-stop(100%, #d4d4d4), color-stop(100%, #d4d4d4));
+    background: -webkit-linear-gradient(top, #e0e0e0 0%, #d4d4d4 0%, #ededed 0%, #ededed 0%, #d4d4d4 0%, #d4d4d4 0%, #d4d4d4 0%, #ededed 18%, #d4d4d4 100%, #d4d4d4 100%);
+    background: -o-linear-gradient(top, #e0e0e0 0%, #d4d4d4 0%, #ededed 0%, #ededed 0%, #d4d4d4 0%, #d4d4d4 0%, #d4d4d4 0%, #ededed 18%, #d4d4d4 100%, #d4d4d4 100%);
+    background: -ms-linear-gradient(top, #e0e0e0 0%, #d4d4d4 0%, #ededed 0%, #ededed 0%, #d4d4d4 0%, #d4d4d4 0%, #d4d4d4 0%, #ededed 18%, #d4d4d4 100%, #d4d4d4 100%);
+    background: linear-gradient(to bottom, #e0e0e0 0%, #d4d4d4 0%, #ededed 0%, #ededed 0%, #d4d4d4 0%, #d4d4d4 0%, #d4d4d4 0%, #ededed 18%, #d4d4d4 100%, #d4d4d4 100%);    
+    font-weight: bold;
+    font-family: 'proxima_novalight', 'helvetica_ce_35_thinregular';
+    font-size: 14px;
+    line-height: 1.42857143;
+}
+.multiple_resource_box {
+    position: relative;
+    padding: 15px;
+    background-color: #323232;
+    color: #fff;
+    text-align: center;
+    padding-top: 50px;
+    height: 231px;
+}
+.input_class_checkbox{
+    visibility: hidden;
+}
+.input_photo_box {   
+    width: 109px;
+    height: 109px;
+    background: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    margin-right: 4px;
+    cursor: pointer;
+    padding-top: 5px;
+    clear: both;
+    padding-left: 5px;
+}
+.input_photo_box.otherDeviceBoxDisabled{
+    background-color: #fff;
+    cursor: pointer;
+}
+.input_photo_box.otherDeviceBoxDisabled:hover{
+    background-color: #fff;
+    cursor: default;
+}
+.input_photo_box:hover,
+.input_photo_box:focus,
+.input_photo_box:active {
+    background-color: #E4E4E4;
+}
+.input_photo_box:focus,
+.input_photo_box:active {
+    background-color: #feba01;
+}
+.input_photo_box:focus .my_computer {
+    background-image: url(https://imgd.photogurus.com/assets/images/uploader/my_computer_mo.png);
+    background-repeat: no-repeat;
+    width: 56px;
+    height: 50px;
+    /*margin: 17px 28px 0px 29px;*/ 
+}
+.fbdisable {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: #E7E6E4;
+    opacity: 0.8;
+}
+.my_computer {
+    background-image: url(https://imgd.photogurus.com/assets/images/uploader/my_computer.png);
+    background-repeat: no-repeat;
+    width: 56px;
+    height: 50px;
+    margin: 17px 26px 0px 27px;
+}
+.loading-photogurus {
+    background-image: url(https://imgd.photogurus.com/assets/images/uploader/loading.gif);
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    background-position: center;
+}
+.facebook {
+    background-image: url(https://imgd.photogurus.com/assets/images/uploader/facebook_icon.png);
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    margin: 17px 21px 0px 27px;
+}
+.drop_box {
+    background-image: url(https://imgd.photogurus.com/assets/images/uploader/drop_box.png);
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 54px;
+    margin: 13px 21px 0px 21px;
+}
+#oneDrive{
+    display:none;
+}
+.one_drive {
+    background-image: url(https://imgd.photogurus.com/assets/images/uploader/oneDriveLogo.png);
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 54px;
+    margin: 13px 27px 0px 27px;
+}
+.google_photo {
+    background-image: url(https://imgd.photogurus.com/assets/images/uploader/googlephoto.png);
+    background-repeat: no-repeat;
+    width: 56px;
+    height: 57px;
+    margin: 10px 21px 0px 21px;
+}
+.other_device {
+    background-image: url(https://imgd.photogurus.com/assets/images/uploader/otherDevice.png);
+    background-repeat: no-repeat;
+    width: 56px;
+    height: 57px;
+    margin: 10px 21px 0px 21px;
+}
+.active_other_device {
+    background-image: url(https://imgd.photogurus.com/assets/images/uploader/otherDeviceSelected.png);
+    background-repeat: no-repeat;
+    width: 56px;
+    height: 57px;
+    margin: 10px 21px 0px 21px;
+}
+.selected_other_device {
+    background-image: url(https://imgd.photogurus.com/assets/images/uploader/otherDeviceSelectedColoredIcon.png);
+    background-repeat: no-repeat;
+    width: 56px;
+    height: 57px;
+    margin: 10px 21px 0px 21px;
+}
+.Friends {
+    background-image: url(https://imgd.photogurus.com/assets/images/uploader/friendsIcon.png);
+    background-repeat: no-repeat;
+    width: 56px;
+    height: 57px;
+    margin: 10px 21px 0px 21px;
+}
+.amazon_photo {
+    background-image: url(https://imgd.photogurus.com/assets/images/uploader/amazonIcon.png);
+    background-repeat: no-repeat;
+    width: 52px;
+    height: 50px;
+    margin: 17px 21px 0px 24px;
+}
+.flickr {
+    background-image: url(https://imgd.photogurus.com/assets/images/uploader/flickr.png);
+    background-repeat: no-repeat;
+    width: 81px;
+    height: 40px;
+    margin: 27px 0px 0px 10px;
+}
+.amazon {
+    background-image: url(https://imgd.photogurus.com/assets/images/uploader/amazon.png);
+    background-repeat: no-repeat;
+    width: 56px;
+    height: 50px;
+    margin: 17px 28px 0px 29px;
+}
+
+.my_computer_text{
+    color: #000;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: arial;
+    margin-bottom: 17px;
+    padding-top: 10px;
+}
+
+.input_photo_box_label {
+    color: #000;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: arial;
+    
+}
+#startUpload.primary_btn.disabled_btn,#saveAndDesignUpload.primary_btn.disabled_btn,#contributorUpload.primary_btn.disabled_btn {
+    background: #ac8414;
+    border: 1px solid #ac8414;
+    cursor: default;
+}
+#startUpload.primary_btn,#saveAndDesignUpload.primary_btn,#contributorUpload.primary_btn {
+    font-weight: bold;
+    padding: 1px 27px;
+    background: #feba00;
+    position: absolute;
+    color: #000;
+    margin-top: 30px;
+    display: inline-block;
+    border-radius: 2px;
+    font-size: 26px;
+    cursor: pointer;
+    border: 1px solid #DBA204;
+    float: right;
+    margin-top: 30px;
+    right: 15px;
+}
+#sureToSubmitYes.primary_btn {
+    padding: 8px 20px;
+    background: #feba00;
+    color: #000;
+    display: inline-block;
+    border-radius: 2px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #DBA204;
+    margin-right: 13px;
+}
+#sureToSubmitNo.primary_btn {
+    padding: 8px 20px;
+    background: #FFFFFF;
+    color: #000;
+    display: inline-block;
+    border-radius: 2px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #BEB59B;
+}
+#savetitle{
+    width: 293px;
+    height: 38px;
+    padding: 10px;
+    text-align: center;
+    background: #cccccc;
+    color: #323232;
+    font-weight: bold;
+    margin: 0 auto;
+    font-size: 17px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+}
+/*#friendsTitle{    
+    width: 293px;
+    height: 38px;
+    padding: 10px;
+    text-align: center;
+    background: #cccccc;
+    color: #323232;
+    font-weight: bold;
+    margin: 0 auto;
+    font-size: 17px;
+    margin-top: 20px;
+    border-radius: 5px;
+}*/
+
+#friendsTitle{    
+    width: 293px;
+    height: 38px;
+    padding: 10px;
+    text-align: center;
+    background: #cccccc;
+    color: #323232;
+    font-weight: bold;
+    margin: 0 auto;
+    font-size: 17px;
+    margin-top: 10px;
+    border-radius: 5px;
+
+}
+
+#otherDeviceText2{
+    margin:0px;
+}
+#createOrder {
+    padding: 8px 20px;
+    background: #feba00;
+    color: #000;
+    display: block;
+    border-radius: 2px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 auto;
+    text-align: center;
+    left: 0;
+    right: 0;
+    width: 163px;
+}
+.primary_btn {
+    padding: 8px 20px;
+    background: #feba00;
+    color: #000;
+    display: inline-block;
+    border-radius: 2px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid #DBA204;
+}
+/* css pk*/
+
+input[type="file"] {
+    display: none;
+}
+.button {
+    color: #000;
+    background-color: #449d44;
+    border-color: #398439;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.fileinput-button{
+    padding: 0;
+    margin: 0px 4px 0px 0px;
+}
+
+.fileinput-button label { 
+    cursor: pointer;
+    
+}
+.pageload {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    background-color: rgba(255,255,255,0.66);
+    z-index: 99999;
+    display: table;
+    opacity: 5;
+}
+.pageload>div {
+    display: table-cell;
+    vertical-align: middle;
+}
+.text-center {
+    text-align: center !important;
+}
+
+#photoStoryPopup .form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #f8f7f7;
+    background-image: none;
+    border: 1px solid #dedede;
+    border-radius: 0px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+#photoStoryPopup #specialInstruction.form-control {
+    z-index: auto;
+    position: relative;
+    line-height: 22.8571px;
+    font-size: 16px;
+    transition: none;
+    height: auto;
+}
+
+#photoStoryPopup .form-control:focus {
+    border-color: #dba204;
+}
+#createOrder.disabled_btn {
+    background: #ac8414;
+    border: 1px solid #ac8414;
+    cursor: default;
+}
+#photoStoryPopup .modalHeader{
+    border-bottom: 1px solid #cfcfcf;
+    padding: 20px 10px;
+}
+#fb_modal .selectAlbumTitile,.GoogleAlbumContainer .selectAlbumTitile{
+    font-size: 18px;
+    color:#323232;
+    margin-left: 34px;
+}
+#fb_modal .selectAllAlbumPhots,.GoogleAlbumContainer .selectAllAlbumPhots{
+    font-size: 18px;
+    color:#323232;
+    margin-left: 34px;    
+}
+#fb_modal .selectAllCheckIcon,.GoogleAlbumContainer .selectAllCheckIcon{
+    background-position: -304px -100px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    float: left;;
+}
+#fb_modal .selectAllCheckIcon.active,.GoogleAlbumContainer .selectAllCheckIcon.active{
+    background-position: -304px -146px;
+}
+.selectAllFBContent{
+    margin-bottom: 10px;
+    display:none;
+    margin-top: 15px;
+}
+#FBAlbums .file-title,#flickerAlbumCollection .file-title, #albumCollectionList .file-title,#googleAlbumCollection .file-title,#amazonCloudCollection .file-title{
+    padding: 8px 0px 0px 0px;
+    font-weight: 600;
+    font-size: 16px;
+    width: 130px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    overflow: hidden;
+    line-height: 1.1;
+}
+
+#FBAlbums .numberOfPhotos,#GPModal .numberOfPhotos, #flickrModal .numberOfPhotos,#AmazonModal .numberOfPhotos{
+    padding: 4px 0px;
+    font-weight: 600;
+    font-size: 12px;
+    width: 130px;
+    /* height: 56px; */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    line-height: 1;
+    color: #6b6a6a;
+    margin-bottom: 10px; 
+}
+#AmazonModal .numberOfPhotos{
+    visibility: hidden;
+}
+
+.button.upload {
+    margin-left: 40px;
+    background-color: #428bca;
+    border-color: #357ebd;
+}
+.button.delete {
+    background-color: rgb(254, 186, 0);
+    border-color: #B79E59;
+}
+.button.delete:hover {
+    background-color: rgba(254, 186, 0, 0.9);
+    border-color: #B79E59;
+}
+.class_checkbox {
+    width: 200px;
+    height: 200px;
+}
+.class_checkbox.checked {
+    background-color: green;
+}
+.file-image {
+    height: 75px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+[data-toggle="buttons"] > .btn input[type="checkbox"],
+[data-toggle="buttons"] > .btn input[type="radio"],
+[data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"],
+[data-toggle="buttons"] > .btn-group > .btn input[type="radio"] {
+    position: absolute;
+}
+#FBAlbumsPhotos .btn.btn-primary,#GPModal .btn.btn-primary,#flickrModal .btn.btn-primary,#AmazonModal .btn.btn-primary{
+    padding: 0px;
+    margin-right: 8px;   
+    z-index: 1030;    
+    color: #323232;
+    background-color: transparent;
+    border-color: transparent;
+}
+.saveFbPhots{
+    display: block;
+    color:#7e7e7e;
+    cursor: pointer;
+    float: right;
+    display:none;
+}
+
+.delete-button-div {
+    top: 37px;
+    left: 0px;
+    display: none;
+    z-index: 10;
+    position: absolute;
+    right: 0px;
+    width: 66px;
+    margin: 0 auto;
+}
+.preview-img:hover .delete-button-div {
+    display: block;
+}
+.preview-img-db:hover .delete-button-div {
+    display: block;
+}
+.preview-img-flicker:hover .delete-button-div {
+    display: block;
+}
+.preview-img-gp:hover .delete-button-div {
+    display: block;
+}
+.preview-img-ac:hover .delete-button-div {
+    display: block;
+}
+#FBAlbumsPhotos .fb-albums {
+    height: 90px;
+    width: 90px;
+    cursor: pointer;
+}
+.fb-albums,.GPModalAlbum,.flickrModalAlbum,.ACModalAlbum  {
+    float: left;
+    background: #dedede;
+    cursor: pointer;
+    margin: 0px 34px;
+    padding-top: 10px;
+}
+
+.fb-albums-photos {
+    width: 90px;
+    height: 90px;
+    background: #aaaaaa;
+    margin-bottom: 7px;
+
+}
+#albumPhotosCollectionList .fb-albums-photos {
+    width: 90px;
+    height: 90px;
+    background: #aaaaaa;
+    margin-bottom: 7px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;   
+}
+#flickerSelectedAlbumPhotosCollection .fb-albums,#albumPhotosCollectionList .fb-albums,#googleSelectedAlbumPhotosCollection .fb-albums,#amazonCloudSelectedPhotosCollection .fb-albums{
+    height: 75px;
+    width: 75px;
+    overflow: hidden;
+    float: left;
+    background: #f2eff0;
+    border: 1px solid #cfcfcf;
+    border-top: none;
+    cursor: pointer;  
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;    
+}
+.sourceFlagImg {
+    background-image: url(https://imgd.photogurus.com/assets/images/uploader/sourceFlag.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 189px;
+    position: absolute;
+    margin-top: -22px;
+}
+.upArrow{
+    display:none
+}
+.upArrowFlagImg {
+    background-image: url(https://imgd.photogurus.com/assets/images/uploader/uploadArrow.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 115px;
+    height: 85px;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-top: -22px;
+}
+.back {
+    background-image: url(https://imgd.photogurus.com/assets/images/uploader/back1.png);
+    background-repeat: no-repeat;
+    width: 64px;
+    font-size: 13px;
+    line-height: 2;
+    font-weight: normal;
+    position: absolute;
+    cursor: pointer;
+    margin-top: -1px;
+}
+.left-arrow {
+    display: inline-block;
+    position: relative;
+    background: #dfdfdf;
+    font-size: 10px;
+    padding: 3px;
+    -moz-box-shadow: inset 0 8px 8px -8px #696868, inset 0 -8px 8px -8px #696868;
+    -webkit-box-shadow: inset 0 8px 8px -8px #696868, inset 0 -8px 8px -8px #696868;
+    box-shadow: inset 0 8px 8px -8px #696868, inset 0 -8px 8px -8px #696868;
+}
+.left-arrow:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    margin-top: -10px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 10px solid grey;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+}
+
+.clearfixChanged {
+    overflow: hidden;
+    height: 0;
+    clear: both;
+}
+#FBAlbumsPhotos {} .imageContainer {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+#photoStoryPopup.modalContainer {
+    width: 800px;
+}
+#photoUploadProcess.modalContainer {
+    width: 800px;
+    padding: 0px;
+    border: 1px solid #c9c9c9;
+}
+#dyanamicMessage {
+    width: 300px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+#flickerModal .modal-body {
+    position: relative;
+    padding: 0px;
+    height: 369px;
+    width: 900px;
+    border: 0px solid #dddddd;
+    border-radius: 5px;
+    background-color: #f3f3f3;
+}
+#flickerModal .modal-content {
+    margin-top: 0px;
+}
+#flickerModal.modal {
+    position: fixed;
+    top: 0%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: block;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+}
+#flickerModal .modal-dialog {
+    margin: 0px;
+}
+#GPModal .modal {
+    position: fixed;
+    top: 0%;
+    right: 0;
+    bottom: 0;
+    left: -18px;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+}
+#GPModal.in,#flickerModal.in {
+    padding-left:0px!important;
+}
+
+#GPModal .modal-content {
+    margin-top: 0px;
+}
+#GPModal.modal {
+    position: fixed;
+    top: 0%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+    margin-left: 0px;
+}
+#AmazonModal.in,#flickerModal.in {
+    padding-left:0px!important;
+}
+
+#AmazonModal .modal-content {
+    margin-top: 0px;
+}
+#AmazonModal.modal {
+    position: fixed;
+    top: 0%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    outline: 0;
+    margin-left: 0px;
+}
+
+#progressCounter {
+    width: 160px;
+    display: block;
+    font-size: 24px;
+    color: #fff;
+    margin: 20px auto 14px auto;
+}
+#progressCounterInBytes {
+    width: 180px;
+    display: block;
+    font-size: 15px;
+    color: rgb(107, 65, 18);
+}
+#progressEstTime {
+    width: 450px;
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+}
+.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-image: none!important;
+}
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar { 
+    box-shadow: none!important;  
+}
+.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar, .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+    background-color: #787878!important;
+}
+.mCS-3d-thick-dark.mCSB_scrollTools_vertical, .mCS-3d-thick.mCSB_scrollTools_vertical {
+    box-shadow: none!important;
+    background: #e0e0e0!important;
+}
+.mCS-3d-thick-dark.mCSB_scrollTools, .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerContainer, .mCS-3d-thick.mCSB_scrollTools, .mCS-3d-thick.mCSB_scrollTools .mCSB_draggerContainer {
+    border-radius: 3px!important;
+}
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    height: 100px!important;
+}
+.mCSB_scrollTools .mCSB_dragger {
+    height: 100px!important;
+}
+.mCSB_inside>.mCSB_container {
+    margin-right: 0px!important;
+}
+@media (min-width: 1200px) {    
+    #photoStoryPopup.modalContainer {
+        width: 800px;
+    }
+}
+@media (max-width: 992px) {
+    #photoStoryPopup.modalContainer {
+        width: 800px;
+    }
+    #photoUploadProcess.modalContainer {
+        width: 768px;
+    }
+}
+@media (max-width: 768px) {
+    #photoUploadProcess .modalBody {
+        width: 536px;
+    }
+    #photoStoryPopup.modalContainer {
+        width: 600px;
+    }
+    #photoUploadProcess.modalContainer {
+        width: 536px;
+    }
+}

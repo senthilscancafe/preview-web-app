@@ -1,0 +1,133 @@
+<div class="printFormContainer">
+    <div class="printFormHeader">Order Summary</div>
+    <div class="orderSummaryFormBody overFlowHide noPadding">
+        <div class="col-md-12 noPadding ">
+            <div class="col-md-7 orderSummeryTile orderSummaryBookSection">
+                <div class="pull-left noPadding">
+                    <img src="{{webCoverUrl}}" width="112" height="112" class="orderDetailsImgBox" alt="">
+                </div>
+                <div class="col-md-6 ml25 orderSummaryBookData">
+                    <div class="orderSummaryTextDontWrap"><b>{{orderTitle}}</b></div>
+                    <div class="orderSummaryTextDontWrap">{{orderSize}}</div>
+                    <div class="orderSummaryTextDontWrap">{{orderNoPages}}</div>
+                </div>
+            </div>
+            <div class="col-md-5 privacyBg orderTextColor pull-right"><div>{{note1}}</div><div>{{note1a}}</div>
+                <span class="activeTextColor termAndConditionModalLink">{{note2}}.</span>
+                <div class="orderSummaryFormBtn placeOrder">{{placeOrder}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="printFormSectionTitle">{{heading1}}</div>
+    <div class="printFormBodySummarySection overFlowHide noPadding">
+        <div class="col-md-12 noPadding">
+            <div class="col-md-7 orderSummeryTile orderFormBg">
+                <div class="col-md-12 noPadding ">
+                    <div>{{shippingTo}}</div>
+                    <div class="textDontWrap"><b>{{shippingAddressGistName}} {{shippingAddressGist}}</b></div>
+                    <div class="orderSummaryFormElementSection">
+                        <div>{{estimatedDeliveryDate}}</div>
+                        <div><b>{{formatDate estimatedDeliveryByDate 1}}</b></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 padding25 summaryScreenBookDetails">
+                <div>
+                    <div class="col-md-6">{{item1Label}}</div>
+                    <div class="col-md-6 text-right">{{currency item1Val "USD"}}</div>
+                </div>
+                {{#if discountRequested}} {{#compare discountRequested.item5Val '!==' '0.00'}}
+                <div class="discount">
+                    <div class="col-md-6">{{discountRequested.item5Label}}</div>
+                    <div class="col-md-6 text-right">- {{currency discountRequested.item5Val "USD"}}</div>
+                </div>
+                {{/compare}} {{/if}}
+                <div>
+                    <div class="col-md-6">{{item2Label}}</div>
+                    <div class="col-md-6 text-right">{{currency item2Val "USD"}}</div>
+                </div>
+                <div>
+                    <div class="col-md-6">{{item3Label}}</div>
+                    <div class="col-md-6 text-right">{{currency item3Val "USD"}}</div>
+                </div>
+                <div class="col-md-12 noPadding orderSummaryFormElementSection">
+                    <div class="col-md-7"><b>{{item4Label}}</b></div>
+                    <div class="col-md-5 text-right"><b>{{currency item4Val "USD"}}</b></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="printFormSectionNote">
+        <div class="col-md-12 noPadding ">
+            {{#unless discountRequested}}
+            <div class="col-md-7 orderSummeryTile orderFormBgDiscount"></div>
+            {{/unless}}
+            <div class="col-md-5 padding10">
+                {{#unless discountRequested}}
+                <div class="col-md-12 discountLink">Have a coupon?</div>
+                {{/unless}}
+            </div>
+        </div>
+    </div>
+
+    <div class="printFormSectionTitle">{{heading2}}</div>
+    <div class="printFormBodyNextSection overFlowHide">
+        <div class="col-md-12 flex padding15 selectedShipping">
+            <div class="col-md-11">
+                <div><b>{{shippingName}}</b></div>
+                <div>{{shippingAddressDetail}}</div>
+                <div>Phone: {{sanitize shippingAddressDetailPhone '{"formatType": 5}'}}</div>
+            </div>
+            <div class="col-md-1">
+                <span style="float: right;" class="verticallyMiddle"><i class="rightArrow icons"></i></span>
+</div>
+</div>
+</div>
+
+<div class="printFormSectionTitle">{{heading3}}</div>
+<div class="printFormBodyNextSection overFlowHide">
+    <div class="col-md-12 flex padding15 selectedCard">
+        <div class="col-md-11">
+            <div><b>{{subHeading1}}</b></div>
+            <div>{{paymentDetails}}</div>
+        </div>
+        <div class="col-md-1">
+            <span style="float: right;" class="verticallyMiddle"><i class="rightArrow icons"></i></span>
+</div>
+</div>
+<hr class="orderSummaryHr col-md-12"></hr>
+<div class="col-md-12 flex padding15 selectedBilling">
+    <div class="col-md-11 ">
+        <div><b>{{subHeading2}}</b></div>
+        <div>{{billingAddressDetailName}}</div>
+        <div>{{billingAddressDetail}}</div>
+    </div>
+    <div class="col-md-1">
+        <span style="float: right;" class="verticallyMiddle"><i class="rightArrow icons"></i></span>
+</div>
+</div>
+</div>
+
+<div class="printFormSectionTitle">{{heading4}}</div>
+<div class="printFormBodyNextSection overFlowHide">
+    <div class="col-md-12 flex padding15 selecteddeliveryOption">
+        <div class="col-md-11 ">
+            <div>{{deliveryOption}}</div>
+        </div>
+        <div class="col-md-1">
+            <span style="float: right;" class="verticallyMiddle"><i class="rightArrow icons"></i></span>
+</div>
+</div>
+<hr class="orderSummaryHr col-md-12"></hr>
+<div class="col-md-12 flex padding15">
+    <div class="col-md-11">
+        <div>{{estimatedDeliveryDate}}<b>{{formatDate estimatedDeliveryByDate 1}}</b></div>
+
+    </div>
+</div>
+</div>
+<div class="orderSummaryActionBtnContainer">
+    <div class="printFormPrimaryBtn placeOrder">Place your order</div>
+</div>
+</div>

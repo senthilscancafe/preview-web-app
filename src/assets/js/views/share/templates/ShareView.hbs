@@ -1,0 +1,263 @@
+<!-- Share Modal -->
+<div id="shareModal" class="modal" role="dialog" >
+    <div class="modal-dialog" id="shareDialog">
+
+        <div class="modal-content" id="scr1">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><i class="backIcon"></i></button>
+                <h4 class="modal-title text-center">{{Share}}</h4>
+            </div>
+            <div class="modal-body">
+                <div class="sc1-content">
+                    <div id="shareCover">
+                        <img src="{{coverURL}}" style="width: 100%;">
+                    </div>
+                    <div class="mobileShareScreen">
+                        <div class="desktop-share-option share-sprite">                     
+                            <a class="email-button">
+                                <i ></i>
+                            </a>                         
+                            <a class="pg-image pvt_share">
+                                <i></i>
+                            </a>
+
+                        </div>
+                        <hr class="shareHr"></hr>
+                        <div class="desktop-share-option share-sprite">
+                            <a class="fb">
+                                <i ></i>
+                            </a>
+                            <a class="share-button">
+                                <i ></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="desktopShareScreen">
+                        <div class="desktop-share-option share-sprite">
+                            <a class="fb">
+                                <i ></i>
+                            </a>
+                            <a class="email-button">
+                                <i ></i>
+                            </a>
+                            <a class="share-button">
+                                <i ></i>
+                            </a>
+                        </div>
+                    </div>
+                    {{#compare shared_to_all_flag '===' '0'}} 
+                    {{#compare design_request_type '===' '2'}} 
+                        <button class="btn btn-sharewithcontributors" id="" data-title="" data-count="" data-type="MCMD" data-belongsto="Owner">Share with Contributors</button>
+                    {{/compare}}
+                    {{/compare}}
+                    <!--<div class="op7 pvt_share">{{PrivateShare}} </div>-->
+                    <!--<div class="op7">{{Requireslogin}}</div>-->
+                </div>
+            </div>
+        </div>
+        <div class="modal-content" id="scrPrivareShare"></div>
+
+        <div class="modal-content" id="scrPrivareShareSend">
+            <div class="modal-header">
+                <button type="button" class="close" id="PrivareShareBackForm"><i class="backIcon"></i></button>
+                <h4 class="modal-title text-center">Text Message Share</h4>
+            </div>
+            <div class="modal-body">
+                <form id="sharePrivateForm" class="scrForm">
+                    <div class="form-group">
+                        <label>
+                            {{EmailorMobileNumber}}
+                        </label>
+                        <input type="text" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="{{SeparateEmailaddressesOrMobile}}" />
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            {{Subject}}
+                        </label>
+                        <input type="text" class="form-control" id="shareSubjectId" value="{{Checkoutmystory}} {{story_caption}}!" placeholder="{{Checkoutmystory}}!" />
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            {{Message}}
+                        </label>
+                        <textarea rows="3" class="form-control" id="shareMessageId">{{hello}}{{textareaMessageStart}}{{story_caption}} {{textareaMessageEnd}}</textarea>
+                    </div>
+                    <div id="shareCoverSend">
+                        <img src="{{coverURL}}">
+                    </div>
+                </form>
+
+
+            </div>
+            <div class="modal-footer">     
+                <button type="button" class="btn next-btn" id="privateShareFormNext">{{Share}}</button>
+            </div>
+        </div>
+        <div class="modal-content" id="scrEmailShareSend">
+            <div class="modal-header">
+                <button type="button" class="close" id="PrivareShareBackForm"><i class="backIcon"></i></button>
+                <h4 class="modal-title text-center shareType">{{story_caption}}</h4>
+            </div>
+            <div class="modal-body">
+                <form id="shareEmailForm" class="scrForm">
+                    <div class="form-group">
+                        <label>
+                            {{From}}
+                        </label>
+                        <input type="text" class="form-control" id="emailFromId" value="{{senderemail}}" disabled="" />
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            {{ToEmail}}
+                        </label>
+                        <input type="text" class="form-control" id="EmailAndMobileId" placeholder="{{SeprateEmailaddresses}}" />
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            {{Subject}}
+                        </label>
+                        <input type="text" class="form-control" id="SubjectId" value="{{Checkoutmystory}} {{story_caption}}!" readonly/>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            {{Message}}
+                        </label>
+                        <textarea rows="3" class="form-control" id="MessageId" readonly>{{hello}}
+{{textareaMessageStart}}{{story_caption}} {{textareaMessageEnd}}</textarea>
+                    </div>
+                </form>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn next-btn" id="privateEmailFormNext">{{Share}}</button>
+            </div>
+        </div>
+        <div class="modal-content" id="scrFacebookShareSend">
+            <div class="modal-header">
+                <button type="button" class="close" id="privateShareBackForm" ><i class="backIcon"></i></button>
+                <h4 class="modal-title text-center">Facebook Share</h4>
+            </div>
+            <div class="modal-body">
+                <form id="shareFacebokForm" class="fbForm clearfix">
+                    <div class="form-group">
+
+                        <textarea rows="3" class="form-control" id="facebookCommentId">
+{{Checkoutmystory}}!</textarea>
+                    </div>
+                    <div id="tags">
+                        <div class="tag-icon">
+                            <span>{{Tagyourfriends}}</span>
+                        </div>
+                        <div class="with-text">{{withFriends}}</div>
+                        <!--                        <div class="placeholder-text">Enter Name</div>-->
+                        <select class="form-control" id="tagPicker" multiple="multiple" autofocus="autofocus">
+                        </select>
+                    </div>
+                </form>
+                <p class="para-text">
+                    {{SelectWhoCanSee}}
+                </p>
+                <form id="shareFacebokFormRadio" class="fbForm">
+                    <div class="share-RadioImg shareRadio active" id="ShareFriendsDiv">
+                        <input class="share-radio" type="radio" checked=""   id="ShareFriends" name="shareWith" />
+                    </div>
+                    <label for="ShareFriends" id="ShareFriendslabel">{{Friends}}</label>
+                    <hr class="fb-hr" />
+                    <div class="share-RadioImg shareRadio">
+                        <input class="share-radio" type="radio" id="ShareSelf"  name="shareWith" />
+                    </div>
+                    <label  for="ShareSelf">{{Self}}</label>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn next-btn" id="facebookShareFormNext">{{Share}}</button>
+            </div>
+        </div>
+        <div class="modal-content" id="privateMobileCheck"></div>
+        <!--        <div class="modal-content" id="privateMobileCheck">
+                    <div class="modal-header">
+                        <button type="button" class="close" id="PrivareShareBackForm"><i class="backIcon"></i></button>
+                        <h4 class="modal-title text-center">Choose Country Code</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form id="sharemobileForm" class="scrForm">
+                            <div class="form-group">
+                                   <input type="tel" class="form-control telephone-input input-lg mobile-number" >  
+                            </div>
+                           
+                        </form>
+        
+        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn next-btn" id="privateEmailFormNext">Next</button>
+                    </div>
+                </div>-->
+    </div>
+</div>
+<!-- /Share Modal -->
+<div id="mailBody" style="display: none">
+
+</div>
+<!-- Message Modal -->
+<div id="alertModal" class="modal fade" data-backdrop="static" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <div><strong>Are you sure you want to go back? You will lose your data.</strong></div>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default" id="cancel_back">No</button>
+                <button type="button" class="btn btn-default" id="ok_shareBack">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- / Message Modal -->
+<div id="okModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <div><strong class="share-text">Your story has been shared.</strong></div>
+                <div id="safariCopyLinkContainer">
+                    <a href="http://www.photogurus.com" id="safariLink">link</a>
+                </div>
+                <form class="copy-link">
+
+                    <input type="text" class="form-control" value="http" />
+                    <button type="button" class="btn">Copy to Clipboard</button>
+                </form>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="ok_shared">Ok</button>
+                <button type="button" class="btn btn-default" id="ok_same">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="errorMessageModal" class="modal fade" data-backdrop="static" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Photogurus</h4>
+            </div>
+            <div class="modal-body text-center">
+                <div><strong class="share-text">Your story has been shared.</strong></div>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="errorMessageModalOKBtn">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>

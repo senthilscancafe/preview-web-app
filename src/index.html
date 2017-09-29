@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Photogurus</title>
+        <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+        <meta charset="UTF-8">
+        <meta lang="be">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <!-- Google Analytics -->
+        <script>
+            window.ga = window.ga || function () {
+                (ga.q = ga.q || []).push(arguments);
+            };
+            ga.l = +new Date;
+            ga('create', 'UA-87664747-1', 'auto'); // dev
+        </script>
+        
+        <link rel="stylesheet" href="assets/css/jquery-ui-1.11.1.css">
+        <!-- Bootstrap core CSS -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/bootstrap-datepicker3.standalone.min.css" rel="stylesheet">
+        <!-- Reactor files -->
+        <link rel="stylesheet" href="assets/css/webfont.css">
+        <link rel="stylesheet" href="assets/css/climacons-font.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.css">
+        <link rel="stylesheet" href="assets/css/fontawesome-stars.css">
+        <link rel="stylesheet" href="assets/css/card.css">
+        <link rel="stylesheet" href="assets/css/sli.css">
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet" href="assets/css/croppie.css">
+        <link rel="stylesheet" href="assets/css/select2.css"/>
+        <link rel="stylesheet" href="assets/css/app.css">
+        <link rel="stylesheet" href="assets/css/app.skins.css">
+        <link rel="stylesheet" href="assets/css/intlTelInput.css">
+        <link rel="stylesheet" href="assets/css/croppie.css">
+
+        <!--upload files-->
+        <link href="assets/css/uploader/magnific-popup.css" rel="stylesheet">
+        <link href="assets/css/uploader/simple-sidebar.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/uploader/jquery.mCustomScrollbar.min.css">
+
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/uploaderStyle.css">
+        <link rel="stylesheet" href="assets/css/jquery_left_navigation.css">
+        <link rel="stylesheet" href="assets/css/offline-theme-dark.css">
+        <link rel="stylesheet" href="assets/css/offline-language-english.css">
+        <script type="text/javascript">
+            var currentVersion = "V1.0.2";
+            var facebookData = '';
+            var currentENV = "local";
+        </script>
+        <!--        [if IE]>
+                    <script src="assets/js/thirdparty/placeholder/better-dom-legacy.js"></script>
+                <![endif]         
+                <script src="assets/js/thirdparty/placeholder/better-dom.min.js"></script>-->
+        
+        <!-- Facebook Pixel Code -->
+        <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1908341129437529'); // Insert your pixel ID here.
+        
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1908341129437529&ev=PageView&noscript=1"
+        /></noscript>
+        <!-- DO NOT MODIFY -->
+        <!-- End Facebook Pixel Code -->
+    </head>
+    <body  class="page-loading">
+
+        <div id="fb-root"></div>
+        <!-- page loading spinner -->
+        <div class="pageload">
+            <div class="pageload-inner text-center">
+                <img src="https://imgd.photogurus.com/assets/images/loading-photogurus.gif" alt='loader'>
+            </div>
+        </div>
+
+        <!-- /page loading spinner -->
+        <!-- Fixed navbar -->
+        <div id="appSignInDiv"></div>
+        <!-- Message Modal -->
+        <div id="messageModalCon"></div>
+        <div id="termAndCondtionContainer"></div>
+        <!-- / Message Modal -->
+        <div class="app layout-fixed-header mainContainer">
+            <div id="SideBarDiv" ></div>
+            <div class="main-panel">
+                <div id="NavBarDiv" class="header navbar"></div>
+
+                <div id="MainViewDiv" class="main-content">
+                    <!-- /Verify Account -->
+                    <div id="upload_progress"></div>
+                    <div id="dashbaordUIView"></div>
+                </div>
+                <div id="uploaderContainer" class="main-content"></div>
+                <div id="printlayout" class="main-content"></div>
+            </div>
+
+
+            <div id="shareScreenModal"></div>
+            <div id="infoScreenModal"></div>
+            <div id="FooterViewDiv" class="container-fluid"></div>
+        </div>
+        <div id="verifyScrModal"></div>
+
+        <div id="messageModal" class="mobileFeature modal fade" role="dialog" data-backdrop="static">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Photogurus</h4>
+                    </div>
+                    <div class="modal-body text-center">
+                        <p id="download_text">This functionality is only available on our app. Please download the app.</p>
+                        <p style="display: none;" id="back_text">Are you sure you want to go back? You will lose your data.</p>
+                        <p style="display: none;" id="stopUploading">Are you sure you want to logout?<br>You have an upload in progress. It will be canceled if you logout.</p>
+                    </div>
+                    <div class="modal-footer text-center">
+
+                        <button type="button" class="btn btn-default ot-btn" id="confirm_download"  data-dismiss="modal">Download</button>
+                        <button type="button" class="btn btn-default  ot-btn"  id="cancel_btn" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-default ot-btn" id="ok_back" style="display: none;"   data-dismiss="modal">OK</button>
+                        <button type="button" class="btn btn-default  up-btn"  id="no_btn" data-dismiss="modal" style="display: none;">No</button>
+                        <button type="button" class="btn btn-default up-btn" id="yes_back"  data-dismiss="modal" style="display: none;">Yes</button>
+                    </div>
+
+                </div>
+            </div>
+        </div> 
+        <script src="assets/js/thirdparty/jquery/jquery-2.1.4.min.js"></script>
+        <script src="assets/js/thirdparty/bootstrap/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script src="assets/js/thirdparty/bootstrap/bootstrap-datepicker.min.js"></script>
+        <script src="assets/js/thirdparty/theme/jquery.lazyload.js"></script>
+        <script src="assets/js/thirdparty/croppie/croppie.min.js"></script>
+        <script src="assets/js/thirdparty/theme/modernizr.js"></script>
+        <script src="assets/js/thirdparty/theme/fastclick.js"></script>
+        <script src="assets/js/thirdparty/theme/perfect-scrollbar.jquery.js"></script>
+        <script src="assets/js/thirdparty/theme/smartresize.js"></script>
+        <script src="assets/js/thirdparty/theme/constants.js"></script>
+        <script src="assets/js/thirdparty/jquery/jquery.ddslick.min.js"></script>
+        <script src="assets/js/thirdparty/date.js"></script>
+        <!-- country code scripts -->
+        <script src="assets/js/thirdparty/theme/intlTelInput.min.js"></script>
+        <script src="assets/js/thirdparty/theme/utils.js"></script>
+
+        <script src="assets/js/thirdparty/libphonenumber/demo-compiled.js"></script>
+        <!-- end  country code scripts -->
+        <script src="assets/js/thirdparty/libphonenumber/i18n.phonenumbers.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/3.4.8/select2.min.js"></script>
+
+        <!-- file upload-->        
+
+        <script src="assets/js/thirdparty/uploader/load-image.all.min.js"></script>
+        <script src="assets/js/thirdparty/uploader/jquery.iframe-transport.js"></script>
+        <script src="assets/js/thirdparty/uploader/jquery.fileupload.js"></script>
+        <script src="assets/js/thirdparty/uploader/jquery.fileupload-process.js"></script>
+        <script src="assets/js/thirdparty/uploader/jquery.fileupload-image.js"></script>
+        <script src="assets/js/thirdparty/uploader/jquery.fileupload-validate.js"></script>    
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.finderselect/0.6.0/jquery.finderselect.min.js"></script>
+        <script src="assets/js/thirdparty/customScroll/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <script src="assets/js/thirdparty/jqueryloadingoverlay/loadingoverlay.min.js"></script>
+        <script src="assets/js/thirdparty/magnific-popup/jquery.magnific-popup.min.js"></script><!--pop up box-->
+        <script src="assets/js/uploader/facebook.js"></script>
+        <script src="assets/js/uploader/utility.js"></script>
+        <script src="assets/js/uploader/AjaxManager.js"></script>
+        <script src="assets/js/uploader/uploaderLanguageUtils.js"></script>
+        <script src="assets/js/thirdparty/md5/jquery.md5.js"></script>
+        <script src="assets/js/thirdparty/rating/jquery.barrating.js"></script>
+        <script src="assets/js/thirdparty/offline/offline.min.js"></script>
+        <script type='text/javascript' src='assets/js/thirdparty/placeholder/jquery.html5-placeholder-shim.js'></script>
+        <script src="assets/js/thirdparty/jquery/jquery_left_navigation_pg_min.js"></script>
+        <script>
+            window.require = {waitSeconds: 0};
+            Offline.options = {
+                checks: {xhr: {url: 'https://photogurusdev.scancafe.com'}},
+                requests: false
+            };
+        </script>        
+        <script data-main="assets/js/main" src="assets/js-preserve/require.min.js"></script>       
+    </body>
+</html>
