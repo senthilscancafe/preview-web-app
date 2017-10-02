@@ -215,6 +215,7 @@ turnMethods = {
       incPages = false,
       data = this.data(),
       lastPage = data.totalPages+1;
+      
 
     if (data.destroying)
       return false;
@@ -238,12 +239,12 @@ turnMethods = {
 
     }
 
-    if (page>=1 && page<=lastPage) {
+    if (page>=1 && page<=lastPage)  {
 
       if (data.display=='double')
         className = (page%2) ? ' odd' : ' even';
       else
-        className = '';
+        className = (page%2) ? ' odd' : ' even';
 
       // Stop animations
       if (data.done)
@@ -293,8 +294,9 @@ turnMethods = {
             {'class': 'page-wrapper',
               page: page,
               css: {position: 'absolute',
-              overflow: 'hidden'}});
-
+              overflow: 'hidden',
+              width:'0px !important'}
+      });
           // Append to this flipbook
           this.append(data.pageWrap[page]);
 

@@ -831,6 +831,28 @@ body::-webkit-scrollbar {
     perspective: 2000px;
 }
 
+.hardleft {
+    background-color: #CCC;
+    width: 50%;
+    height: 100%;
+    float:left !important;
+   background-position: 0% 100%;
+  
+  background-size:50% !important;
+  background-repeat:no-repeat; 
+}
+
+.hardright {
+    background-color: #CCC;
+    width: 50%;
+    height: 100%;
+    float:right;
+   background-position: 100% 0;
+  
+  background-size:50%;
+  background-repeat:no-repeat; 
+}
+
 .hard {
     background-color: #CCC;
     width: 100%;
@@ -1006,11 +1028,42 @@ html:-webkit-full-screen {
 }
 
 .coverImages {
+    
     width: 50px;
     height: 50px;
     display: inline-block;
     background-size: cover;
     float: left;
+}
+
+.rightpageImages:hover {
+    outline: 2px solid #ffbc00;
+}
+
+.rightpageImages {
+    background-size: cover;
+    display: inline-block;
+    float: left;
+    height: 50px;
+    width: 100px;
+    background-position: 100% 0;
+    background-size:50%;
+    background-repeat:no-repeat;  
+}
+
+.leftpageImages:hover {
+    outline: 2px solid #ffbc00;
+}
+
+.leftpageImages {
+    background-size: cover;
+    display: inline-block;
+    float: left;
+    height: 50px;
+    width: 100px;
+    background-position: 0 100%;
+    background-size:50%;
+    background-repeat:no-repeat;
 }
 
 .img_item {

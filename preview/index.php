@@ -80,6 +80,7 @@ if($apiFlag == 0) {
 }
 
 $lsharepreviewUrl = $sharepreviewUrl;
+
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, $lsharepreviewUrl);
@@ -153,18 +154,29 @@ if (!empty($decodeResult->arr_data->details)) {
     $share_details = (array) $decodeResult->arr_data->details;
 
     $imagdetailscount = count($decodeResult->arr_data->details);
+
     foreach ($decodeResult->arr_data->details as $indexkey => $rowshare_details) {
-        if (strstr($rowshare_details->spread_url, 'cover_1')) {
+        if ($rowshare_details->spread_type=='frontcover') {
             $imagdetails[$rowshare_details->spread_id]['pagestyle'] = 'style="width:auto; height:700px; "';
             $imagdetails[$rowshare_details->spread_id]['spec'] = '';
-        } else if (strstr($rowshare_details->spread_url, 'cover_2')) {
+        }
+        else if($rowshare_details->spread_type=='backcover') {
             $imagdetails[$rowshare_details->spread_id]['pagestyle'] = 'style="width:auto; height:700px; "';
             $imagdetails[$rowshare_details->spread_id]['spec'] = '';
+        }
+        else if($rowshare_details->spread_type=='rightpage') {
+            $imagdetails[$rowshare_details->spread_id]['pagestyle'] = 'style="width:auto; height:700px; "';
+            $imagdetails[$rowshare_details->spread_id]['spec'] = '';
+        }
+        else if($rowshare_details->spread_type=='leftpage') {
+            $imagdetails[$rowshare_details->spread_id]['pagestyle'] = 'style="width:auto; height:700px; "';
+            $imagdetails[$rowshare_details->spread_id]['spec'] = '';            
         } else {
             $imagdetails[$rowshare_details->spread_id]['pagestyle'] = 'style="height:700px;"';
             $imagdetails[$rowshare_details->spread_id]['spec'] = 'width="915" height="458"';
         }
-
+        
+        $imagdetails[$rowshare_details->spread_id]['spread_type'] = $rowshare_details->spread_type;   
         $imagdetails[$rowshare_details->spread_id]['spread_url'] = $rowshare_details->spread_url;
         $imagdetails[$rowshare_details->spread_id]['thumb_url'] = $rowshare_details->thumb_url;
         $imagdetails[$rowshare_details->spread_id]['pagenumber'] = ($indexkey + 1) . ' / ' . $imagdetailscount;

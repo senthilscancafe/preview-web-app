@@ -6,7 +6,7 @@
 
 
 <script src="../assets/js/thirdparty/jquery-1.11.3.min.js" type="text/javascript"></script>
-<script src="../assets/js/thirdparty/turn.min.js" type="text/javascript"></script>
+<script src="../assets/js/thirdparty/turn.js" type="text/javascript"></script>
 <script src="../assets/js/thirdparty/bootstrap.min.js" type="text/javascript"></script>
 <script src="../assets/js/thirdparty/jquery.mCustomScrollbar.concat.min.js"></script>
 

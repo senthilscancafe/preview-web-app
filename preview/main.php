@@ -214,7 +214,7 @@
 
                                         </div>
 
-                                        <div class="hard image_url_<?= $imgIterator ?>" id="image_url_r_<?= $imgIterator ?>"  data-likestatus ="<?= $imageDetail['likestatus'] ?>" data-comments="<?= $imageDetail['comments'] ?>" data-likes= "<?= $imageDetail['likes'] ?>" data-spreadid ="<?= $imageDetail['spread_id']; ?>" style="background-image:url('<?= $spreadUrl ?>');background-position: right center;background-size: cover;">
+                                        <div class="hard image_url_<?= $imgIterator ?>" id="image_url_r_<?= $imgIterator ?> "  data-likestatus ="<?= $imageDetail['likestatus'] ?>" data-comments="<?= $imageDetail['comments'] ?>" data-likes= "<?= $imageDetail['likes'] ?>" data-spreadid ="<?= $imageDetail['spread_id']; ?>" style="background-image:url('<?= $spreadUrl ?>');background-position: right center;background-size: cover;">
 
                                             <div class="nextControl controls">
                                                 <img src="" >
@@ -501,7 +501,7 @@
                           <div class="bottomActionBtnContainer flipbook-bottom">
                                <!--<div class="spriteCode spreadShareIcon"></div>-->
                             
-                            <div class="spriteCode spreadPrintIcon"></div>   
+                            <!--<div class="spriteCode spreadPrintIcon"></div>   -->
 
                              <a href="<?=$zuluUrl.$orderId.'&consumer=yes&token='.$authToken?>">
                                         <div class="spriteCode spreadEditIcon"></div>
@@ -511,7 +511,7 @@
                              <?php } ?>
                              <?php if (($userLoggedIn == 1 && $sharedStatus == 8001) ||$userLoggedIn == 0) { ?>
                                 <div class="bottomActionBtnContainer flipbook-bottom">
-                                     <div class="spriteCode spreadPrintIcon"></div> 
+                                     <!--<div class="spriteCode spreadPrintIcon"></div> -->
                                  </div> 
                              <?php } ?>
                         <!-- bottom tray for web desktops -->
@@ -526,15 +526,25 @@
                                 <div class="bottomTrayInnerContainer">
                                     <?php
                                     $i = 1;
-                                    ?>
-                                    <div class="flipbookWell coverImages c<?= $i ?>" data-value="1" style="background-image:url(<?= $frontCoverThumbUrl ?>);"></div>
+                                    ?>                                                                                                                                                                                      
+                                    <div class="flipbookWell coverImages c<?= $i ?>" data-value="1" style="background-image:url(<?= $frontCoverThumbUrl ?>)"></div>
                                     <?php
                                     foreach ($imagdetails as $imageDetail) {
                                         $spreadThumbUrl = $imageDetail['thumb_url'];
+                                        if($imageDetail['spread_type']=='spread')
+                                        {
+                                          $type=' wells';  
+                                        }elseif($imageDetail['spread_type']=='rightpage')
+                                        {
+                                          $type=' rightpageImages';  
+                                        }
+                                        if($imageDetail['spread_type']=='leftpage')
+                                        {
+                                          $type=' rightpageImages';  
+                                        }
                                         $i = $i + 2;
                                         ?>
-                                        <div class="flipbookWell wells c<?= $i ?> c<?= $i - 1 ?>" data-value=<?= $i ?> style="background-image:url(<?= $spreadThumbUrl ?>);"></div>
-
+                                        <div class="flipbookWell <?= $type ?> c<?= $i ?> c<?= $i - 1 ?>" data-value=<?= $i ?> style="background-image:url(<?= $spreadThumbUrl ?>);"></div>
                                         <?php
                                     }
                                     $i = $i + 1;
