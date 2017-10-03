@@ -536,11 +536,11 @@
                                           $type=' wells';  
                                         }elseif($imageDetail['spread_type']=='rightpage')
                                         {
-                                          $type=' rightpageImages';  
+                                          $type=' wells rightpageImages';  
                                         }
                                         if($imageDetail['spread_type']=='leftpage')
                                         {
-                                          $type=' rightpageImages';  
+                                          $type=' wells leftpageImages';  
                                         }
                                         $i = $i + 2;
                                         ?>

@@ -1041,14 +1041,10 @@ html:-webkit-full-screen {
 }
 
 .rightpageImages {
-    background-size: cover;
-    display: inline-block;
-    float: left;
-    height: 50px;
-    width: 100px;
     background-position: 100% 0;
     background-size:50%;
-    background-repeat:no-repeat;  
+    background-repeat:no-repeat;
+
 }
 
 .leftpageImages:hover {
@@ -1056,11 +1052,6 @@ html:-webkit-full-screen {
 }
 
 .leftpageImages {
-    background-size: cover;
-    display: inline-block;
-    float: left;
-    height: 50px;
-    width: 100px;
     background-position: 0 100%;
     background-size:50%;
     background-repeat:no-repeat;
