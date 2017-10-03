@@ -11,6 +11,6 @@
 $config['branch_key'] = getenv('BRANCH_KEY'); 
 $config['mode'] = getenv('MODE'); 
 $config['branchio_api_endpoint'] = getenv('BRANCHIO_API_ENDPOINT'); 
-$urls['share_preview_url'] = getenv('SHARE_PREVIEW_URL'); 
+$urls['share_preview_url'] = 'https://api.cewe.photogurus.io/share/order-image-urls/'; 
 $urls['send_link_url'] = getenv('SEND_LINK_URL');
 ?>
