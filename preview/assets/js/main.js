@@ -359,11 +359,11 @@ $(function () {
                 jQuery('.user-region-modal #user-region-modal-left-action').click(function(event){
                     event.stopPropagation();
                     if ((navigator.userAgent.match(/Android/i))) {
-                        window.location.href = "https://play.google.com/store/apps/details?id=com.photogurus";
+                        window.location.href = $('#googlePlayIdUrl').val();
                     } else if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPad/i)) || (navigator.userAgent.match(/iPod/i))) {
-                        window.location.href = "https://itunes.apple.com/us/app/photogurus/id799452318?ls=1&mt=8";
+                        window.location.href = $('#appleStoreIdUrl').val();
                     } else {
-                        window.location.href = 'https://www.photogurus.com/?page=send_link';
+                        window.location.href = $('#sendLinkUrl').val();
                     }
                 });
             }else{
@@ -542,9 +542,9 @@ $(function () {
     function foundDeviceLink() {
         if ((navigator.userAgent.match(/Android/i))) {
             isAndroid = 1;
-            window.location.href = 'https://play.google.com/store/apps/details?id=com.photogurus';
+            window.location.href = $('#googlePlayIdUrl').val();;
         } else if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPad/i)) || (navigator.userAgent.match(/iPod/i))) {
-            window.location.href = 'https://itunes.apple.com/us/app/photogurus/id799452318?ls=1&mt=8';
+            window.location.href = $('#appleStoreIdUrl').val();
         }
     }
 
@@ -763,9 +763,9 @@ $(function () {
         } else {
             if ($("#phoneAndEmailId").val() === "") {
                 //$('.ocperson').text("Please enter email or mobile number");
-                $('.ocperson').text("Please enter the email address");
+                $('.ocperson').text($('#emailValidation1').val());
             } else {
-                $('.ocperson').text("Invalid email address");
+                $('.ocperson').text($('#emailValidation2').val());
             }
             testresults = false;
             isEmail = 0;
@@ -846,10 +846,10 @@ $(function () {
         $('.ocperson').css('visibility', 'hidden');
     });
     $("#flipbook").on("click", "#googlePlayId", function () {
-        window.location = 'https://play.google.com/store/apps/details?id=com.photogurus';
+        window.location = $('#googlePlayIdUrl').val();
     });
     $("#flipbook").on("click", "#appleStoreId", function () {
-        window.location = 'https://itunes.apple.com/us/app/photogurus/id799452318?ls=1&mt=8';
+        window.location = $('#appleStoreIdUrl').val();
     });
     // $(".body").on("click", ".js-textareacopybtn", function () {
     //     evt.stopPropagation();
@@ -1065,7 +1065,7 @@ $(function () {
             jQuery('#messageModalFlipbook').modal('show');
             jQuery('#confirm_download_btn').click(function () {
                 //                console.log("clk");
-                window.location.href = "https://play.google.com/store/apps/details?id=com.photogurus";
+                window.location.href = $('#googlePlayIdUrl').val();;
                 jQuery('#messageModalFlipbook').modal('hide');
             });
         } else if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPad/i)) || (navigator.userAgent.match(/iPod/i))) {
@@ -1075,7 +1075,7 @@ $(function () {
             jQuery('#messageModalFlipbook').modal('show');
             jQuery('#confirm_download_btn').click(function () {
                 //                console.log("clk");
-                window.location.href = "https://itunes.apple.com/us/app/photogurus/id799452318?ls=1&mt=8";
+                window.location.href = $('#appleStoreIdUrl').val();;
                 jQuery('#messageModalFlipbook').modal('hide');
             });
         } else {
@@ -1105,7 +1105,7 @@ $(function () {
             jQuery('#messageModalFlipbook').modal('show');
             jQuery('#confirm_download_btn').click(function () {
                 //                console.log("clk");
-                window.location.href = "https://play.google.com/store/apps/details?id=com.photogurus";
+                window.location.href = $('#googlePlayIdUrl').val();
                 jQuery('#messageModalFlipbook').modal('hide');
             });
         } else if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPad/i)) || (navigator.userAgent.match(/iPod/i))) {
@@ -1115,7 +1115,7 @@ $(function () {
             jQuery('#messageModalFlipbook').modal('show');
             jQuery('#confirm_download_btn').click(function () {
                 //                console.log("clk");
-                window.location.href = "https://itunes.apple.com/us/app/photogurus/id799452318?ls=1&mt=8";
+                window.location.href = $('#appleStoreIdUrl').val();
                 jQuery('#messageModalFlipbook').modal('hide');
             });
         } else {
@@ -2249,9 +2249,9 @@ function backcoverLayoutAndScrenChange() {
 
     if ((navigator.userAgent.match(/Android/i))) {
         isAndroid = 1;
-        $('#downloadPath').attr('href', 'https://play.google.com/store/apps/details?id=com.photogurus');
+        $('#downloadPath').attr('href', $('#googlePlayIdUrl').val());
     } else if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPad/i)) || (navigator.userAgent.match(/iPod/i))) {
-        $('#downloadPath').attr('href', 'https://itunes.apple.com/us/app/photogurus/id799452318?ls=1&mt=8');
+        $('#downloadPath').attr('href', $('#appleStoreIdUrl').val());
     }
 }
 

@@ -244,7 +244,7 @@ button, input, select, textarea {
     position: absolute;
     height: 28px;
     display: inline-block;
-    background-image: url(https://imgd.photogurus.com/assets/preview/images/loader.gif);
+    background-image: url(../images/loader.gif);
     margin-top: 36px;
     margin-left: 123px;
 }
@@ -442,7 +442,7 @@ body::-webkit-scrollbar {
 }
 
 .appstore {
-    background-image: url(https://imgd.photogurus.com/assets/preview/images/appstore.png);
+    background-image: url(../images/appstore.png);
     width: 192px;
     height: 62px;
     margin: 30px auto;
@@ -453,7 +453,7 @@ body::-webkit-scrollbar {
 }
 
 .closeButton {
-    background-image: url(https://imgd.photogurus.com/assets/preview/images/closeButton.png);
+    background-image: url(../images/closeButton.png);
     width: 23px;
     height: 23px;
     margin-left: -36px;
@@ -464,7 +464,7 @@ body::-webkit-scrollbar {
 }
 
 .clearIcon {
-    background-image: url(https://imgd.photogurus.com/assets/preview/images/close.png);
+    background-image: url(../images/close.png);
     width: 23px;
     height: 24px;
     margin-left: -36px;
@@ -475,21 +475,21 @@ body::-webkit-scrollbar {
 }
 
 .googleplay {
-    background-image: url(https://imgd.photogurus.com/assets/preview/images/googleplay.png);
+    background-image: url(../images/googleplay.png);
     width: 192px;
     height: 62px;
     margin: 30px auto;
 }
 
 .backCover {
-    background-image: url(https://imgd.photogurus.com/assets/preview/images/backcover.png);
+    background-image: url(../images/backcover.png);
     width: 166px;
     height: 165px;
     margin: 30px;
 }
 
 .backcoverLogo {
-    background-image: url(https://imgd.photogurus.com/assets/preview/images/icon_logo.png);
+    background-image: url(../images/icon_logo.png);
     width: 39px;
     height: 45px;
     margin: 41px auto;
@@ -501,7 +501,7 @@ body::-webkit-scrollbar {
 }
 
 .backcoverLogoBig {
-    background-image: url(https://imgd.photogurus.com/assets/preview/images/logoBig.png);
+    background-image: url(../images/logoBig.png);
     width: 150px;
     height: 61px;
     margin: 41px auto;
@@ -515,7 +515,7 @@ body::-webkit-scrollbar {
 }
 
 .haveAnAppLogo {
-    background-image: url(https://imgd.photogurus.com/assets/preview/images/logo.png);
+    background-image: url(../images/logo.png);
     width: 73px;
     height: 73px;
     margin: 41px auto;
@@ -543,20 +543,20 @@ body::-webkit-scrollbar {
 }
 
 .emailIcon {
-    background-image: url(https://imgd.photogurus.com/assets/preview/images/icon_mail.png);
+    background-image: url(../images/icon_mail.png);
     width: 73px;
     height: 73px;
     margin-right: 20px;
 }
 
 .attachmentIcon {
-    background-image: url(https://imgd.photogurus.com/assets/preview/images/icon_link.png);
+    background-image: url(../images/icon_link.png);
     width: 73px;
     height: 73px;
 }
 
 .facebookIcon {
-    background-image: url(https://imgd.photogurus.com/assets/preview/images/icon_fb.png);
+    background-image: url(../images/icon_fb.png);
     width: 73px;
     height: 73px;
     margin-right: 20px;
@@ -705,7 +705,7 @@ body::-webkit-scrollbar {
 }
 
 .sliderRightRext .flipArrow {
-    background-image: url(https://imgd.photogurus.com/assets/preview/images/flip_arr.png);
+    background-image: url(../images/flip_arr.png);
     position: absolute;
     float: right;
     width: 20px;
@@ -715,7 +715,7 @@ body::-webkit-scrollbar {
 }
 
 #menu-toggle {
-    background-image: url(https://imgd.photogurus.com/assets/preview/images/menuToggle.png);
+    background-image: url(../images/menuToggle.png);
     width: 30px;
     height: 30px;
     background-position: 0px 104px;
@@ -725,7 +725,7 @@ body::-webkit-scrollbar {
 }
 
 .closeMenu {
-    background-image: url(https://imgd.photogurus.com/assets/preview/images/menuToggle.png);
+    background-image: url(../images/menuToggle.png);
     width: 11px;
     height: 11px;
     background-position: 0px 22px;
@@ -785,7 +785,7 @@ body::-webkit-scrollbar {
 }
 
 #next {
-    /* background-image: url(https://imgd.photogurus.com/assets/preview/images/rightArrow.png); */
+    /* background-image: url(../images/rightArrow.png); */
     /* position: absolute; */
     /* float: right; */
     width: 30px;
@@ -805,7 +805,7 @@ body::-webkit-scrollbar {
 }
 
 .sliderLeftRext .flipArrow {
-    background-image: url(https://imgd.photogurus.com/assets/preview/images/flip_arr.png);
+    background-image: url(../images/flip_arr.png);
     position: absolute;
     float: left;
     transform: rotate(180deg);
@@ -1362,7 +1362,7 @@ html:-webkit-full-screen {
 }
 
 .spriteCode {
-    background-image: url(https://imgd.photogurus.com/assets/preview/images/sprite4.png);
+    background-image: url(../images/sprite4.png);
 }
 
 .leftArrowIconPos {
@@ -1513,7 +1513,7 @@ html:-webkit-full-screen {
 }
 
 .flipbook-share, .flipbook-print, .flipbook-like, .flipbook-comments, .likeButton, .closeBtn, .mobile-nav, .active-lines, .home-icon-nav, .share-icon-nav, .share-icon-nav-ios {
-    background-image: url(https://imgd.photogurus.com/assets/preview/images/sprite4.png);
+    background-image: url(../images/sprite4.png);
     display: inline-block;
     background-repeat: no-repeat;
 }
@@ -1953,7 +1953,7 @@ html:-webkit-full-screen {
         display: block;
     }
     .backcoverLogo {
-        background-image: url(https://imgd.photogurus.com/assets/preview/images/icon_logo.png);
+        background-image: url(../images/icon_logo.png);
         width: 39px;
         height: 45px;
         margin: 41px auto;
@@ -1971,10 +1971,10 @@ html:-webkit-full-screen {
         margin-top: 33px;
     }
     .closeButton {
-        background-image: url(https://imgd.photogurus.com/assets/preview/images/closeButtonSmall.png);
+        background-image: url(../images/closeButtonSmall.png);
     }
     .clearIcon {
-        background-image: url(https://imgd.photogurus.com/assets/preview/images/closeSmall.png);
+        background-image: url(../images/closeSmall.png);
     }
     .bubble {
         margin-top: 60px;
@@ -2175,7 +2175,7 @@ html:-webkit-full-screen {
         display: block;
     }
     .backcoverLogo {
-        background-image: url(https://imgd.photogurus.com/assets/preview/images/icon_logo.png);
+        background-image: url(../images/icon_logo.png);
         width: 39px;
         height: 45px;
         margin: 41px auto;

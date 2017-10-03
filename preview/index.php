@@ -4,7 +4,7 @@ require_once 'config/config.php';
 
 $urls = $GLOBALS['urls'];
 $configVars = $GLOBALS['config'];
-
+//print_r($configVars);
 $sharepreviewUrl = $urls['share_preview_url'];
 $zuluUrl = $urls['zulu_url'];
 $sendLinkUrl = $urls['send_link_url'];
@@ -12,6 +12,23 @@ $newlogInUrl = $urls['login_url'];
 
 $branchKey = $configVars['branch_key'];
 $branchLink = $configVars['branchio_api_endpoint'];
+$googlePlayIdUrl = $configVars['googlePlayId'];
+$appleStoreIdUrl = $configVars['appleStoreId'];
+
+
+$send_link_text=$configVars['send_link_text'];
+$email_place_holder=$configVars['email_place_holder'];
+$last_page_text1=$configVars['last_page_text1'];
+$last_page_text2=$configVars['last_page_text2'];
+$email_validation1=$configVars['email_validation1'];
+$email_validation2=$configVars['email_validation2'];
+
+$page_title=$configVars['page_title'];
+$partner_code=$configVars['partner_code'];
+$partner_name=$configVars['partner_name'];
+
+
+
 $currentUrl=$_GET['story_id'];
 //$currentUrl = $_SERVER['REQUEST_URI'];
 //$apiFlag is to identify own story or shared story. Comes in the URL

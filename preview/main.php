@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Photogurus</title>
+        <title><?=$partner_name.'  '.$page_title?></title>
         <link rel="shortcut icon" type="image/x-icon" href="https://imgd.photogurus.com/assets/preview/images/favicon.ico">
         <meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1'>
         <?php include_once 'loadassets.php'; ?>
@@ -36,6 +36,13 @@
             <input type="hidden" id="install_app_url" value="<?= $deepLinkUrl ?>">
             <input type="hidden" id="loggedInUser" value="<?= $userLoggedIn ?>">
             <input type="hidden" id="send_link_url" value="<?= $sendLinkApiUrl ?>">
+            <input type="hidden" id="googlePlayIdUrl" value="<?= $googlePlayIdUrl ?>">
+            <input type="hidden" id="appleStoreIdUrl" value="<?= $appleStoreIdUrl ?>">
+            <input type="hidden" id="sendLinkUrl" value="<?= $sendLinkUrl ?>">
+            <input type="hidden" id="emailValidation1" value="<?= $email_validation1 ?>">
+            <input type="hidden" id="emailValidation2" value="<?= $email_validation2 ?>">
+
+            
             <input type="hidden" id="country_code" value="">
             <div id="flip_body" class="flipbook-body disable-select" style="display: none;">
                 <?php
@@ -373,8 +380,8 @@
 
                                         </div>
                                         <div style="" class="noAppInstatlled commonbackCover" style="display: none">
-                                            <div class="linkLine">Story looks awesome in app.<br>
-                                                Download on your device! </div>
+                                            <div class="linkLine"><?=$last_page_text1 ?><br>
+                                                <?=$last_page_text2 ?> </div>
                                             <div>
                                                 <img id="googlePlayId" src="" alt="facebook link"  class="storelink">
                                                 <img id="appleStoreId" src="" alt="mail link" class="storelink">
@@ -385,11 +392,11 @@
                                                         Invalid Mobile Number
                                                     </div>
 <!--                                                    <input type="text" name="Phone" id="phoneAndEmailId" placeholder="Email or Mobile number">-->
-                                                    <input type="text" name="Phone" id="phoneAndEmailId" placeholder="Enter your email">
+																																											<input type="text" name="Phone" id="phoneAndEmailId" placeholder='<?php echo $email_place_holder ?>' /> 
                                                     <div class="closeButton"></div>
                                                     <div class="clearIcon"></div>
                                                     <div class="loaderFor"></div>
-                                                    <div class="primary_btn " id="getLink">Send link</div>
+                                                    <div class="primary_btn " id="getLink"><?= $send_link_text ?></div>
 
                                                 </div>
                                             </div>
@@ -619,7 +626,7 @@
                                     <div class="fluid CopyLink_Title">Copy link of photostory <span id="albumnamespan"></span> </div>
                                     <div class="fluid CopyLinkTextBoxWraper">  Below Copy Link Row Wraper Start Here
                                         <div class="fluid CopyLinkTextBoxInnerWraper">
-                                            <span id="cplinkspan">http://www.photogurus.com/?page=preview_share&token=54bd33046d25a </span>
+                                            
                                         </div>
                                     </div>  Above Copy Link Row Wraper End Here
                                     <div class="fluid CopyLinkBotonsWraper">
