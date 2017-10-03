@@ -12,7 +12,7 @@ $newlogInUrl = $urls['login_url'];
 
 $branchKey = $configVars['branch_key'];
 $branchLink = $configVars['branchio_api_endpoint'];
-$currentUrl=$_GET['stroy_id'];
+$currentUrl=$_GET['story_id'];
 //$currentUrl = $_SERVER['REQUEST_URI'];
 //$apiFlag is to identify own story or shared story. Comes in the URL
 //$tokenFlag is to identify whether the shared link is a social media share link or direct email/sms share link. comes in cookie and default is 1 that is targeted token
