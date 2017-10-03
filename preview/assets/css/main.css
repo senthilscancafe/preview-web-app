@@ -831,25 +831,14 @@ body::-webkit-scrollbar {
     perspective: 2000px;
 }
 
-.hardleft {
-    background-color: #CCC;
-    width: 50%;
-    height: 100%;
-    float:left !important;
-   background-position: 0% 100%;
-  
+.hardright {
+   background-position: -100% 0%;
   background-size:50% !important;
   background-repeat:no-repeat; 
 }
 
-.hardright {
-    background-color: #CCC;
-    width: 50%;
-    height: 100%;
-    float:right;
-   background-position: 100% 0;
-  
-  background-size:50%;
+.hardleft {
+  background-position: 0 0%;
   background-repeat:no-repeat; 
 }
 

@@ -294,8 +294,7 @@ turnMethods = {
             {'class': 'page-wrapper',
               page: page,
               css: {position: 'absolute',
-              overflow: 'hidden',
-              width:'0px !important'}
+              overflow: 'hidden'}
       });
           // Append to this flipbook
           this.append(data.pageWrap[page]);

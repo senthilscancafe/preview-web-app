@@ -603,6 +603,7 @@ $(function () {
     }
     var flipComplete = null;
     jQuery("#flipbook").bind("turning", function (event, page, view) {
+        console.log("showing: "+page);
         if (page === 1) {
             jQuery('.flip-control-actions').addClass('editIconLayering');
             $('.flipbook-bottom').hide();
@@ -618,6 +619,19 @@ $(function () {
             });
             jQuery('.editIconLayering').removeClass('editIconLayering');
         }
+
+        var totalPage = (jQuery("#image_count").val()-1)*2;
+        jQuery(".hard.page.p"+(totalPage+1)+".odd").css('display','block');
+        jQuery(".hard.image_url_1.page.p2.even").css('display','none');
+        console.log(jQuery("#image_count").val());
+        
+        console.log(totalPage);
+        if (page === (totalPage-2) || page === ((totalPage-2)+1)) {
+            jQuery(".hard.image_url_"+((totalPage-2)/2)+".page.p"+(totalPage-1)+".odd").css('display','none');
+            jQuery(".hard.page.p"+(totalPage+1)+".odd").css('display','none');
+        }
+        
+
         if (page === 6 || page === 7) {
 
             var url6 = jQuery(".hard.image_url_3.page.p6.even").css('background-image');
