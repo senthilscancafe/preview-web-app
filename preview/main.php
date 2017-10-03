@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <title><?=$partner_name.'  '.$page_title?></title>
-        <link rel="shortcut icon" type="image/x-icon" href="https://imgd.photogurus.com/assets/preview/images/favicon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
         <meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1'>
         <?php include_once 'loadassets.php'; ?>
 
@@ -25,11 +25,11 @@
 
     <body >
         <div id="loading">
-            <img id="loading-image" src="https://imgd.photogurus.com/assets/preview/images/nilloader.gif" alt="Loading..." />
+            <img id="loading-image" src="/assets/images/nilloader.gif" alt="Loading..." />
         </div>
         <div class="pageload" style="display: none;">
             <div class="pageload-inner text-center">
-                <img src="https://imgd.photogurus.com/assets/preview/images/nilloader.gif">
+                <img src="/assets/images/nilloader.gif">
             </div>
         </div>
         <div id="wrapper">
@@ -176,7 +176,7 @@
                                     ?>
                                     <div id="image_url_l_0" class="hard image_url_0" data-likestatus ="<?= $frontCoverLikeStatus ?>" data-comments="<?= $frontCoverComments ?>" data-likes= "<?= $frontCoverLikes ?>" data-spreadid ="<?= $frontCoverSpreadId; ?>" style="background-image:url(<?= $frontCoverThumbUrl ?>);background-size: cover;">
                                         <div id="loadingThmubs" style=" right: 42%;">
-                                            <img id="loading-thumbs" src="https://imgd.photogurus.com/assets/preview/images/loading2.gif" alt="Loading..." /> 
+                                            <img id="loading-thumbs" src="/assets/images/loading2.gif" alt="Loading..." /> 
                                         </div>
                                         <div class="likeBox">
                                             <div class="clearfix top-row">
@@ -222,7 +222,7 @@
                                         ?>
                                         <div class="<?= $type ?>  image_url_<?= $imgIterator ?>" id="image_url_l_<?= $imgIterator ?>" data-likestatus ="<?= $imageDetail['likestatus'] ?>" data-comments="<?= $imageDetail['comments'] ?>" data-likes= "<?= $imageDetail['likes'] ?>" data-spreadid ="<?= $imageDetail['spread_id']; ?>" style="background-image:url('<?= $spreadUrl ?>');background-size: cover;">
                                             <div id="loadingThmubs">
-                                                <img id="loading-thumbs" src="https://imgd.photogurus.com/assets/preview/images/loading2.gif" alt="Loading..." />
+                                                <img id="loading-thumbs" src="/assets/images/loading2.gif" alt="Loading..." />
                                             </div>
                                             <div class="prevControl controls">
                                                 <img src="" >
@@ -270,7 +270,7 @@
                                     ?>
                                     <div id="image_url_<?= $imgIterator ?>" class="hard image_url_<?= $imgIterator ?> lastPage"  data-likestatus ="<?= $backCoverLikeStatus ?>" data-comments="<?= $backCoverComments ?>" data-likes= "<?= $backCoverLikes ?>" data-spreadid ="<?= $backCoverSpreadId; ?>" style="background-image:url(<?= $backCoverThumbUrl ?>);background-size: cover;">
                                         <div id="loadingThmubs" style=" right: 50%;">
-                                           <!-- <img id="loading-thumbs" src="https://imgd.photogurus.com/assets/preview/images/loading2.gif" alt="Loading..." /> -->
+                                           <img id="loading-thumbs" src="/assets/images/loading2.gif" alt="Loading..." />
                                         </div>
 
                                         <div class="prevControl controls">
