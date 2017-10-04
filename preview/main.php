@@ -84,7 +84,12 @@
                     <div class="leftArea">
                         <div class="mobile-nav"></div>
                         <div class="spriteCode portraitHome"></div>
-                        <div class="spriteCode headerLogo"></div>
+                        <div 
+                            <?php
+                            $logo = "assets/images/".$partner_code ."-logo.png";
+                            ?>
+                            <a><img src="<?= $logo ?>" width="272" height="42"></a>
+                    </div>
                     </div>
                     <div class="heder_wraper col-sm-4">
                     </div>
