@@ -82,13 +82,13 @@
                 <div class="head-container row">
                     
                     <div class="leftArea">
-                        <div class="mobile-nav"></div>
+                        <!--<div class="mobile-nav"></div>-->
                         <div class="spriteCode portraitHome"></div>
                         <div 
                             <?php
                             $logo = "assets/images/".$partner_code ."-logo.png";
                             ?>
-                            <a><img src="<?= $logo ?>" width="272" height="42"></a>
+                            <a><img src="<?= $logo ?>" width="272px" height="42px"></a>
                     </div>
                     </div>
                     <div class="heder_wraper col-sm-4">
