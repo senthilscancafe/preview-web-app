@@ -6,9 +6,9 @@ $urls = $GLOBALS['urls'];
 $configVars = $GLOBALS['config'];
 //print_r($configVars);
 $sharepreviewUrl = $urls['share_preview_url'];
-$zuluUrl = $urls['zulu_url'];
+//$zuluUrl = $urls['zulu_url'];
 $sendLinkUrl = $urls['send_link_url'];
-$newlogInUrl = $urls['login_url'];
+//$newlogInUrl = $urls['login_url'];
 
 $branchKey = $configVars['branch_key'];
 $branchLink = $configVars['branchio_api_endpoint'];
